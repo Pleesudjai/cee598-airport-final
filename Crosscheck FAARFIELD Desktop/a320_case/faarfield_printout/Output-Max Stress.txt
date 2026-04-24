@@ -1,0 +1,21 @@
+ Step = 1
+ Maximum Horizontal Tensile Stress on the Concrete Slab
+ location direction node              x              y              z         stress
+      Top         x  419    0.67200E+02    0.40000E+01    0.00000E+00    0.12125E+02
+      Top         y  599    0.96600E+02    0.00000E+00    0.00000E+00    0.10089E+02
+   Bottom         x  419    0.67200E+02    0.40000E+01    0.00000E+00    0.12125E+02
+   Bottom         y  599    0.96600E+02    0.00000E+00    0.00000E+00    0.10089E+02
+ Overlay
+      Top         x 2679    0.24000E+03    0.12000E+03    0.16000E+02    0.23102E+01
+      Top         y 2679    0.24000E+03    0.12000E+03    0.16000E+02    0.22680E+01
+   Bottom         x 1786    0.24000E+03    0.12000E+03    0.12000E+02    0.12139E+02
+   Bottom         y 1786    0.24000E+03    0.12000E+03    0.12000E+02    0.11802E+02
+
+ Maximum Vertical Compressive Stress on the Foundation
+    layer direction node              x              y              z         stress
+        1         z 3730    0.00000E+00    0.00000E+00    0.00000E+00   -0.22513E+01
+        2         z 3731    0.00000E+00    0.00000E+00   -0.40000E+01   -0.19030E+01
+        3         z 5142    0.10920E+03    0.12000E+03   -0.11500E+02   -0.15695E+01
+        4         z 4497    0.10920E+03    0.00000E+00   -0.19000E+02   -0.90883E+00
+
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FaarfieldApi</RootNamespace>
+    <AssemblyName>FaarfieldApi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Console</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="LEAFClassLib">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\LEAFClassLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ACClassLib">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\ACClassLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="FaarFieldModel">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\FaarFieldModel.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="FaarFieldAnalysis">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\FaarFieldAnalysis.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="AMClassLib">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\AMClassLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="FAAMeshClassLib">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\FAAMeshClassLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="FEMClassLib">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\FEMClassLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="ACRClassLib">
+      <HintPath>C:\Program Files (x86)\FAARFIELD\ACRClassLib.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.vb" />
+    <Compile Include="AircraftLibrary.vb" />
+    <Compile Include="FullAnalysisWrapper.vb" />
+    <Compile Include="Dto\FullAnalysisRequest.vb" />
+    <Compile Include="Dto\FullAnalysisResponse.vb" />
+    <Compile Include="HttpRouter.vb" />
+    <Compile Include="JsonHelper.vb" />
+    <Compile Include="LeafSolverWrapper.vb" />
+    <Compile Include="Fem3dWrapper.vb" />
+    <Compile Include="Fem3dStressSpike.vb" />
+    <Compile Include="Dto\Fem3dMesh.vb" />
+    <Compile Include="Dto\HealthResponse.vb" />
+    <Compile Include="Dto\LeafGridRequest.vb" />
+    <Compile Include="Dto\LeafGridResponse.vb" />
+    <Compile Include="Dto\LeafPointRequest.vb" />
+    <Compile Include="Dto\ErrorResponse.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

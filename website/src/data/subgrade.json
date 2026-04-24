@@ -1,0 +1,446 @@
+{
+  "KLHX": {
+    "soil": "Silt Loam (Minnequa)",
+    "aashto": "A-6(9)",
+    "cbr": 7,
+    "E": 10500,
+    "k": 70,
+    "quality": "Fair",
+    "hydro_group": "C",
+    "drainage": "Well drained",
+    "horizons": [
+      {
+        "hz": "A",
+        "top": 0,
+        "bot": 15,
+        "texture": "Loam",
+        "sand": 35,
+        "silt": 44,
+        "clay": 21,
+        "ll": 33,
+        "pi": 13,
+        "pass200": 81
+      },
+      {
+        "hz": "Bw",
+        "top": 15,
+        "bot": 51,
+        "texture": "Silt Loam",
+        "sand": 10,
+        "silt": 67,
+        "clay": 23,
+        "ll": 33,
+        "pi": 14,
+        "pass200": 90
+      },
+      {
+        "hz": "Bk",
+        "top": 51,
+        "bot": 89,
+        "texture": "Loam",
+        "sand": 35,
+        "silt": 42,
+        "clay": 23,
+        "ll": 32,
+        "pi": 13,
+        "pass200": 73
+      },
+      {
+        "hz": "Cr",
+        "top": 89,
+        "bot": 152,
+        "texture": "Bedrock",
+        "sand": null,
+        "silt": null,
+        "clay": null,
+        "ll": null,
+        "pi": null,
+        "pass200": null
+      }
+    ]
+  },
+  "KPUB": {
+    "soil": "Midway clay/Bedrock",
+    "aashto": "Rock",
+    "cbr": 12,
+    "E": 18000,
+    "k": 120,
+    "quality": "Good (weathered shale)",
+    "hydro_group": "D",
+    "drainage": "Well drained",
+    "horizons": [
+      {
+        "hz": "A",
+        "top": 0,
+        "bot": 5,
+        "texture": "Clay Loam",
+        "sand": 32,
+        "silt": 31,
+        "clay": 37,
+        "ll": 50,
+        "pi": 26,
+        "pass200": 78
+      },
+      {
+        "hz": "C",
+        "top": 5,
+        "bot": 25,
+        "texture": "Clay",
+        "sand": 26,
+        "silt": 29,
+        "clay": 45,
+        "ll": 54,
+        "pi": 31,
+        "pass200": 82
+      },
+      {
+        "hz": "Cr",
+        "top": 25,
+        "bot": 200,
+        "texture": "Bedrock/Shale",
+        "sand": null,
+        "silt": null,
+        "clay": null,
+        "ll": null,
+        "pi": null,
+        "pass200": null
+      }
+    ]
+  },
+  "KMQJ": {
+    "soil": "Crosby silt loam",
+    "aashto": "A-7-6(17)",
+    "cbr": 4,
+    "E": 6000,
+    "k": 45,
+    "quality": "Poor",
+    "hydro_group": "C/D",
+    "drainage": "Somewhat poorly drained",
+    "horizons": [
+      {
+        "hz": "Ap",
+        "top": 0,
+        "bot": 20,
+        "texture": "Silt Loam",
+        "sand": 18,
+        "silt": 64,
+        "clay": 18,
+        "ll": 33,
+        "pi": 12,
+        "pass200": 85
+      },
+      {
+        "hz": "BE",
+        "top": 20,
+        "bot": 28,
+        "texture": "Silt Loam",
+        "sand": 20,
+        "silt": 63,
+        "clay": 17,
+        "ll": 30,
+        "pi": 11,
+        "pass200": 75
+      },
+      {
+        "hz": "Bt",
+        "top": 28,
+        "bot": 36,
+        "texture": "Silt Loam",
+        "sand": 20,
+        "silt": 55,
+        "clay": 25,
+        "ll": 36,
+        "pi": 17,
+        "pass200": 75
+      },
+      {
+        "hz": "2Bt",
+        "top": 36,
+        "bot": 71,
+        "texture": "Silty Clay",
+        "sand": 18,
+        "silt": 42,
+        "clay": 40,
+        "ll": 50,
+        "pi": 28,
+        "pass200": 72
+      },
+      {
+        "hz": "2BCt",
+        "top": 71,
+        "bot": 91,
+        "texture": "Loam",
+        "sand": 33.5,
+        "silt": 40.5,
+        "clay": 26,
+        "ll": 35,
+        "pi": 16,
+        "pass200": 60
+      },
+      {
+        "hz": "2Cd",
+        "top": 91,
+        "bot": 200,
+        "texture": "Loam",
+        "sand": 42,
+        "silt": 40.5,
+        "clay": 17.5,
+        "ll": 27,
+        "pi": 10,
+        "pass200": 54
+      }
+    ]
+  },
+  "KCIU": {
+    "soil": "Liminga fine sand",
+    "aashto": "A-3",
+    "cbr": 20,
+    "E": 30000,
+    "k": 170,
+    "quality": "Good",
+    "hydro_group": "A",
+    "drainage": "Well drained",
+    "horizons": [
+      {
+        "hz": "Oe",
+        "top": 0,
+        "bot": 3,
+        "texture": "Mucky Peat",
+        "sand": 5,
+        "silt": 90,
+        "clay": 5,
+        "ll": null,
+        "pi": null,
+        "pass200": 95
+      },
+      {
+        "hz": "E",
+        "top": 3,
+        "bot": 18,
+        "texture": "Fine Sand",
+        "sand": 94,
+        "silt": 5,
+        "clay": 1,
+        "ll": 0,
+        "pi": 0,
+        "pass200": 15
+      },
+      {
+        "hz": "Bhs",
+        "top": 18,
+        "bot": 23,
+        "texture": "Fine Sand",
+        "sand": 93,
+        "silt": 4,
+        "clay": 3,
+        "ll": 0,
+        "pi": 0,
+        "pass200": 15
+      },
+      {
+        "hz": "Bs",
+        "top": 23,
+        "bot": 56,
+        "texture": "Fine Sand",
+        "sand": 95,
+        "silt": 3,
+        "clay": 2,
+        "ll": 0,
+        "pi": 0,
+        "pass200": 12
+      },
+      {
+        "hz": "BC",
+        "top": 56,
+        "bot": 79,
+        "texture": "Fine Sand",
+        "sand": 98,
+        "silt": 1.5,
+        "clay": 0.5,
+        "ll": 0,
+        "pi": 0,
+        "pass200": 10
+      },
+      {
+        "hz": "C",
+        "top": 79,
+        "bot": 203,
+        "texture": "Fine Sand",
+        "sand": 99,
+        "silt": 0.8,
+        "clay": 0.2,
+        "ll": 0,
+        "pi": 0,
+        "pass200": 10
+      }
+    ]
+  },
+  "KOTM": {
+    "soil": "Taintor silty clay loam",
+    "aashto": "A-7-6(20)",
+    "cbr": 4,
+    "E": 6000,
+    "k": 45,
+    "quality": "Poor",
+    "hydro_group": "D",
+    "drainage": "Poorly drained",
+    "horizons": [
+      {
+        "hz": "Ap",
+        "top": 0,
+        "bot": 23,
+        "texture": "Silty Clay Loam",
+        "sand": 2,
+        "silt": 68,
+        "clay": 30,
+        "ll": 48,
+        "pi": 21,
+        "pass200": 99
+      },
+      {
+        "hz": "A1",
+        "top": 23,
+        "bot": 41,
+        "texture": "Silty Clay Loam",
+        "sand": 2,
+        "silt": 64,
+        "clay": 34,
+        "ll": 50,
+        "pi": 24,
+        "pass200": 99
+      },
+      {
+        "hz": "A2",
+        "top": 41,
+        "bot": 51,
+        "texture": "Silty Clay Loam",
+        "sand": 2,
+        "silt": 61,
+        "clay": 37,
+        "ll": 52,
+        "pi": 26,
+        "pass200": 99
+      },
+      {
+        "hz": "Btg1",
+        "top": 51,
+        "bot": 61,
+        "texture": "Silty Clay",
+        "sand": 2,
+        "silt": 57,
+        "clay": 41,
+        "ll": 52,
+        "pi": 30,
+        "pass200": 99
+      },
+      {
+        "hz": "Btg2",
+        "top": 61,
+        "bot": 71,
+        "texture": "Silty Clay",
+        "sand": 2,
+        "silt": 58,
+        "clay": 40,
+        "ll": 51,
+        "pi": 29,
+        "pass200": 99
+      },
+      {
+        "hz": "Btg3",
+        "top": 71,
+        "bot": 91,
+        "texture": "Silty Clay Loam",
+        "sand": 2,
+        "silt": 62,
+        "clay": 36,
+        "ll": 47,
+        "pi": 26,
+        "pass200": 99
+      },
+      {
+        "hz": "Btg4",
+        "top": 91,
+        "bot": 117,
+        "texture": "Silty Clay Loam",
+        "sand": 2,
+        "silt": 65,
+        "clay": 33,
+        "ll": 44,
+        "pi": 23,
+        "pass200": 99
+      },
+      {
+        "hz": "Cg",
+        "top": 117,
+        "bot": 152,
+        "texture": "Silty Clay Loam",
+        "sand": 2,
+        "silt": 70,
+        "clay": 28,
+        "ll": 39,
+        "pi": 19,
+        "pass200": 99
+      }
+    ]
+  },
+  "KMWH": {
+    "soil": "Malaga stony sandy loam",
+    "aashto": "A-1-a",
+    "cbr": 40,
+    "E": 50000,
+    "k": 300,
+    "quality": "Excellent",
+    "hydro_group": "B",
+    "drainage": "Somewhat excessively drained",
+    "horizons": [
+      {
+        "hz": "H1",
+        "top": 0,
+        "bot": 15,
+        "texture": "Stony Sandy Loam",
+        "sand": 66.6,
+        "silt": 23.4,
+        "clay": 10,
+        "ll": 25,
+        "pi": 2.5,
+        "pass200": 42.5
+      },
+      {
+        "hz": "H2",
+        "top": 15,
+        "bot": 28,
+        "texture": "Gravelly Sandy Loam",
+        "sand": 66.6,
+        "silt": 23.4,
+        "clay": 10,
+        "ll": 25,
+        "pi": 2.5,
+        "pass200": 37.5
+      },
+      {
+        "hz": "H3",
+        "top": 28,
+        "bot": 46,
+        "texture": "V.Gravelly Sandy Loam",
+        "sand": 66.6,
+        "silt": 23.4,
+        "clay": 10,
+        "ll": 25,
+        "pi": 2.5,
+        "pass200": 20
+      },
+      {
+        "hz": "H4",
+        "top": 46,
+        "bot": 152,
+        "texture": "Ext.Gravelly Coarse Sand",
+        "sand": 91,
+        "silt": 6.5,
+        "clay": 2.5,
+        "ll": null,
+        "pi": 0,
+        "pass200": 5
+      }
+    ]
+  }
+}

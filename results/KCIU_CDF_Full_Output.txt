@@ -1,0 +1,26 @@
+FAARFIELD CDF (Native Engine: LEAF + 3D Rigid FEM via FAASR3D) — KCIU (Chippewa County International, MI)
+Engine: FAARFIELD_desktop_parity+FEM3D  |  useFem3d=true  |  R=360 psi  |  SCI=80.0  |  life=20yr
+Material rule: FAA AC 150/5320-6F lower-bound (R = 0.08 * f'c_assumed = 0.08 * 4500 = 360 psi for >20-yr aged PCC, no field cores)
+Subgrade: Fine Sand (AASHTO A-3, NRCS), CBR=20, E=30,000 psi
+Growth: -0.100%/yr over 20 yr (linear, FAARFIELD modFAILURE_MODEL_NP.vb:840)
+Wander: sigma = 30.435" (FAA standard for rigid pavement) over 41-offset lateral sweep (0-400" at 10" steps)
+====================================================================================================
+
+--- Section 21222 (Runway - 2.5" AC + 24" PCC) — UNDER ---
+Construction: PCC poured 1958, AC overlay 2000 (PCC age 68 yr at analysis).
+CDF breakdown: AC=1.2836e-10  Subgrade=2.3321e-24  PCC=1.1393e+01  -> CDF_max = 1.1393e+01
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 190" from centerline
+Predicted structural life: 1.76 yr (vs 20-yr target -> short by 18.24 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  B763       412,000  2D      3.785e+00  xml
+    2  A332       533,519  2D      1.660e+00  xml
+    3  B77W       775,000  3D      1.578e+00  xml
+    4  B77L       775,000  3D      1.575e+00  xml
+    5  B772       766,000  3D      1.534e+00  xml
+
+====================================================================================================
+Generated 2026-04-22 19:09 from results/cdf_results.json

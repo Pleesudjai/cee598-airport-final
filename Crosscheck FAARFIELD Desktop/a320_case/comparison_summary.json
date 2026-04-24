@@ -1,0 +1,348 @@
+{
+  "test_inputs": {
+    "layers": [
+      {
+        "type": "P-401",
+        "h": 4.0,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501",
+        "h": 12.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 12000,
+      "nu": 0.4
+    },
+    "aircraft": {
+      "icao": "A320"
+    },
+    "design_type": "FlexOnRigid (DESIGN_TYPE=13)",
+    "faarfield_aircraft_label": "A320-200 WV000 Bogie",
+    "wheel_coords_gear_frame_in": [
+      {
+        "x": -131.2,
+        "y": -19.8
+      },
+      {
+        "x": -167.7,
+        "y": 19.8
+      },
+      {
+        "x": -167.7,
+        "y": -19.8
+      },
+      {
+        "x": -131.2,
+        "y": 19.8
+      },
+      {
+        "x": 131.2,
+        "y": -19.8
+      },
+      {
+        "x": 167.7,
+        "y": 19.8
+      },
+      {
+        "x": 167.7,
+        "y": -19.8
+      },
+      {
+        "x": 131.2,
+        "y": 19.8
+      }
+    ],
+    "wheel_coords_mesh_frame_in": [
+      {
+        "x": 36.49199999999999,
+        "y": -19.782
+      },
+      {
+        "x": 0,
+        "y": 19.782
+      },
+      {
+        "x": 0,
+        "y": -19.782
+      },
+      {
+        "x": 36.49199999999999,
+        "y": 19.782
+      },
+      {
+        "x": 298.8120073242187,
+        "y": -19.782
+      },
+      {
+        "x": 335.30400732421873,
+        "y": 19.782
+      },
+      {
+        "x": 335.30400732421873,
+        "y": -19.782
+      },
+      {
+        "x": 298.8120073242187,
+        "y": 19.782
+      }
+    ],
+    "n_bricks": 4580
+  },
+  "spike": {
+    "success": true,
+    "phase": "done",
+    "errorMessage": null,
+    "firstPassMs": 10388,
+    "secondPassMs": 14884,
+    "pccBottomStressFirstPass": 6.06244127351354,
+    "aircraftIcao": "A320",
+    "aircraftName": "A320",
+    "printoutDir": "C:\\Users\\chidc\\AppData\\Local\\Temp\\PrintOut-fem_spike_109cb29a",
+    "printoutFile": "C:\\Users\\chidc\\AppData\\Local\\Temp\\PrintOut-fem_spike_109cb29a\\Output-Hexahedron Element-Step 1.txt",
+    "modelOut": 1,
+    "modPgIpcType": "FEMClassLib.clsFEM+InputCards",
+    "modPgIpcNumelh": 4580,
+    "modPgIpcNumnp": 6838,
+    "modPgIpcNtime": 1,
+    "gDesignTypeValue": 13,
+    "iSymCaseValue": 0,
+    "stTypeName": "System.Double[,,,]",
+    "stRank": 4,
+    "stDim0": 4581,
+    "stDim1": 8,
+    "stDim2": 9,
+    "stDim3": 2,
+    "stNonzeroCount": 256480,
+    "stPeakAbsValue": 20.328800254024774,
+    "stPeakLocation": [
+      828,
+      7,
+      7,
+      1
+    ],
+    "stPeakAbsStressOnly": 14.970025741700953,
+    "stPeakStressLocation": [
+      828,
+      1,
+      3,
+      1
+    ],
+    "stPeakStressLabel": "sigmaX",
+    "stress1MaxAbs": 12.12488254702708,
+    "stress8MaxAbs": 12.138515421914436,
+    "stress1NonzeroCount": 1,
+    "stress8NonzeroCount": 1,
+    "samples": [
+      {
+        "elem": 828,
+        "comp": 1,
+        "gp": 3,
+        "time": 1,
+        "value": -14.970025741700953,
+        "componentLabel": "sigmaX"
+      },
+      {
+        "elem": 828,
+        "comp": 2,
+        "gp": 3,
+        "time": 1,
+        "value": -14.808483284876145,
+        "componentLabel": "sigmaY"
+      },
+      {
+        "elem": 828,
+        "comp": 3,
+        "gp": 3,
+        "time": 1,
+        "value": -7.020337492204386,
+        "componentLabel": "sigmaZ"
+      },
+      {
+        "elem": 828,
+        "comp": 4,
+        "gp": 3,
+        "time": 1,
+        "value": 0.04908269784567562,
+        "componentLabel": "tauXY"
+      },
+      {
+        "elem": 828,
+        "comp": 5,
+        "gp": 3,
+        "time": 1,
+        "value": 2.733130955407753,
+        "componentLabel": "tauYZ"
+      },
+      {
+        "elem": 828,
+        "comp": 6,
+        "gp": 3,
+        "time": 1,
+        "value": 2.7310212638592173,
+        "componentLabel": "tauXZ"
+      }
+    ],
+    "elementSamples": [
+      {
+        "elementId": 1,
+        "sigmaX": 0.030264709454335886,
+        "sigmaY": -0.10662072360726305,
+        "sigmaZ": -2.1487752533400064,
+        "tauXY": 0.025656068905753993,
+        "tauYZ": -0.20675316111994496,
+        "tauXZ": -0.645673485395273,
+        "mises": 2.4185888472444828
+      },
+      {
+        "elementId": 2,
+        "sigmaX": 0.07753535821333686,
+        "sigmaY": 0.11691884009033382,
+        "sigmaZ": -0.6491308352149084,
+        "tauXY": -0.011761577033750352,
+        "tauYZ": -0.05509058035200466,
+        "tauXZ": -0.6826817627946895,
+        "mises": 1.4021043285528643
+      },
+      {
+        "elementId": 3,
+        "sigmaX": 0.12816754990613105,
+        "sigmaY": 0.08980774468648889,
+        "sigmaZ": -0.8442929692342738,
+        "tauXY": -0.0022085494036239513,
+        "tauYZ": -0.06063584417629841,
+        "tauXZ": -0.7535396867137487,
+        "mises": 1.6199871814528601
+      },
+      {
+        "elementId": 4,
+        "sigmaX": 0.16554423506718308,
+        "sigmaY": 0.10586720825543028,
+        "sigmaZ": -0.7441050831654588,
+        "tauXY": -0.00047070360065371714,
+        "tauYZ": -0.05284831204691572,
+        "tauXZ": -0.647718334757357,
+        "mises": 1.4295924885867066
+      },
+      {
+        "elementId": 5,
+        "sigmaX": 0.1966868918297956,
+        "sigmaY": 0.10405578176737662,
+        "sigmaZ": -0.7667400367270822,
+        "tauXY": 0.000579977376247751,
+        "tauYZ": -0.05398983583194006,
+        "tauXZ": -0.6601984229014085,
+        "mises": 1.471006543972173
+      }
+    ]
+  },
+  "summary_pass_rate": {
+    "n_compared": 4580,
+    "exact_match": 26,
+    "within_0_1_pct": 4580,
+    "within_5_pct_PASS": 4580,
+    "exact_pct": 0.5676855895196506,
+    "within_0_1_pct_pct": 100.0,
+    "within_5_pct_pct": 100.0
+  },
+  "peak_agreement": {
+    "printout_peak": [
+      681,
+      "sz",
+      3.411
+    ],
+    "aeropave_peak": [
+      681,
+      "sz",
+      3.4109527203259242
+    ],
+    "agreement": true
+  },
+  "worst_3": [
+    {
+      "eid": 705,
+      "max_abs_diff_psi": 0.000499288130993536,
+      "rel_to_peak_pct": 0.014637588126459572,
+      "printout": [
+        0.01559,
+        -0.5618,
+        -1.769,
+        0.008556,
+        1.399,
+        -0.1488
+      ],
+      "aeropave": [
+        0.015589614602027402,
+        -0.5617761618544714,
+        -1.7694156871468738,
+        0.008555627155260294,
+        1.3994992881309936,
+        -0.1488071369215981
+      ],
+      "centroid": [
+        102.9,
+        114,
+        6
+      ],
+      "layer": 1
+    },
+    {
+      "eid": 1122,
+      "max_abs_diff_psi": 0.0004977857828094567,
+      "rel_to_peak_pct": 0.014593543911153818,
+      "printout": [
+        -1.017,
+        -0.8862,
+        -0.166,
+        -0.01374,
+        0.003901,
+        -0.01154
+      ],
+      "aeropave": [
+        -1.0165022142171904,
+        -0.8862220402736235,
+        -0.16598125758827284,
+        -0.0137405596933294,
+        0.003900743188611773,
+        -0.011542614094537319
+      ],
+      "centroid": [
+        56.70000000000001,
+        30,
+        14
+      ],
+      "layer": 0
+    },
+    {
+      "eid": 3217,
+      "max_abs_diff_psi": 0.0004972591246608093,
+      "rel_to_peak_pct": 0.014578103918522703,
+      "printout": [
+        -0.3199,
+        -0.3359,
+        -1.002,
+        0.04358,
+        0.001665,
+        0.027
+      ],
+      "aeropave": [
+        -0.3199160551166669,
+        -0.335889929343897,
+        -1.0015027408753392,
+        0.04358263376323397,
+        0.0016651819559825505,
+        0.027000041395092482
+      ],
+      "centroid": [
+        37.8,
+        66,
+        -15.25
+      ],
+      "layer": 3
+    }
+  ]
+}

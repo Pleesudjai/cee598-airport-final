@@ -1,0 +1,17 @@
+FAARFIELD Engine Parity Test — KLHX Section 6627
+=================================================
+
+Failure Mode        |    JS Value    |   Python Value  |  Error %  | Status
+AC Fatigue          |    8.537e-07   |     8.637e-07   |   1.15%   | PASS (eng.)
+Subgrade Rutting    |    4.344e-09   |     4.449e-09   |   2.38%   | PASS (eng.)
+PCC Fatigue         |    1.008e+01   |     1.015e+01   |   0.72%   | PASS (eng.)
+
+Overall: QUALIFIED PASS
+- All values within 2.4% relative error
+- Drift caused by annual_deps rounding in JSON (round to 2 decimals)
+- Python uses full float64 precision; JSON rounds to 2 decimal places
+- Engineering tolerance: < 5% is acceptable for pavement design
+- Both engines agree: Section 6627 is UNDER-DESIGNED (CDF >> 1.0)
+- Both engines agree on controlling mode: PCC Fatigue
+
+Verdict: JS engine is validated for interactive website use.

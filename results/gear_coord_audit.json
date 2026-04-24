@@ -1,0 +1,4724 @@
+{
+  "summary": {
+    "nearest_proxy": 73,
+    "xml": 73,
+    "family_proxy": 10,
+    "proxy_override": 4
+  },
+  "simplifiedAircraft": [],
+  "errorAircraft": [],
+  "allEntries": [
+    {
+      "icao": "A10",
+      "excelGear": "S",
+      "excelMtow": 50044.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "F18S",
+      "faarfieldName": "F/A-18C",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 150,
+      "wheelCoords": [
+        {
+          "x": -61.25,
+          "y": 0
+        },
+        {
+          "x": 61.25,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "A124",
+      "excelGear": "5D",
+      "excelMtow": 886258.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "A124",
+      "faarfieldName": "An-124",
+      "gearType": "5D",
+      "nWheels": 20,
+      "tirePressure": 194,
+      "wheelCoords": [
+        {
+          "x": -177.20000305175782,
+          "y": -134.6
+        },
+        {
+          "x": -137.8000030517578,
+          "y": -134.6
+        },
+        {
+          "x": -177.20000305175782,
+          "y": -67.3
+        },
+        {
+          "x": -137.8000030517578,
+          "y": -67.3
+        },
+        {
+          "x": -177.20000305175782,
+          "y": 0
+        },
+        {
+          "x": -137.8000030517578,
+          "y": 0
+        },
+        {
+          "x": -177.20000305175782,
+          "y": 67.3
+        },
+        {
+          "x": -137.8000030517578,
+          "y": 67.3
+        },
+        {
+          "x": -177.20000305175782,
+          "y": 134.6
+        },
+        {
+          "x": -137.8000030517578,
+          "y": 134.6
+        },
+        {
+          "x": 177.20000305175782,
+          "y": 134.6
+        },
+        {
+          "x": 137.8000030517578,
+          "y": 134.6
+        },
+        {
+          "x": 177.20000305175782,
+          "y": 67.3
+        },
+        {
+          "x": 137.8000030517578,
+          "y": 67.3
+        },
+        {
+          "x": 177.20000305175782,
+          "y": 0
+        },
+        {
+          "x": 137.8000030517578,
+          "y": 0
+        },
+        {
+          "x": 177.20000305175782,
+          "y": -67.3
+        },
+        {
+          "x": 137.8000030517578,
+          "y": -67.3
+        },
+        {
+          "x": 177.20000305175782,
+          "y": -134.6
+        },
+        {
+          "x": 137.8000030517578,
+          "y": -134.6
+        }
+      ]
+    },
+    {
+      "icao": "A319",
+      "excelGear": "D",
+      "excelMtow": 168653.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "A319",
+      "faarfieldName": "A319-100 opt",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 181,
+      "wheelCoords": [
+        {
+          "x": -131.1595001220703,
+          "y": 0
+        },
+        {
+          "x": -167.6595001220703,
+          "y": 0
+        },
+        {
+          "x": 167.6595001220703,
+          "y": 0
+        },
+        {
+          "x": 131.1595001220703,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "A320",
+      "excelGear": "D",
+      "excelMtow": 174165.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "A320",
+      "faarfieldName": "A320-200 WV000 Bogie",
+      "gearType": "D",
+      "nWheels": 8,
+      "tirePressure": 209,
+      "wheelCoords": [
+        {
+          "x": -131.16000366210938,
+          "y": -19.782
+        },
+        {
+          "x": -167.65200366210937,
+          "y": 19.782
+        },
+        {
+          "x": -167.65200366210937,
+          "y": -19.782
+        },
+        {
+          "x": -131.16000366210938,
+          "y": 19.782
+        },
+        {
+          "x": 131.16000366210938,
+          "y": -19.782
+        },
+        {
+          "x": 167.65200366210937,
+          "y": 19.782
+        },
+        {
+          "x": 167.65200366210937,
+          "y": -19.782
+        },
+        {
+          "x": 131.16000366210938,
+          "y": 19.782
+        }
+      ]
+    },
+    {
+      "icao": "A321",
+      "excelGear": "D",
+      "excelMtow": 206132.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "A321",
+      "faarfieldName": "A321-200 opt",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 217.6,
+      "wheelCoords": [
+        {
+          "x": -131.1595001220703,
+          "y": 0
+        },
+        {
+          "x": -167.6595001220703,
+          "y": 0
+        },
+        {
+          "x": 167.6595001220703,
+          "y": 0
+        },
+        {
+          "x": 131.1595001220703,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "A332",
+      "excelGear": "2D",
+      "excelMtow": 533519.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "A332",
+      "faarfieldName": "A330-200F WV001",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 206,
+      "wheelCoords": [
+        {
+          "x": -182.75,
+          "y": -39
+        },
+        {
+          "x": -237.75,
+          "y": 39
+        },
+        {
+          "x": -237.75,
+          "y": -39
+        },
+        {
+          "x": -182.75,
+          "y": 39
+        },
+        {
+          "x": 182.75,
+          "y": -39
+        },
+        {
+          "x": 237.75,
+          "y": 39
+        },
+        {
+          "x": 237.75,
+          "y": -39
+        },
+        {
+          "x": 182.75,
+          "y": 39
+        }
+      ]
+    },
+    {
+      "icao": "A4",
+      "excelGear": "3D",
+      "excelMtow": 310852.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "A400",
+      "faarfieldName": "A400M TLL2",
+      "gearType": "3D",
+      "nWheels": 12,
+      "tirePressure": 133,
+      "wheelCoords": [
+        {
+          "x": -139.3500015258789,
+          "y": -61.7
+        },
+        {
+          "x": -105.6500015258789,
+          "y": -61.7
+        },
+        {
+          "x": -139.3500015258789,
+          "y": 0
+        },
+        {
+          "x": -105.6500015258789,
+          "y": 0
+        },
+        {
+          "x": -139.3500015258789,
+          "y": 61.7
+        },
+        {
+          "x": -105.6500015258789,
+          "y": 61.7
+        },
+        {
+          "x": 139.3500015258789,
+          "y": 61.7
+        },
+        {
+          "x": 105.6500015258789,
+          "y": 61.7
+        },
+        {
+          "x": 139.3500015258789,
+          "y": 0
+        },
+        {
+          "x": 105.6500015258789,
+          "y": 0
+        },
+        {
+          "x": 139.3500015258789,
+          "y": -61.7
+        },
+        {
+          "x": 105.6500015258789,
+          "y": -61.7
+        }
+      ]
+    },
+    {
+      "icao": "AC50",
+      "excelGear": "S",
+      "excelMtow": 6750.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AC68",
+      "excelGear": "S",
+      "excelMtow": 8000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AC6L",
+      "excelGear": "S",
+      "excelMtow": 9000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AC80",
+      "excelGear": "S",
+      "excelMtow": 9400.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "BE9L",
+      "faarfieldName": "Beechcraft King Air C90",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 58.00000000000001,
+      "wheelCoords": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": -153,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AC90",
+      "excelGear": "S",
+      "excelMtow": 10700.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AC95",
+      "excelGear": "S",
+      "excelMtow": 11750.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AEST",
+      "excelGear": "S",
+      "excelMtow": 6850.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "ASTR",
+      "excelGear": "D",
+      "excelMtow": 35650.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C750",
+      "faarfieldName": "Cessna Citation X",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 189,
+      "wheelCoords": [
+        {
+          "x": -57.380001068115234,
+          "y": 0
+        },
+        {
+          "x": -69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 57.380001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AT43",
+      "excelGear": "D",
+      "excelMtow": 36825.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "DH8B",
+      "faarfieldName": "Q200/Dash 8 Series 200",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 92,
+      "wheelCoords": [
+        {
+          "x": -163.825,
+          "y": 0
+        },
+        {
+          "x": -146.625,
+          "y": 0
+        },
+        {
+          "x": 163.825,
+          "y": 0
+        },
+        {
+          "x": 146.625,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AT5T",
+      "excelGear": "S",
+      "excelMtow": 10480.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "AT8T",
+      "excelGear": "S",
+      "excelMtow": 16000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "BE40",
+      "faarfieldName": "BeechJet-400/400A",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 90,
+      "wheelCoords": [
+        {
+          "x": -56,
+          "y": 0
+        },
+        {
+          "x": 56,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B190",
+      "excelGear": "D",
+      "excelMtow": 17120.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B350",
+      "faarfieldName": "Beechcraft King Air 350",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 92,
+      "wheelCoords": [
+        {
+          "x": -97.20999908447266,
+          "y": 0
+        },
+        {
+          "x": -108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 97.20999908447266,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B350",
+      "excelGear": "D",
+      "excelMtow": 16500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B350",
+      "faarfieldName": "Beechcraft King Air 350",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 92,
+      "wheelCoords": [
+        {
+          "x": -97.20999908447266,
+          "y": 0
+        },
+        {
+          "x": -108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 97.20999908447266,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B38M",
+      "excelGear": "D",
+      "excelMtow": 181200.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B38M",
+      "faarfieldName": "B737-8/8-200/BBJ MAX 8",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 212,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B39M",
+      "excelGear": "D",
+      "excelMtow": 194668.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B39M",
+      "faarfieldName": "B737-9 MAX",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 230,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B461",
+      "excelGear": "D",
+      "excelMtow": 84000.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "B463",
+      "faarfieldName": "BAe 146-300/300QC/300QT",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 140,
+      "wheelCoords": [
+        {
+          "x": -80,
+          "y": 0
+        },
+        {
+          "x": -106,
+          "y": 0
+        },
+        {
+          "x": 106,
+          "y": 0
+        },
+        {
+          "x": 80,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B462",
+      "excelGear": "D",
+      "excelMtow": 93000.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "B463",
+      "faarfieldName": "BAe 146-300/300QC/300QT",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 140,
+      "wheelCoords": [
+        {
+          "x": -80,
+          "y": 0
+        },
+        {
+          "x": -106,
+          "y": 0
+        },
+        {
+          "x": 106,
+          "y": 0
+        },
+        {
+          "x": 80,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B703",
+      "excelGear": "2D",
+      "excelMtow": 333600.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B762",
+      "faarfieldName": "B767-200 ER",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 190,
+      "wheelCoords": [
+        {
+          "x": -160.5,
+          "y": -28
+        },
+        {
+          "x": -205.5,
+          "y": 28
+        },
+        {
+          "x": -205.5,
+          "y": -28
+        },
+        {
+          "x": -160.5,
+          "y": 28
+        },
+        {
+          "x": 160.5,
+          "y": -28
+        },
+        {
+          "x": 205.5,
+          "y": 28
+        },
+        {
+          "x": 205.5,
+          "y": -28
+        },
+        {
+          "x": 160.5,
+          "y": 28
+        }
+      ]
+    },
+    {
+      "icao": "B722",
+      "excelGear": "D",
+      "excelMtow": 209500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B722",
+      "faarfieldName": "B727-200 Advanced Option",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 173,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B732",
+      "excelGear": "D",
+      "excelMtow": 128100.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B732",
+      "faarfieldName": "B737-200",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 158,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": -118.25,
+          "y": 0
+        },
+        {
+          "x": 118.25,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B733",
+      "excelGear": "D",
+      "excelMtow": 139500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B733",
+      "faarfieldName": "B737-300",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 200.99999999999997,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": -118.25,
+          "y": 0
+        },
+        {
+          "x": 118.25,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B734",
+      "excelGear": "D",
+      "excelMtow": 150000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B734",
+      "faarfieldName": "B737-400",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 185,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": -118.25,
+          "y": 0
+        },
+        {
+          "x": 118.25,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B735",
+      "excelGear": "D",
+      "excelMtow": 136000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B735",
+      "faarfieldName": "B737-500",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 194,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": -118.25,
+          "y": 0
+        },
+        {
+          "x": 118.25,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B736",
+      "excelGear": "D",
+      "excelMtow": 144500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B736",
+      "faarfieldName": "B737-600",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 182,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B737",
+      "excelGear": "D",
+      "excelMtow": 154500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B737",
+      "faarfieldName": "B737 BBJ",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 204,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B738",
+      "excelGear": "D",
+      "excelMtow": 174200.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B738",
+      "faarfieldName": "B737 BBJ2",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 204,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B739",
+      "excelGear": "D",
+      "excelMtow": 187700.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B739",
+      "faarfieldName": "B737-900 ER",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 220,
+      "wheelCoords": [
+        {
+          "x": -95.5,
+          "y": 0
+        },
+        {
+          "x": -129.5,
+          "y": 0
+        },
+        {
+          "x": 129.5,
+          "y": 0
+        },
+        {
+          "x": 95.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "B744",
+      "excelGear": "2D/2D2",
+      "excelMtow": 910000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B744",
+      "faarfieldName": "B747-400ER",
+      "gearType": "2D/2D2",
+      "nWheels": 8,
+      "tirePressure": 230,
+      "wheelCoords": [
+        {
+          "x": -194.5,
+          "y": 92
+        },
+        {
+          "x": -238.5,
+          "y": 150
+        },
+        {
+          "x": -238.5,
+          "y": 92
+        },
+        {
+          "x": -194.5,
+          "y": 150
+        },
+        {
+          "x": 194.5,
+          "y": 92
+        },
+        {
+          "x": 238.5,
+          "y": 150
+        },
+        {
+          "x": 238.5,
+          "y": 92
+        },
+        {
+          "x": 194.5,
+          "y": 150
+        }
+      ]
+    },
+    {
+      "icao": "B748",
+      "excelGear": "2D/2D2",
+      "excelMtow": 987000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B748",
+      "faarfieldName": "B747-8F",
+      "gearType": "2D/2D2",
+      "nWheels": 8,
+      "tirePressure": 221.00000000000003,
+      "wheelCoords": [
+        {
+          "x": -193.1000061035156,
+          "y": 92.75
+        },
+        {
+          "x": -239.90000610351564,
+          "y": 149.25
+        },
+        {
+          "x": -239.90000610351564,
+          "y": 92.75
+        },
+        {
+          "x": -193.1000061035156,
+          "y": 149.25
+        },
+        {
+          "x": 193.1000061035156,
+          "y": 92.75
+        },
+        {
+          "x": 239.90000610351564,
+          "y": 149.25
+        },
+        {
+          "x": 239.90000610351564,
+          "y": 92.75
+        },
+        {
+          "x": 193.1000061035156,
+          "y": 149.25
+        }
+      ]
+    },
+    {
+      "icao": "B752",
+      "excelGear": "2D",
+      "excelMtow": 255500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B752",
+      "faarfieldName": "B757-200",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 183,
+      "wheelCoords": [
+        {
+          "x": -127,
+          "y": -22.5
+        },
+        {
+          "x": -161,
+          "y": 22.5
+        },
+        {
+          "x": -161,
+          "y": -22.5
+        },
+        {
+          "x": -127,
+          "y": 22.5
+        },
+        {
+          "x": 127,
+          "y": -22.5
+        },
+        {
+          "x": 161,
+          "y": 22.5
+        },
+        {
+          "x": 161,
+          "y": -22.5
+        },
+        {
+          "x": 127,
+          "y": 22.5
+        }
+      ]
+    },
+    {
+      "icao": "B762",
+      "excelGear": "2D",
+      "excelMtow": 395000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B762",
+      "faarfieldName": "B767-200 ER",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 190,
+      "wheelCoords": [
+        {
+          "x": -160.5,
+          "y": -28
+        },
+        {
+          "x": -205.5,
+          "y": 28
+        },
+        {
+          "x": -205.5,
+          "y": -28
+        },
+        {
+          "x": -160.5,
+          "y": 28
+        },
+        {
+          "x": 160.5,
+          "y": -28
+        },
+        {
+          "x": 205.5,
+          "y": 28
+        },
+        {
+          "x": 205.5,
+          "y": -28
+        },
+        {
+          "x": 160.5,
+          "y": 28
+        }
+      ]
+    },
+    {
+      "icao": "B763",
+      "excelGear": "2D",
+      "excelMtow": 412000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B763",
+      "faarfieldName": "B767-300 ER/Freighter",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 200,
+      "wheelCoords": [
+        {
+          "x": -160.1,
+          "y": -28
+        },
+        {
+          "x": -205.9,
+          "y": 28
+        },
+        {
+          "x": -205.9,
+          "y": -28
+        },
+        {
+          "x": -160.1,
+          "y": 28
+        },
+        {
+          "x": 160.1,
+          "y": -28
+        },
+        {
+          "x": 205.9,
+          "y": 28
+        },
+        {
+          "x": 205.9,
+          "y": -28
+        },
+        {
+          "x": 160.1,
+          "y": 28
+        }
+      ]
+    },
+    {
+      "icao": "B772",
+      "excelGear": "3D",
+      "excelMtow": 766000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B772",
+      "faarfieldName": "B777-200",
+      "gearType": "3D",
+      "nWheels": 12,
+      "tirePressure": 182,
+      "wheelCoords": [
+        {
+          "x": -243.5,
+          "y": -57
+        },
+        {
+          "x": -188.5,
+          "y": -57
+        },
+        {
+          "x": -243.5,
+          "y": 0
+        },
+        {
+          "x": -188.5,
+          "y": 0
+        },
+        {
+          "x": -243.5,
+          "y": 57
+        },
+        {
+          "x": -188.5,
+          "y": 57
+        },
+        {
+          "x": 243.5,
+          "y": 57
+        },
+        {
+          "x": 188.5,
+          "y": 57
+        },
+        {
+          "x": 243.5,
+          "y": 0
+        },
+        {
+          "x": 188.5,
+          "y": 0
+        },
+        {
+          "x": 243.5,
+          "y": -57
+        },
+        {
+          "x": 188.5,
+          "y": -57
+        }
+      ]
+    },
+    {
+      "icao": "B773",
+      "excelGear": "3D",
+      "excelMtow": 766800.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B773",
+      "faarfieldName": "B777-300",
+      "gearType": "3D",
+      "nWheels": 12,
+      "tirePressure": 215,
+      "wheelCoords": [
+        {
+          "x": -243.5,
+          "y": -57
+        },
+        {
+          "x": -188.5,
+          "y": -57
+        },
+        {
+          "x": -243.5,
+          "y": 0
+        },
+        {
+          "x": -188.5,
+          "y": 0
+        },
+        {
+          "x": -243.5,
+          "y": 57
+        },
+        {
+          "x": -188.5,
+          "y": 57
+        },
+        {
+          "x": 243.5,
+          "y": 57
+        },
+        {
+          "x": 188.5,
+          "y": 57
+        },
+        {
+          "x": 243.5,
+          "y": 0
+        },
+        {
+          "x": 188.5,
+          "y": 0
+        },
+        {
+          "x": 243.5,
+          "y": -57
+        },
+        {
+          "x": 188.5,
+          "y": -57
+        }
+      ]
+    },
+    {
+      "icao": "B779",
+      "excelGear": "3D",
+      "excelMtow": 775000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B779",
+      "faarfieldName": "B777-9",
+      "gearType": "3D",
+      "nWheels": 12,
+      "tirePressure": 224,
+      "wheelCoords": [
+        {
+          "x": -240.5,
+          "y": -57.6
+        },
+        {
+          "x": -185.5,
+          "y": -57.6
+        },
+        {
+          "x": -240.5,
+          "y": 0
+        },
+        {
+          "x": -185.5,
+          "y": 0
+        },
+        {
+          "x": -240.5,
+          "y": 57.6
+        },
+        {
+          "x": -185.5,
+          "y": 57.6
+        },
+        {
+          "x": 240.5,
+          "y": 57.6
+        },
+        {
+          "x": 185.5,
+          "y": 57.6
+        },
+        {
+          "x": 240.5,
+          "y": 0
+        },
+        {
+          "x": 185.5,
+          "y": 0
+        },
+        {
+          "x": 240.5,
+          "y": -57.6
+        },
+        {
+          "x": 185.5,
+          "y": -57.6
+        }
+      ]
+    },
+    {
+      "icao": "B77L",
+      "excelGear": "3D",
+      "excelMtow": 775000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B77L",
+      "faarfieldName": "B777-200 LR",
+      "gearType": "3D",
+      "nWheels": 12,
+      "tirePressure": 218,
+      "wheelCoords": [
+        {
+          "x": -243.5,
+          "y": -57.6
+        },
+        {
+          "x": -188.5,
+          "y": -57.6
+        },
+        {
+          "x": -243.5,
+          "y": 0
+        },
+        {
+          "x": -188.5,
+          "y": 0
+        },
+        {
+          "x": -243.5,
+          "y": 57.6
+        },
+        {
+          "x": -188.5,
+          "y": 57.6
+        },
+        {
+          "x": 243.5,
+          "y": 57.6
+        },
+        {
+          "x": 188.5,
+          "y": 57.6
+        },
+        {
+          "x": 243.5,
+          "y": 0
+        },
+        {
+          "x": 188.5,
+          "y": 0
+        },
+        {
+          "x": 243.5,
+          "y": -57.6
+        },
+        {
+          "x": 188.5,
+          "y": -57.6
+        }
+      ]
+    },
+    {
+      "icao": "B77W",
+      "excelGear": "3D",
+      "excelMtow": 775000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B77W",
+      "faarfieldName": "B777-300 ER",
+      "gearType": "3D",
+      "nWheels": 12,
+      "tirePressure": 221,
+      "wheelCoords": [
+        {
+          "x": -243.5,
+          "y": -57.6
+        },
+        {
+          "x": -188.5,
+          "y": -57.6
+        },
+        {
+          "x": -243.5,
+          "y": 0
+        },
+        {
+          "x": -188.5,
+          "y": 0
+        },
+        {
+          "x": -243.5,
+          "y": 57.6
+        },
+        {
+          "x": -188.5,
+          "y": 57.6
+        },
+        {
+          "x": 243.5,
+          "y": 57.6
+        },
+        {
+          "x": 188.5,
+          "y": 57.6
+        },
+        {
+          "x": 243.5,
+          "y": 0
+        },
+        {
+          "x": 188.5,
+          "y": 0
+        },
+        {
+          "x": 243.5,
+          "y": -57.6
+        },
+        {
+          "x": 188.5,
+          "y": -57.6
+        }
+      ]
+    },
+    {
+      "icao": "B788",
+      "excelGear": "2D",
+      "excelMtow": 502500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B788",
+      "faarfieldName": "B787-8",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 228,
+      "wheelCoords": [
+        {
+          "x": -167.5,
+          "y": -28.75
+        },
+        {
+          "x": -218.5,
+          "y": 28.75
+        },
+        {
+          "x": -218.5,
+          "y": -28.75
+        },
+        {
+          "x": -167.5,
+          "y": 28.75
+        },
+        {
+          "x": 167.5,
+          "y": -28.75
+        },
+        {
+          "x": 218.5,
+          "y": 28.75
+        },
+        {
+          "x": 218.5,
+          "y": -28.75
+        },
+        {
+          "x": 167.5,
+          "y": 28.75
+        }
+      ]
+    },
+    {
+      "icao": "B789",
+      "excelGear": "2D",
+      "excelMtow": 560000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B789",
+      "faarfieldName": "B787-9",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 229,
+      "wheelCoords": [
+        {
+          "x": -163,
+          "y": -29.75
+        },
+        {
+          "x": -223,
+          "y": 29.75
+        },
+        {
+          "x": -223,
+          "y": -29.75
+        },
+        {
+          "x": -163,
+          "y": 29.75
+        },
+        {
+          "x": 163,
+          "y": -29.75
+        },
+        {
+          "x": 223,
+          "y": 29.75
+        },
+        {
+          "x": 223,
+          "y": -29.75
+        },
+        {
+          "x": 163,
+          "y": 29.75
+        }
+      ]
+    },
+    {
+      "icao": "B78X",
+      "excelGear": "2D",
+      "excelMtow": 502500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "B78X",
+      "faarfieldName": "B787-10",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 224,
+      "wheelCoords": [
+        {
+          "x": -163,
+          "y": -29.75
+        },
+        {
+          "x": -223,
+          "y": 29.75
+        },
+        {
+          "x": -223,
+          "y": -29.75
+        },
+        {
+          "x": -163,
+          "y": 29.75
+        },
+        {
+          "x": 163,
+          "y": -29.75
+        },
+        {
+          "x": 223,
+          "y": 29.75
+        },
+        {
+          "x": 223,
+          "y": -29.75
+        },
+        {
+          "x": 163,
+          "y": 29.75
+        }
+      ]
+    },
+    {
+      "icao": "BCS1",
+      "excelGear": "D",
+      "excelMtow": 134000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "BCS1",
+      "faarfieldName": "A220-100",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 189,
+      "wheelCoords": [
+        {
+          "x": -115,
+          "y": 0
+        },
+        {
+          "x": -150,
+          "y": 0
+        },
+        {
+          "x": 150,
+          "y": 0
+        },
+        {
+          "x": 115,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BCS3",
+      "excelGear": "D",
+      "excelMtow": 149000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "BCS3",
+      "faarfieldName": "A220-300",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 213,
+      "wheelCoords": [
+        {
+          "x": -115,
+          "y": 0
+        },
+        {
+          "x": -150,
+          "y": 0
+        },
+        {
+          "x": 150,
+          "y": 0
+        },
+        {
+          "x": 115,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE10",
+      "excelGear": "D",
+      "excelMtow": 11800.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "BE10",
+      "faarfieldName": "Beechcraft King Air B100",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 52,
+      "wheelCoords": [
+        {
+          "x": -90,
+          "y": 0
+        },
+        {
+          "x": -101.58,
+          "y": 0
+        },
+        {
+          "x": 101.58,
+          "y": 0
+        },
+        {
+          "x": 90,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE19",
+      "excelGear": "D",
+      "excelMtow": 17120.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "LJ35",
+      "faarfieldName": "Learjet 35/36/35A/36A",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 171,
+      "wheelCoords": [
+        {
+          "x": -43.5,
+          "y": 0
+        },
+        {
+          "x": -55.5,
+          "y": 0
+        },
+        {
+          "x": 55.5,
+          "y": 0
+        },
+        {
+          "x": 43.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE20",
+      "excelGear": "D",
+      "excelMtow": 12500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "BE10",
+      "faarfieldName": "Beechcraft King Air B100",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 52,
+      "wheelCoords": [
+        {
+          "x": -90,
+          "y": 0
+        },
+        {
+          "x": -101.58,
+          "y": 0
+        },
+        {
+          "x": 101.58,
+          "y": 0
+        },
+        {
+          "x": 90,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE30",
+      "excelGear": "D",
+      "excelMtow": 14000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B350",
+      "faarfieldName": "Beechcraft King Air 350",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 92,
+      "wheelCoords": [
+        {
+          "x": -97.20999908447266,
+          "y": 0
+        },
+        {
+          "x": -108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 97.20999908447266,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE40",
+      "excelGear": "S",
+      "excelMtow": 16100.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "BE40",
+      "faarfieldName": "BeechJet-400/400A",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 90,
+      "wheelCoords": [
+        {
+          "x": -56,
+          "y": 0
+        },
+        {
+          "x": 56,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE60",
+      "excelGear": "S",
+      "excelMtow": 6775.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "BE55",
+      "faarfieldName": "Beechcraft Baron 55",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 56,
+      "wheelCoords": [
+        {
+          "x": -48,
+          "y": 0
+        },
+        {
+          "x": 48,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE90",
+      "excelGear": "S",
+      "excelMtow": 10097.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C441",
+      "faarfieldName": "Cessna C441 Conquest II",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 95,
+      "wheelCoords": [
+        {
+          "x": -84,
+          "y": 0
+        },
+        {
+          "x": 84,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE99",
+      "excelGear": "D",
+      "excelMtow": 10400.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "BE10",
+      "faarfieldName": "Beechcraft King Air B100",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 52,
+      "wheelCoords": [
+        {
+          "x": -90,
+          "y": 0
+        },
+        {
+          "x": -101.58,
+          "y": 0
+        },
+        {
+          "x": 101.58,
+          "y": 0
+        },
+        {
+          "x": 90,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "BE9L",
+      "excelGear": "D",
+      "excelMtow": 10097.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "BE9L",
+      "faarfieldName": "Beechcraft King Air C90",
+      "gearType": "D",
+      "nWheels": 2,
+      "tirePressure": 58.00000000000001,
+      "wheelCoords": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": -153,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C130",
+      "excelGear": "2D",
+      "excelMtow": 155000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C130",
+      "faarfieldName": "C-130-70",
+      "gearType": "2D",
+      "nWheels": 4,
+      "tirePressure": 105,
+      "wheelCoords": [
+        {
+          "x": -85.5,
+          "y": -35
+        },
+        {
+          "x": -85.5,
+          "y": 35
+        },
+        {
+          "x": 85.5,
+          "y": -35
+        },
+        {
+          "x": 85.5,
+          "y": 35
+        }
+      ]
+    },
+    {
+      "icao": "C17",
+      "excelGear": "2D",
+      "excelMtow": 585000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C17",
+      "faarfieldName": "C-17A",
+      "gearType": "2D",
+      "nWheels": 12,
+      "tirePressure": 138,
+      "wheelCoords": [
+        {
+          "x": -190,
+          "y": -48.5
+        },
+        {
+          "x": -149.5,
+          "y": -48.5
+        },
+        {
+          "x": -107,
+          "y": -37
+        },
+        {
+          "x": -108.5,
+          "y": 60
+        },
+        {
+          "x": -151,
+          "y": 48.5
+        },
+        {
+          "x": -191.5,
+          "y": 48.5
+        },
+        {
+          "x": 190,
+          "y": -48.5
+        },
+        {
+          "x": 149.5,
+          "y": -48.5
+        },
+        {
+          "x": 107,
+          "y": -37
+        },
+        {
+          "x": 108.5,
+          "y": 60
+        },
+        {
+          "x": 151,
+          "y": 48.5
+        },
+        {
+          "x": 191.5,
+          "y": 48.5
+        }
+      ]
+    },
+    {
+      "icao": "C208",
+      "excelGear": "S",
+      "excelMtow": 7800.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C25A",
+      "excelGear": "S",
+      "excelMtow": 12125.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C25B",
+      "excelGear": "S",
+      "excelMtow": 13870.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C550",
+      "faarfieldName": "Cessna Citation II/Bravo C550/551",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -78.5,
+          "y": 0
+        },
+        {
+          "x": 78.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C25C",
+      "excelGear": "S",
+      "excelMtow": 10361.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C25M",
+      "excelGear": "S",
+      "excelMtow": 13870.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C30J",
+      "excelGear": "2D",
+      "excelMtow": 155000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B752",
+      "faarfieldName": "B757-200",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 183,
+      "wheelCoords": [
+        {
+          "x": -127,
+          "y": -22.5
+        },
+        {
+          "x": -161,
+          "y": 22.5
+        },
+        {
+          "x": -161,
+          "y": -22.5
+        },
+        {
+          "x": -127,
+          "y": 22.5
+        },
+        {
+          "x": 127,
+          "y": -22.5
+        },
+        {
+          "x": 161,
+          "y": 22.5
+        },
+        {
+          "x": 161,
+          "y": -22.5
+        },
+        {
+          "x": 127,
+          "y": 22.5
+        }
+      ]
+    },
+    {
+      "icao": "C402",
+      "excelGear": "S",
+      "excelMtow": 6850.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C414",
+      "faarfieldName": "Cessna 414/414A Chancellor",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 62,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C404",
+      "excelGear": "S",
+      "excelMtow": 8400.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C414",
+      "excelGear": "S",
+      "excelMtow": 6750.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C414",
+      "faarfieldName": "Cessna 414/414A Chancellor",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 62,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C421",
+      "excelGear": "S",
+      "excelMtow": 7450.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C414",
+      "faarfieldName": "Cessna 414/414A Chancellor",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 62,
+      "wheelCoords": [
+        {
+          "x": -87.75,
+          "y": 0
+        },
+        {
+          "x": 87.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C425",
+      "excelGear": "S",
+      "excelMtow": 8598.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C441",
+      "excelGear": "S",
+      "excelMtow": 9850.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C441",
+      "faarfieldName": "Cessna C441 Conquest II",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 95,
+      "wheelCoords": [
+        {
+          "x": -84,
+          "y": 0
+        },
+        {
+          "x": 84,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C500",
+      "excelGear": "S",
+      "excelMtow": 9502.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C441",
+      "faarfieldName": "Cessna C441 Conquest II",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 95,
+      "wheelCoords": [
+        {
+          "x": -84,
+          "y": 0
+        },
+        {
+          "x": 84,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C501",
+      "excelGear": "S",
+      "excelMtow": 13227.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "C550",
+      "faarfieldName": "Cessna Citation II/Bravo C550/551",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -78.5,
+          "y": 0
+        },
+        {
+          "x": 78.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C510",
+      "excelGear": "S",
+      "excelMtow": 7716.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C525",
+      "excelGear": "S",
+      "excelMtow": 10700.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C550",
+      "excelGear": "S",
+      "excelMtow": 14800.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C550",
+      "faarfieldName": "Cessna Citation II/Bravo C550/551",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -78.5,
+          "y": 0
+        },
+        {
+          "x": 78.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C55B",
+      "excelGear": "S",
+      "excelMtow": 42300.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "C550",
+      "faarfieldName": "Cessna Citation II/Bravo C550/551",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -78.5,
+          "y": 0
+        },
+        {
+          "x": 78.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C560",
+      "excelGear": "S",
+      "excelMtow": 16300.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C560",
+      "faarfieldName": "Cessna Citation V",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C56X",
+      "excelGear": "S",
+      "excelMtow": 15000.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "C560",
+      "faarfieldName": "Cessna Citation V",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C650",
+      "excelGear": "D",
+      "excelMtow": 22002.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C650",
+      "faarfieldName": "Cessna Citation VI/VII",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 167.99999999999997,
+      "wheelCoords": [
+        {
+          "x": -51.630001068115234,
+          "y": 0
+        },
+        {
+          "x": -61.380001068115234,
+          "y": 0
+        },
+        {
+          "x": 61.380001068115234,
+          "y": 0
+        },
+        {
+          "x": 51.630001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C680",
+      "excelGear": "D",
+      "excelMtow": 30000.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "C750",
+      "faarfieldName": "Cessna Citation X",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 189,
+      "wheelCoords": [
+        {
+          "x": -57.380001068115234,
+          "y": 0
+        },
+        {
+          "x": -69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 57.380001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C68A",
+      "excelGear": "D",
+      "excelMtow": 30800.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "C750",
+      "faarfieldName": "Cessna Citation X",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 189,
+      "wheelCoords": [
+        {
+          "x": -57.380001068115234,
+          "y": 0
+        },
+        {
+          "x": -69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 57.380001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "C750",
+      "excelGear": "S",
+      "excelMtow": 35699.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "C750",
+      "faarfieldName": "Cessna Citation X",
+      "gearType": "S",
+      "nWheels": 4,
+      "tirePressure": 189,
+      "wheelCoords": [
+        {
+          "x": -57.380001068115234,
+          "y": 0
+        },
+        {
+          "x": -69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 69.63000106811523,
+          "y": 0
+        },
+        {
+          "x": 57.380001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CL30",
+      "excelGear": "D",
+      "excelMtow": 37478.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "CL60",
+      "faarfieldName": "Bombardier CL-604/605",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 145,
+      "wheelCoords": [
+        {
+          "x": -55,
+          "y": 0
+        },
+        {
+          "x": -70,
+          "y": 0
+        },
+        {
+          "x": 70,
+          "y": 0
+        },
+        {
+          "x": 55,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CL35",
+      "excelGear": "D",
+      "excelMtow": 40600.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "CL60",
+      "faarfieldName": "Bombardier CL-604/605",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 145,
+      "wheelCoords": [
+        {
+          "x": -55,
+          "y": 0
+        },
+        {
+          "x": -70,
+          "y": 0
+        },
+        {
+          "x": 70,
+          "y": 0
+        },
+        {
+          "x": 55,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CL60",
+      "excelGear": "D",
+      "excelMtow": 48200.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "CL60",
+      "faarfieldName": "Bombardier CL-604/605",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 145,
+      "wheelCoords": [
+        {
+          "x": -55,
+          "y": 0
+        },
+        {
+          "x": -70,
+          "y": 0
+        },
+        {
+          "x": 70,
+          "y": 0
+        },
+        {
+          "x": 55,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CRJ2",
+      "excelGear": "D",
+      "excelMtow": 53000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "CRJ2",
+      "faarfieldName": "CRJ100LR/200LR",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 179,
+      "wheelCoords": [
+        {
+          "x": -73,
+          "y": 0
+        },
+        {
+          "x": -55.6,
+          "y": 0
+        },
+        {
+          "x": 73,
+          "y": 0
+        },
+        {
+          "x": 55.6,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CRJ7",
+      "excelGear": "D",
+      "excelMtow": 84500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "CRJ7",
+      "faarfieldName": "CRJ700",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 142,
+      "wheelCoords": [
+        {
+          "x": -92.35,
+          "y": 0
+        },
+        {
+          "x": -67.83,
+          "y": 0
+        },
+        {
+          "x": 92.35,
+          "y": 0
+        },
+        {
+          "x": 67.83,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CRJ9",
+      "excelGear": "D",
+      "excelMtow": 80500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "CRJ9",
+      "faarfieldName": "CRJ900",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 162,
+      "wheelCoords": [
+        {
+          "x": -92.35,
+          "y": 0
+        },
+        {
+          "x": -67.83,
+          "y": 0
+        },
+        {
+          "x": 92.35,
+          "y": 0
+        },
+        {
+          "x": 67.83,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "CVLT",
+      "excelGear": "D",
+      "excelMtow": 57000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "E145",
+      "faarfieldName": "ERJ-145 XR",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 175.00000000000003,
+      "wheelCoords": [
+        {
+          "x": -71.44499969482422,
+          "y": 0
+        },
+        {
+          "x": -89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 71.44499969482422,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "D328",
+      "excelGear": "D",
+      "excelMtow": 30842.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "SF34",
+      "faarfieldName": "Saab 340B",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 55,
+      "wheelCoords": [
+        {
+          "x": -124.75,
+          "y": 0
+        },
+        {
+          "x": -139.25,
+          "y": 0
+        },
+        {
+          "x": 139.25,
+          "y": 0
+        },
+        {
+          "x": 124.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "DC10",
+      "excelGear": "2D",
+      "excelMtow": 430000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "DC10",
+      "faarfieldName": "KC-10",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 177,
+      "wheelCoords": [
+        {
+          "x": -183,
+          "y": -32
+        },
+        {
+          "x": -237,
+          "y": 32
+        },
+        {
+          "x": -237,
+          "y": -32
+        },
+        {
+          "x": -183,
+          "y": 32
+        },
+        {
+          "x": 183,
+          "y": -32
+        },
+        {
+          "x": 237,
+          "y": 32
+        },
+        {
+          "x": 237,
+          "y": -32
+        },
+        {
+          "x": 183,
+          "y": 32
+        }
+      ]
+    },
+    {
+      "icao": "DC91",
+      "excelGear": "D",
+      "excelMtow": 90700.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "DC93",
+      "faarfieldName": "DC9-32",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 155,
+      "wheelCoords": [
+        {
+          "x": -85.5,
+          "y": 0
+        },
+        {
+          "x": -110.5,
+          "y": 0
+        },
+        {
+          "x": 110.5,
+          "y": 0
+        },
+        {
+          "x": 85.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "DC93",
+      "excelGear": "D",
+      "excelMtow": 110098.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "DC93",
+      "faarfieldName": "DC9-32",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 155,
+      "wheelCoords": [
+        {
+          "x": -85.5,
+          "y": 0
+        },
+        {
+          "x": -110.5,
+          "y": 0
+        },
+        {
+          "x": 110.5,
+          "y": 0
+        },
+        {
+          "x": 85.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "DH8A",
+      "excelGear": "D",
+      "excelMtow": 34392.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "DH8A",
+      "faarfieldName": "Q100/Dash 8 Series 100",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 131,
+      "wheelCoords": [
+        {
+          "x": -165.05,
+          "y": 0
+        },
+        {
+          "x": -148.55,
+          "y": 0
+        },
+        {
+          "x": 165.05,
+          "y": 0
+        },
+        {
+          "x": 148.55,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "DH8D",
+      "excelGear": "D",
+      "excelMtow": 63052.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "DH8D",
+      "faarfieldName": "Q400/Dash 8 Series 400",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 227,
+      "wheelCoords": [
+        {
+          "x": -182.77,
+          "y": 0
+        },
+        {
+          "x": -163.23,
+          "y": 0
+        },
+        {
+          "x": 182.77,
+          "y": 0
+        },
+        {
+          "x": 163.23,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "DHC6",
+      "excelGear": "S",
+      "excelMtow": 12500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E120",
+      "excelGear": "D",
+      "excelMtow": 25353.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "E135",
+      "faarfieldName": "ERJ-135",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 134,
+      "wheelCoords": [
+        {
+          "x": -71.44499969482422,
+          "y": 0
+        },
+        {
+          "x": -89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 71.44499969482422,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E135",
+      "excelGear": "D",
+      "excelMtow": 44070.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "E135",
+      "faarfieldName": "ERJ-135",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 134,
+      "wheelCoords": [
+        {
+          "x": -71.44499969482422,
+          "y": 0
+        },
+        {
+          "x": -89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 71.44499969482422,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E145",
+      "excelGear": "D",
+      "excelMtow": 53131.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "E145",
+      "faarfieldName": "ERJ-145 XR",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 175.00000000000003,
+      "wheelCoords": [
+        {
+          "x": -71.44499969482422,
+          "y": 0
+        },
+        {
+          "x": -89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 71.44499969482422,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E170",
+      "excelGear": "D",
+      "excelMtow": 85098.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "E170",
+      "faarfieldName": "EMB-170 STD",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 126,
+      "wheelCoords": [
+        {
+          "x": -88.5,
+          "y": 0
+        },
+        {
+          "x": -116.5,
+          "y": 0
+        },
+        {
+          "x": 116.5,
+          "y": 0
+        },
+        {
+          "x": 88.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E190",
+      "excelGear": "2D",
+      "excelMtow": 105358.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "E190",
+      "faarfieldName": "EMB-190 STD",
+      "gearType": "2D",
+      "nWheels": 4,
+      "tirePressure": 147,
+      "wheelCoords": [
+        {
+          "x": -100,
+          "y": 0
+        },
+        {
+          "x": -134,
+          "y": 0
+        },
+        {
+          "x": 134,
+          "y": 0
+        },
+        {
+          "x": 100,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E45X",
+      "excelGear": "D",
+      "excelMtow": 53131.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "E145",
+      "faarfieldName": "ERJ-145 XR",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 175.00000000000003,
+      "wheelCoords": [
+        {
+          "x": -71.44499969482422,
+          "y": 0
+        },
+        {
+          "x": -89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 89.55499969482422,
+          "y": 0
+        },
+        {
+          "x": 71.44499969482422,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E50P",
+      "excelGear": "S",
+      "excelMtow": 10471.0,
+      "geometrySource": "proxy_override",
+      "resolvedIcao": "BE40",
+      "faarfieldName": "BeechJet-400/400A",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 90,
+      "wheelCoords": [
+        {
+          "x": -56,
+          "y": 0
+        },
+        {
+          "x": 56,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E55P",
+      "excelGear": "S",
+      "excelMtow": 17528.0,
+      "geometrySource": "proxy_override",
+      "resolvedIcao": "C650",
+      "faarfieldName": "Cessna Citation VI/VII",
+      "gearType": "S",
+      "nWheels": 4,
+      "tirePressure": 167.99999999999997,
+      "wheelCoords": [
+        {
+          "x": -51.630001068115234,
+          "y": 0
+        },
+        {
+          "x": -61.380001068115234,
+          "y": 0
+        },
+        {
+          "x": 61.380001068115234,
+          "y": 0
+        },
+        {
+          "x": 51.630001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E75L",
+      "excelGear": "D",
+      "excelMtow": 89000.0,
+      "geometrySource": "family_proxy",
+      "resolvedIcao": "E75S",
+      "faarfieldName": "EMB-175 STD",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 136,
+      "wheelCoords": [
+        {
+          "x": -88.5,
+          "y": 0
+        },
+        {
+          "x": -116.5,
+          "y": 0
+        },
+        {
+          "x": 116.5,
+          "y": 0
+        },
+        {
+          "x": 88.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "E75S",
+      "excelGear": "D",
+      "excelMtow": 89000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "E75S",
+      "faarfieldName": "EMB-175 STD",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 136,
+      "wheelCoords": [
+        {
+          "x": -88.5,
+          "y": 0
+        },
+        {
+          "x": -116.5,
+          "y": 0
+        },
+        {
+          "x": 116.5,
+          "y": 0
+        },
+        {
+          "x": 88.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "EA50",
+      "excelGear": "S",
+      "excelMtow": 39595.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "F16",
+      "faarfieldName": "F-16C",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 215,
+      "wheelCoords": [
+        {
+          "x": -46.5,
+          "y": 0
+        },
+        {
+          "x": 46.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "EPIC",
+      "excelGear": "S",
+      "excelMtow": 7500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "F15",
+      "excelGear": "S",
+      "excelMtow": 68000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "F15",
+      "faarfieldName": "F-15C",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 340,
+      "wheelCoords": [
+        {
+          "x": -54.125,
+          "y": 0
+        },
+        {
+          "x": 54.125,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "F18",
+      "excelGear": "S",
+      "excelMtow": 51900.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "F15",
+      "faarfieldName": "F-15C",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 340,
+      "wheelCoords": [
+        {
+          "x": -54.125,
+          "y": 0
+        },
+        {
+          "x": 54.125,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "F18S",
+      "excelGear": "S",
+      "excelMtow": 55997.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "F18S",
+      "faarfieldName": "F/A-18C",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 150,
+      "wheelCoords": [
+        {
+          "x": -61.25,
+          "y": 0
+        },
+        {
+          "x": 61.25,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "F2TH",
+      "excelGear": "D",
+      "excelMtow": 34833.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "F2TH",
+      "faarfieldName": "Dassault Falcon 2000",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 197,
+      "wheelCoords": [
+        {
+          "x": -80,
+          "y": 0
+        },
+        {
+          "x": -94,
+          "y": 0
+        },
+        {
+          "x": 94,
+          "y": 0
+        },
+        {
+          "x": 80,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "F900",
+      "excelGear": "D",
+      "excelMtow": 45503.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "F900",
+      "faarfieldName": "Dassault Falcon 900B/C",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 145,
+      "wheelCoords": [
+        {
+          "x": -80.5,
+          "y": 0
+        },
+        {
+          "x": -94.5,
+          "y": 0
+        },
+        {
+          "x": 94.5,
+          "y": 0
+        },
+        {
+          "x": 80.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "FA20",
+      "excelGear": "D",
+      "excelMtow": 30325.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "F2TH",
+      "faarfieldName": "Dassault Falcon 2000",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 197,
+      "wheelCoords": [
+        {
+          "x": -80,
+          "y": 0
+        },
+        {
+          "x": -94,
+          "y": 0
+        },
+        {
+          "x": 94,
+          "y": 0
+        },
+        {
+          "x": 80,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "FA50",
+      "excelGear": "S",
+      "excelMtow": 38801.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "FA50",
+      "faarfieldName": "Dassault Falcon 50/50EX",
+      "gearType": "S",
+      "nWheels": 4,
+      "tirePressure": 208,
+      "wheelCoords": [
+        {
+          "x": -71.5,
+          "y": 0
+        },
+        {
+          "x": -85.5,
+          "y": 0
+        },
+        {
+          "x": 85.5,
+          "y": 0
+        },
+        {
+          "x": 71.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "FA7X",
+      "excelGear": "D",
+      "excelMtow": 70000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "F900",
+      "faarfieldName": "Dassault Falcon 900B/C",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 145,
+      "wheelCoords": [
+        {
+          "x": -80.5,
+          "y": 0
+        },
+        {
+          "x": -94.5,
+          "y": 0
+        },
+        {
+          "x": 94.5,
+          "y": 0
+        },
+        {
+          "x": 80.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "G150",
+      "excelGear": "D",
+      "excelMtow": 26100.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "H25B",
+      "faarfieldName": "Hawker-800/800XP",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 135,
+      "wheelCoords": [
+        {
+          "x": -48.349998474121094,
+          "y": 0
+        },
+        {
+          "x": -61.64999847412109,
+          "y": 0
+        },
+        {
+          "x": 61.64999847412109,
+          "y": 0
+        },
+        {
+          "x": 48.349998474121094,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "G280",
+      "excelGear": "D",
+      "excelMtow": 12566.0,
+      "geometrySource": "proxy_override",
+      "resolvedIcao": "CL60",
+      "faarfieldName": "Bombardier CL-604/605",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 145,
+      "wheelCoords": [
+        {
+          "x": -55,
+          "y": 0
+        },
+        {
+          "x": -70,
+          "y": 0
+        },
+        {
+          "x": 70,
+          "y": 0
+        },
+        {
+          "x": 55,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "GALX",
+      "excelGear": "D",
+      "excelMtow": 33289.0,
+      "geometrySource": "proxy_override",
+      "resolvedIcao": "C650",
+      "faarfieldName": "Cessna Citation VI/VII",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 167.99999999999997,
+      "wheelCoords": [
+        {
+          "x": -51.630001068115234,
+          "y": 0
+        },
+        {
+          "x": -61.380001068115234,
+          "y": 0
+        },
+        {
+          "x": 61.380001068115234,
+          "y": 0
+        },
+        {
+          "x": 51.630001068115234,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "GLEX",
+      "excelGear": "D",
+      "excelMtow": 95901.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "CRJ7",
+      "faarfieldName": "CRJ700",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 142,
+      "wheelCoords": [
+        {
+          "x": -92.35,
+          "y": 0
+        },
+        {
+          "x": -67.83,
+          "y": 0
+        },
+        {
+          "x": 92.35,
+          "y": 0
+        },
+        {
+          "x": 67.83,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "GLF4",
+      "excelGear": "D",
+      "excelMtow": 73200.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "GLF4",
+      "faarfieldName": "Gulfstream-G-IV",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 185,
+      "wheelCoords": [
+        {
+          "x": -74.12999725341797,
+          "y": 0
+        },
+        {
+          "x": -89.87999725341797,
+          "y": 0
+        },
+        {
+          "x": 89.87999725341797,
+          "y": 0
+        },
+        {
+          "x": 74.12999725341797,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "GLF5",
+      "excelGear": "D",
+      "excelMtow": 88846.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "GLF5",
+      "faarfieldName": "Gulfstream G-V/G500/G550",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 188,
+      "wheelCoords": [
+        {
+          "x": -76.75,
+          "y": 0
+        },
+        {
+          "x": -95.25,
+          "y": 0
+        },
+        {
+          "x": 95.25,
+          "y": 0
+        },
+        {
+          "x": 76.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "GLF6",
+      "excelGear": "D",
+      "excelMtow": 99600.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "GLF5",
+      "faarfieldName": "Gulfstream G-V/G500/G550",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 188,
+      "wheelCoords": [
+        {
+          "x": -76.75,
+          "y": 0
+        },
+        {
+          "x": -95.25,
+          "y": 0
+        },
+        {
+          "x": 95.25,
+          "y": 0
+        },
+        {
+          "x": 76.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "H25B",
+      "excelGear": "D",
+      "excelMtow": 28000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "H25B",
+      "faarfieldName": "Hawker-800/800XP",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 135,
+      "wheelCoords": [
+        {
+          "x": -48.349998474121094,
+          "y": 0
+        },
+        {
+          "x": -61.64999847412109,
+          "y": 0
+        },
+        {
+          "x": 61.64999847412109,
+          "y": 0
+        },
+        {
+          "x": 48.349998474121094,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "HA4T",
+      "excelGear": "D",
+      "excelMtow": 39500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "H25B",
+      "faarfieldName": "Hawker-800/800XP",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 135,
+      "wheelCoords": [
+        {
+          "x": -48.349998474121094,
+          "y": 0
+        },
+        {
+          "x": -61.64999847412109,
+          "y": 0
+        },
+        {
+          "x": 61.64999847412109,
+          "y": 0
+        },
+        {
+          "x": 48.349998474121094,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "HDJT",
+      "excelGear": "S",
+      "excelMtow": 9963.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C441",
+      "faarfieldName": "Cessna C441 Conquest II",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 95,
+      "wheelCoords": [
+        {
+          "x": -84,
+          "y": 0
+        },
+        {
+          "x": 84,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "J328",
+      "excelGear": "D",
+      "excelMtow": 34524.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "DH8A",
+      "faarfieldName": "Q100/Dash 8 Series 100",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 131,
+      "wheelCoords": [
+        {
+          "x": -165.05,
+          "y": 0
+        },
+        {
+          "x": -148.55,
+          "y": 0
+        },
+        {
+          "x": 165.05,
+          "y": 0
+        },
+        {
+          "x": 148.55,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "K35R",
+      "excelGear": "2D",
+      "excelMtow": 322500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B753",
+      "faarfieldName": "B757-300",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 195,
+      "wheelCoords": [
+        {
+          "x": -127,
+          "y": -22.5
+        },
+        {
+          "x": -161,
+          "y": 22.5
+        },
+        {
+          "x": -161,
+          "y": -22.5
+        },
+        {
+          "x": -127,
+          "y": 22.5
+        },
+        {
+          "x": 127,
+          "y": -22.5
+        },
+        {
+          "x": 161,
+          "y": 22.5
+        },
+        {
+          "x": 161,
+          "y": -22.5
+        },
+        {
+          "x": 127,
+          "y": 22.5
+        }
+      ]
+    },
+    {
+      "icao": "LJ31",
+      "excelGear": "D",
+      "excelMtow": 17698.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "LJ35",
+      "faarfieldName": "Learjet 35/36/35A/36A",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 171,
+      "wheelCoords": [
+        {
+          "x": -43.5,
+          "y": 0
+        },
+        {
+          "x": -55.5,
+          "y": 0
+        },
+        {
+          "x": 55.5,
+          "y": 0
+        },
+        {
+          "x": 43.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "LJ35",
+      "excelGear": "D",
+      "excelMtow": 18000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "LJ35",
+      "faarfieldName": "Learjet 35/36/35A/36A",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 171,
+      "wheelCoords": [
+        {
+          "x": -43.5,
+          "y": 0
+        },
+        {
+          "x": -55.5,
+          "y": 0
+        },
+        {
+          "x": 55.5,
+          "y": 0
+        },
+        {
+          "x": 43.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "LJ45",
+      "excelGear": "D",
+      "excelMtow": 21500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "LJ55",
+      "faarfieldName": "Learjet 45/55B",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 201,
+      "wheelCoords": [
+        {
+          "x": -43.5,
+          "y": 0
+        },
+        {
+          "x": -55.5,
+          "y": 0
+        },
+        {
+          "x": 55.5,
+          "y": 0
+        },
+        {
+          "x": 43.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "LJ60",
+      "excelGear": "D",
+      "excelMtow": 23500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "LJ55",
+      "faarfieldName": "Learjet 45/55B",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 201,
+      "wheelCoords": [
+        {
+          "x": -43.5,
+          "y": 0
+        },
+        {
+          "x": -55.5,
+          "y": 0
+        },
+        {
+          "x": 55.5,
+          "y": 0
+        },
+        {
+          "x": 43.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "M20T",
+      "excelGear": "S",
+      "excelMtow": 12500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "MD82",
+      "excelGear": "D",
+      "excelMtow": 149499.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "MD83",
+      "faarfieldName": "MD-83",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 195,
+      "wheelCoords": [
+        {
+          "x": -86.0374984741211,
+          "y": 0
+        },
+        {
+          "x": -114.1624984741211,
+          "y": 0
+        },
+        {
+          "x": 114.1624984741211,
+          "y": 0
+        },
+        {
+          "x": 86.0374984741211,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "MD83",
+      "excelGear": "D",
+      "excelMtow": 149500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "MD83",
+      "faarfieldName": "MD-83",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 195,
+      "wheelCoords": [
+        {
+          "x": -86.0374984741211,
+          "y": 0
+        },
+        {
+          "x": -114.1624984741211,
+          "y": 0
+        },
+        {
+          "x": 114.1624984741211,
+          "y": 0
+        },
+        {
+          "x": 86.0374984741211,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "MD90",
+      "excelGear": "D",
+      "excelMtow": 172500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "MD90",
+      "faarfieldName": "MD-90-30 ER",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 193,
+      "wheelCoords": [
+        {
+          "x": -86.05000305175781,
+          "y": 0
+        },
+        {
+          "x": -114.1500030517578,
+          "y": 0
+        },
+        {
+          "x": 114.1500030517578,
+          "y": 0
+        },
+        {
+          "x": 86.05000305175781,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "MO20",
+      "excelGear": "S",
+      "excelMtow": 11799.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "MRJ9",
+      "excelGear": "D",
+      "excelMtow": 85980.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "CRJ9",
+      "faarfieldName": "CRJ900",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 162,
+      "wheelCoords": [
+        {
+          "x": -92.35,
+          "y": 0
+        },
+        {
+          "x": -67.83,
+          "y": 0
+        },
+        {
+          "x": 92.35,
+          "y": 0
+        },
+        {
+          "x": 67.83,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "MU2",
+      "excelGear": "S",
+      "excelMtow": 11574.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "P180",
+      "excelGear": "S",
+      "excelMtow": 12100.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "P3",
+      "excelGear": "D",
+      "excelMtow": 135000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "P3",
+      "faarfieldName": "P-3C",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 190,
+      "wheelCoords": [
+        {
+          "x": -174,
+          "y": 0
+        },
+        {
+          "x": -200,
+          "y": 0
+        },
+        {
+          "x": 200,
+          "y": 0
+        },
+        {
+          "x": 174,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "PA31",
+      "excelGear": "S",
+      "excelMtow": 6500.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "PAY1",
+      "excelGear": "S",
+      "excelMtow": 8699.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "PAY2",
+      "excelGear": "S",
+      "excelMtow": 9479.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "PC12",
+      "excelGear": "S",
+      "excelMtow": 9039.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C208",
+      "faarfieldName": "Cessna 208B Grand Caravan EX",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 75,
+      "wheelCoords": [
+        {
+          "x": -82,
+          "y": 0
+        },
+        {
+          "x": 82,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "PC24",
+      "excelGear": "D",
+      "excelMtow": 18300.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "LJ35",
+      "faarfieldName": "Learjet 35/36/35A/36A",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 171,
+      "wheelCoords": [
+        {
+          "x": -43.5,
+          "y": 0
+        },
+        {
+          "x": -55.5,
+          "y": 0
+        },
+        {
+          "x": 55.5,
+          "y": 0
+        },
+        {
+          "x": 43.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "PRM1",
+      "excelGear": "S",
+      "excelMtow": 8800.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "BE9L",
+      "faarfieldName": "Beechcraft King Air C90",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 58.00000000000001,
+      "wheelCoords": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": -153,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "R135",
+      "excelGear": "2D",
+      "excelMtow": 321874.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B753",
+      "faarfieldName": "B757-300",
+      "gearType": "2D",
+      "nWheels": 8,
+      "tirePressure": 195,
+      "wheelCoords": [
+        {
+          "x": -127,
+          "y": -22.5
+        },
+        {
+          "x": -161,
+          "y": 22.5
+        },
+        {
+          "x": -161,
+          "y": -22.5
+        },
+        {
+          "x": -127,
+          "y": 22.5
+        },
+        {
+          "x": 127,
+          "y": -22.5
+        },
+        {
+          "x": 161,
+          "y": 22.5
+        },
+        {
+          "x": 161,
+          "y": -22.5
+        },
+        {
+          "x": 127,
+          "y": 22.5
+        }
+      ]
+    },
+    {
+      "icao": "RJ85",
+      "excelGear": "D",
+      "excelMtow": 97000.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B463",
+      "faarfieldName": "BAe 146-300/300QC/300QT",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 140,
+      "wheelCoords": [
+        {
+          "x": -80,
+          "y": 0
+        },
+        {
+          "x": -106,
+          "y": 0
+        },
+        {
+          "x": 106,
+          "y": 0
+        },
+        {
+          "x": 80,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "S22T",
+      "excelGear": "S",
+      "excelMtow": 15100.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C550",
+      "faarfieldName": "Cessna Citation II/Bravo C550/551",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 130,
+      "wheelCoords": [
+        {
+          "x": -78.5,
+          "y": 0
+        },
+        {
+          "x": 78.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "SF34",
+      "excelGear": "D",
+      "excelMtow": 29000.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "SF34",
+      "faarfieldName": "Saab 340B",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 55,
+      "wheelCoords": [
+        {
+          "x": -124.75,
+          "y": 0
+        },
+        {
+          "x": -139.25,
+          "y": 0
+        },
+        {
+          "x": 139.25,
+          "y": 0
+        },
+        {
+          "x": 124.75,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "SH36",
+      "excelGear": "S",
+      "excelMtow": 27099.0,
+      "geometrySource": "xml",
+      "resolvedIcao": "SH36",
+      "faarfieldName": "Shorts 360",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 78,
+      "wheelCoords": [
+        {
+          "x": -83.5,
+          "y": 0
+        },
+        {
+          "x": 83.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "SW4",
+      "excelGear": "D",
+      "excelMtow": 14500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "B350",
+      "faarfieldName": "Beechcraft King Air 350",
+      "gearType": "D",
+      "nWheels": 4,
+      "tirePressure": 92,
+      "wheelCoords": [
+        {
+          "x": -97.20999908447266,
+          "y": 0
+        },
+        {
+          "x": -108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 108.78999908447264,
+          "y": 0
+        },
+        {
+          "x": 97.20999908447266,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "T38",
+      "excelGear": "S",
+      "excelMtow": 12093.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "C525",
+      "faarfieldName": "Cessna Citation M2 C525",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 98,
+      "wheelCoords": [
+        {
+          "x": -75.5,
+          "y": 0
+        },
+        {
+          "x": 75.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "TBM7",
+      "excelGear": "S",
+      "excelMtow": 6613.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "TBM8",
+      "excelGear": "S",
+      "excelMtow": 7495.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "TBM9",
+      "excelGear": "S",
+      "excelMtow": 7394.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "icao": "TEX2",
+      "excelGear": "S",
+      "excelMtow": 6500.0,
+      "geometrySource": "nearest_proxy",
+      "resolvedIcao": "PA31",
+      "faarfieldName": "PA-31-325 Navajo C/R",
+      "gearType": "S",
+      "nWheels": 2,
+      "tirePressure": 66,
+      "wheelCoords": [
+        {
+          "x": -82.5,
+          "y": 0
+        },
+        {
+          "x": 82.5,
+          "y": 0
+        }
+      ]
+    }
+  ]
+}

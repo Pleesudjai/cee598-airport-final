@@ -1,0 +1,9 @@
+Input File Done, 12:04:58
+
+Aircraft #1 Initialize Data Done, 12:04:58
+
+ ======= beginning time step #1 =======
+ iterating:
+0 1 2
+
+FAASR3D Program Done, 12:05:13

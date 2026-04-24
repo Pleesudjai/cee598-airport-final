@@ -1,0 +1,74 @@
+FAARFIELD CDF (Native Engine: LEAF + 3D Rigid FEM via FAASR3D) — KMQJ (Indianapolis Regional, IN)
+Engine: FAARFIELD_desktop_parity+FEM3D  |  useFem3d=true  |  R=360 psi  |  SCI=80.0  |  life=20yr
+Material rule: FAA AC 150/5320-6F lower-bound (R = 0.08 * f'c_assumed = 0.08 * 4500 = 360 psi for >20-yr aged PCC, no field cores)
+Subgrade: Silty Clay (AASHTO A-7-6, NRCS), CBR=4, E=6,000 psi
+Growth: +0.500%/yr over 20 yr (linear, FAARFIELD modFAILURE_MODEL_NP.vb:840)
+Wander: sigma = 30.435" (FAA standard for rigid pavement) over 41-offset lateral sweep (0-400" at 10" steps)
+====================================================================================================
+
+--- Section 8640 (Taxiway TWA3 - 3.5" AC + 8" PCC + 6" Stab Base) — UNDER ---
+Construction: PCC poured 1977, AC overlay 2012 (PCC age 49 yr at analysis).
+CDF breakdown: AC=7.4684e-09  Subgrade=9.9497e-10  PCC=1.8132e+01  -> CDF_max = 1.8132e+01
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 90" from centerline
+Predicted structural life: 1.10 yr (vs 20-yr target -> short by 18.9 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  GLF5        88,846  D       7.903e+00  xml
+    2  GLF4        73,200  D       4.314e+00  xml
+    3  GLF6        99,600  D       2.140e+00  xml
+    4  GLEX        95,901  D       1.511e+00  xml
+    5  B738       174,200  D       1.443e+00  xml
+
+--- Section 8662 (Taxiway TWA2 - 3.5" AC + 8" PCC + 6" Stab Base) — UNDER ---
+Construction: PCC poured 1977, AC overlay 2012 (PCC age 49 yr at analysis).
+CDF breakdown: AC=7.4684e-09  Subgrade=9.9497e-10  PCC=1.8132e+01  -> CDF_max = 1.8132e+01
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 90" from centerline
+Predicted structural life: 1.10 yr (vs 20-yr target -> short by 18.9 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  GLF5        88,846  D       7.903e+00  xml
+    2  GLF4        73,200  D       4.314e+00  xml
+    3  GLF6        99,600  D       2.140e+00  xml
+    4  GLEX        95,901  D       1.511e+00  xml
+    5  B738       174,200  D       1.443e+00  xml
+
+--- Section 8780 (Taxiway TWA4 - 3.5" AC + 8" PCC + 6" Stab Base) — UNDER ---
+Construction: PCC poured 1977, AC overlay 2012 (PCC age 49 yr at analysis).
+CDF breakdown: AC=7.4684e-09  Subgrade=9.9497e-10  PCC=1.8132e+01  -> CDF_max = 1.8132e+01
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 90" from centerline
+Predicted structural life: 1.10 yr (vs 20-yr target -> short by 18.9 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  GLF5        88,846  D       7.903e+00  xml
+    2  GLF4        73,200  D       4.314e+00  xml
+    3  GLF6        99,600  D       2.140e+00  xml
+    4  GLEX        95,901  D       1.511e+00  xml
+    5  B738       174,200  D       1.443e+00  xml
+
+--- Section 8881 (Taxiway TWA1 - 3.5" AC + 8" PCC + 6" Stab Subbase) — UNDER ---
+Construction: PCC poured 1977, AC overlay 2012 (PCC age 49 yr at analysis).
+CDF breakdown: AC=7.4684e-09  Subgrade=9.9497e-10  PCC=1.8132e+01  -> CDF_max = 1.8132e+01
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 90" from centerline
+Predicted structural life: 1.10 yr (vs 20-yr target -> short by 18.9 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  GLF5        88,846  D       7.903e+00  xml
+    2  GLF4        73,200  D       4.314e+00  xml
+    3  GLF6        99,600  D       2.140e+00  xml
+    4  GLEX        95,901  D       1.511e+00  xml
+    5  B738       174,200  D       1.443e+00  xml
+
+====================================================================================================
+Generated 2026-04-22 19:09 from results/cdf_results.json

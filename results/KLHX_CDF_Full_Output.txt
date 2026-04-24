@@ -1,0 +1,42 @@
+FAARFIELD CDF (Native Engine: LEAF + 3D Rigid FEM via FAASR3D) — KLHX (La Junta Municipal, CO)
+Engine: FAARFIELD_desktop_parity+FEM3D  |  useFem3d=true  |  R=360 psi  |  SCI=80.0  |  life=20yr
+Material rule: FAA AC 150/5320-6F lower-bound (R = 0.08 * f'c_assumed = 0.08 * 4500 = 360 psi for >20-yr aged PCC, no field cores)
+Subgrade: Silt Loam (AASHTO A-6, NRCS), CBR=7, E=10,500 psi
+Growth: +3.200%/yr over 20 yr (linear, FAARFIELD modFAILURE_MODEL_NP.vb:840)
+Wander: sigma = 30.435" (FAA standard for rigid pavement) over 41-offset lateral sweep (0-400" at 10" steps)
+====================================================================================================
+
+--- Section 6627 (Taxiway - 2.5" AC + 6" PCC) — UNDER ---
+Construction: PCC poured 1942, AC overlay 2016 (PCC age 84 yr at analysis).
+CDF breakdown: AC=2.5239e-10  Subgrade=1.7103e-15  PCC=6.6714e+00  -> CDF_max = 6.6714e+00
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 80" from centerline
+Predicted structural life: 3.00 yr (vs 20-yr target -> short by 17.0 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  C130       155,000  2D      5.218e+00  xml (exact FAARFIELD XML)
+    2  CRJ9        80,500  D       1.433e+00  xml
+    3  CL30        37,478  D       1.170e-02  xml
+    4  F2TH        34,833  D       8.334e-03  xml
+    5  H25B        28,000  D       7.194e-05  xml
+
+--- Section 7347 (Taxiway - 2" AC + 10" PCC) — OVER ---
+Construction: PCC poured 1942, AC overlay 2016 (PCC age 84 yr at analysis).
+CDF breakdown: AC=8.1148e-11  Subgrade=2.0070e-15  PCC=5.0386e-03  -> CDF_max = 5.0386e-03
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 80" from centerline
+Predicted structural life: > 1000 yr (CDF below numerical resolution)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  CRJ9        80,500  D       4.124e-03  xml
+    2  C130       155,000  2D      9.144e-04  xml (exact FAARFIELD XML)
+    3  SW4         14,500  D       2.144e-09  nearest_proxy (nearest_proxy donor → B350)
+    4  BE20        12,500  D       1.213e-09  nearest_proxy (nearest_proxy donor → BE10)
+    5  CL30        37,478  D       8.854e-10  xml
+
+====================================================================================================
+Generated 2026-04-22 19:09 from results/cdf_results.json

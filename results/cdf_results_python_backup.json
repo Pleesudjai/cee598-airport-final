@@ -1,0 +1,808 @@
+[
+  {
+    "icao": "KLHX",
+    "airport": "La Junta Municipal",
+    "section_id": "6627",
+    "use": "Taxiway",
+    "desc": "2.5\" AC + 6\" PCC",
+    "subgrade": "Silt Loam (AASHTO A-6), CBR=7",
+    "growth": 0.032,
+    "cdf_ac": 2.523869504425773e-10,
+    "cdf_sub": 1.7102992632999037e-15,
+    "cdf_pcc": 6.725807541389897e-10,
+    "cdf_max": 6.725807541389897e-10,
+    "controlling": "PCC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "C130",
+        "mtow": 155000,
+        "gear": "2D",
+        "cdf_total": 5.857587838477726e-10,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 8.4052356769426e-11,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "CRJ9",
+        "mtow": 80500,
+        "gear": "D",
+        "cdf_total": 2.7167419394189273e-12,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 4.398427768615378e-14,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      },
+      {
+        "ac": "A10",
+        "mtow": 50044,
+        "gear": "S",
+        "cdf_total": 8.887267792904472e-15,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F18S"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 37,
+    "elapsedSec": 3.11
+  },
+  {
+    "icao": "KLHX",
+    "airport": "La Junta Municipal",
+    "section_id": "7347",
+    "use": "Taxiway",
+    "desc": "2\" AC + 10\" PCC",
+    "subgrade": "Silt Loam (AASHTO A-6), CBR=7",
+    "growth": 0.032,
+    "cdf_ac": 8.114840821474991e-11,
+    "cdf_sub": 2.007042162523187e-15,
+    "cdf_pcc": 8.33749060614403e-15,
+    "cdf_max": 8.114840821474991e-11,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "C130",
+        "mtow": 155000,
+        "gear": "2D",
+        "cdf_total": 7.152502971091046e-15,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.184885619239802e-15,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      },
+      {
+        "ac": "CRJ9",
+        "mtow": 80500,
+        "gear": "D",
+        "cdf_total": 6.172573842809809e-20,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "A10",
+        "mtow": 50044,
+        "gear": "S",
+        "cdf_total": 4.028830958283263e-20,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F18S"
+      },
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 1.760766131338624e-24,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 37,
+    "elapsedSec": 3.1
+  },
+  {
+    "icao": "KPUB",
+    "airport": "Pueblo Memorial",
+    "section_id": "6948",
+    "use": "Taxiway",
+    "desc": "2.5\" AC + 7\" PCC + 6\" P-154",
+    "subgrade": "Bedrock/Shale, CBR=12",
+    "growth": -0.007,
+    "cdf_ac": 1.308143585757757e-08,
+    "cdf_sub": 6.362573034428337e-18,
+    "cdf_pcc": 6.905133179072417e-13,
+    "cdf_max": 1.308143585757757e-08,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 2.1620982041041232e-13,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "MD90",
+        "mtow": 172500,
+        "gear": "D",
+        "cdf_total": 1.9614415180610452e-13,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "C130",
+        "mtow": 155000,
+        "gear": "2D",
+        "cdf_total": 1.4204459865910446e-13,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GLEX",
+        "mtow": 95901,
+        "gear": "D",
+        "cdf_total": 5.882263310570984e-14,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 CRJ7"
+      },
+      {
+        "ac": "B722",
+        "mtow": 209500,
+        "gear": "D",
+        "cdf_total": 4.2101269485784184e-14,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 136,
+    "elapsedSec": 23.01
+  },
+  {
+    "icao": "KMQJ",
+    "airport": "Indianapolis Regional",
+    "section_id": "8662",
+    "use": "Taxiway TWA2",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab Base",
+    "subgrade": "Silty Clay (AASHTO A-7-6), CBR=4",
+    "growth": 0.005,
+    "cdf_ac": 7.46835001206213e-09,
+    "cdf_sub": 9.949732018121512e-10,
+    "cdf_pcc": 2.383574843545046e-09,
+    "cdf_max": 7.46835001206213e-09,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "B738",
+        "mtow": 174200,
+        "gear": "D",
+        "cdf_total": 2.0786833116291378e-09,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B752",
+        "mtow": 255500,
+        "gear": "2D",
+        "cdf_total": 2.987099586933981e-10,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B77L",
+        "mtow": 775000,
+        "gear": "3D",
+        "cdf_total": 2.530449943261245e-12,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GLEX",
+        "mtow": 95901,
+        "gear": "D",
+        "cdf_total": 1.9197295813539674e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 CRJ7"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.619836654226588e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 94,
+    "elapsedSec": 13.38
+  },
+  {
+    "icao": "KMQJ",
+    "airport": "Indianapolis Regional",
+    "section_id": "8881",
+    "use": "Taxiway TWA1",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab Subbase",
+    "subgrade": "Silty Clay (AASHTO A-7-6), CBR=4",
+    "growth": 0.005,
+    "cdf_ac": 7.46835001206213e-09,
+    "cdf_sub": 9.949732018121512e-10,
+    "cdf_pcc": 2.383574843545046e-09,
+    "cdf_max": 7.46835001206213e-09,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "B738",
+        "mtow": 174200,
+        "gear": "D",
+        "cdf_total": 2.0786833116291378e-09,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B752",
+        "mtow": 255500,
+        "gear": "2D",
+        "cdf_total": 2.987099586933981e-10,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B77L",
+        "mtow": 775000,
+        "gear": "3D",
+        "cdf_total": 2.530449943261245e-12,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GLEX",
+        "mtow": 95901,
+        "gear": "D",
+        "cdf_total": 1.9197295813539674e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 CRJ7"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.619836654226588e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 94,
+    "elapsedSec": 13.45
+  },
+  {
+    "icao": "KMQJ",
+    "airport": "Indianapolis Regional",
+    "section_id": "8640",
+    "use": "Taxiway TWA3",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab Base",
+    "subgrade": "Silty Clay (AASHTO A-7-6), CBR=4",
+    "growth": 0.005,
+    "cdf_ac": 7.46835001206213e-09,
+    "cdf_sub": 9.949732018121512e-10,
+    "cdf_pcc": 2.383574843545046e-09,
+    "cdf_max": 7.46835001206213e-09,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "B738",
+        "mtow": 174200,
+        "gear": "D",
+        "cdf_total": 2.0786833116291378e-09,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B752",
+        "mtow": 255500,
+        "gear": "2D",
+        "cdf_total": 2.987099586933981e-10,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B77L",
+        "mtow": 775000,
+        "gear": "3D",
+        "cdf_total": 2.530449943261245e-12,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GLEX",
+        "mtow": 95901,
+        "gear": "D",
+        "cdf_total": 1.9197295813539674e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 CRJ7"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.619836654226588e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 94,
+    "elapsedSec": 13.57
+  },
+  {
+    "icao": "KMQJ",
+    "airport": "Indianapolis Regional",
+    "section_id": "8780",
+    "use": "Taxiway TWA4",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab Base",
+    "subgrade": "Silty Clay (AASHTO A-7-6), CBR=4",
+    "growth": 0.005,
+    "cdf_ac": 7.46835001206213e-09,
+    "cdf_sub": 9.949732018121512e-10,
+    "cdf_pcc": 2.383574843545046e-09,
+    "cdf_max": 7.46835001206213e-09,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "B738",
+        "mtow": 174200,
+        "gear": "D",
+        "cdf_total": 2.0786833116291378e-09,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B752",
+        "mtow": 255500,
+        "gear": "2D",
+        "cdf_total": 2.987099586933981e-10,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B77L",
+        "mtow": 775000,
+        "gear": "3D",
+        "cdf_total": 2.530449943261245e-12,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GLEX",
+        "mtow": 95901,
+        "gear": "D",
+        "cdf_total": 1.9197295813539674e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 CRJ7"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.619836654226588e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 94,
+    "elapsedSec": 13.43
+  },
+  {
+    "icao": "KCIU",
+    "airport": "Chippewa County Intl",
+    "section_id": "21222",
+    "use": "Runway",
+    "desc": "2.5\" AC + 24\" PCC",
+    "subgrade": "Fine Sand (AASHTO A-3), CBR=20",
+    "growth": -0.001,
+    "cdf_ac": 1.283598734222142e-10,
+    "cdf_sub": 2.332149495923781e-24,
+    "cdf_pcc": 1.0515410954568563e-20,
+    "cdf_max": 1.283598734222142e-10,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "B77W",
+        "mtow": 775000,
+        "gear": "3D",
+        "cdf_total": 4.059553480440204e-21,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B77L",
+        "mtow": 775000,
+        "gear": "3D",
+        "cdf_total": 4.048429581568633e-21,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "B772",
+        "mtow": 766000,
+        "gear": "3D",
+        "cdf_total": 2.4070964296319645e-21,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "C17",
+        "mtow": 585000,
+        "gear": "2D",
+        "cdf_total": 3.312216177669482e-25,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "DH8D",
+        "mtow": 63052,
+        "gear": "D",
+        "cdf_total": 1.6304915306309305e-28,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 89,
+    "elapsedSec": 10.6
+  },
+  {
+    "icao": "KOTM",
+    "airport": "Ottumwa Regional",
+    "section_id": "28171",
+    "use": "Taxiway",
+    "desc": "2.5\" AC + 8\" PCC",
+    "subgrade": "Silty Clay Loam (AASHTO A-7-6), CBR=4",
+    "growth": -0.022,
+    "cdf_ac": 4.594280321660179e-10,
+    "cdf_sub": 2.303313479430861e-11,
+    "cdf_pcc": 2.7373456078751583e-07,
+    "cdf_max": 2.7373456078751583e-07,
+    "controlling": "PCC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "R135",
+        "mtow": 321874,
+        "gear": "2D",
+        "cdf_total": 2.737334801933115e-07,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 B753"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.079194887511603e-12,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      },
+      {
+        "ac": "A10",
+        "mtow": 50044,
+        "gear": "S",
+        "cdf_total": 1.2535593798774198e-15,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F18S"
+      },
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 1.328088529951328e-16,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GALX",
+        "mtow": 33289,
+        "gear": "D",
+        "cdf_total": 1.1951958314595208e-17,
+        "wheelSource": "proxy_override",
+        "wheelSourceNote": "curated proxy_override \u2192 C650"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 59,
+    "elapsedSec": 4.88
+  },
+  {
+    "icao": "KOTM",
+    "airport": "Ottumwa Regional",
+    "section_id": "27450",
+    "use": "Runway",
+    "desc": "3\" AC + 9\" PCC",
+    "subgrade": "Silty Clay Loam (AASHTO A-7-6), CBR=4",
+    "growth": -0.022,
+    "cdf_ac": 3.4430074473479235e-10,
+    "cdf_sub": 2.461821171780809e-11,
+    "cdf_pcc": 2.8234007856945934e-07,
+    "cdf_max": 2.8234007856945934e-07,
+    "controlling": "PCC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "R135",
+        "mtow": 321874,
+        "gear": "2D",
+        "cdf_total": 2.8233991840084203e-07,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 B753"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 1.5964560062207775e-13,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      },
+      {
+        "ac": "A10",
+        "mtow": 50044,
+        "gear": "S",
+        "cdf_total": 5.209255236332845e-16,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F18S"
+      },
+      {
+        "ac": "GALX",
+        "mtow": 33289,
+        "gear": "D",
+        "cdf_total": 1.834563336566081e-18,
+        "wheelSource": "proxy_override",
+        "wheelSourceNote": "curated proxy_override \u2192 C650"
+      },
+      {
+        "ac": "CL35",
+        "mtow": 40600,
+        "gear": "D",
+        "cdf_total": 2.198541465082869e-19,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 CL60"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 59,
+    "elapsedSec": 4.64
+  },
+  {
+    "icao": "KOTM",
+    "airport": "Ottumwa Regional",
+    "section_id": "27641",
+    "use": "Runway",
+    "desc": "3\" AC + 8\" PCC",
+    "subgrade": "Silty Clay Loam (AASHTO A-7-6), CBR=4",
+    "growth": -0.022,
+    "cdf_ac": 4.244420769677339e-10,
+    "cdf_sub": 2.356274026818722e-11,
+    "cdf_pcc": 2.7315188929787857e-07,
+    "cdf_max": 2.7315188929787857e-07,
+    "controlling": "PCC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "R135",
+        "mtow": 321874,
+        "gear": "2D",
+        "cdf_total": 2.7315099205841884e-07,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 B753"
+      },
+      {
+        "ac": "EA50",
+        "mtow": 39595,
+        "gear": "S",
+        "cdf_total": 8.960813595186899e-13,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F16"
+      },
+      {
+        "ac": "A10",
+        "mtow": 50044,
+        "gear": "S",
+        "cdf_total": 1.1112657380733893e-15,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F18S"
+      },
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 3.6542049926667594e-17,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "GALX",
+        "mtow": 33289,
+        "gear": "D",
+        "cdf_total": 9.569245763556632e-18,
+        "wheelSource": "proxy_override",
+        "wheelSourceNote": "curated proxy_override \u2192 C650"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 59,
+    "elapsedSec": 4.77
+  },
+  {
+    "icao": "KMWH",
+    "airport": "Grant County Intl",
+    "section_id": "37325",
+    "use": "Runway (narrow)",
+    "desc": "2\" AC + 6\" PCC + 12\" Agg Base",
+    "subgrade": "Gravelly Coarse Sand (AASHTO A-1-a), CBR=40",
+    "growth": -0.005,
+    "cdf_ac": 5.4302421194164e-10,
+    "cdf_sub": 3.383578521303189e-32,
+    "cdf_pcc": 5.807946698905631e-14,
+    "cdf_max": 5.4302421194164e-10,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 5.786097322606892e-14,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "PRM1",
+        "mtow": 8800,
+        "gear": "S",
+        "cdf_total": 1.9113669789772687e-16,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 BE9L"
+      },
+      {
+        "ac": "AC80",
+        "mtow": 9400,
+        "gear": "S",
+        "cdf_total": 2.7353559558949624e-17,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 BE9L"
+      },
+      {
+        "ac": "F15",
+        "mtow": 68000,
+        "gear": "S",
+        "cdf_total": 3.505485017473275e-21,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "F18",
+        "mtow": 51900,
+        "gear": "S",
+        "cdf_total": 1.8142871753425712e-26,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F15"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 135,
+    "elapsedSec": 30.77
+  },
+  {
+    "icao": "KMWH",
+    "airport": "Grant County Intl",
+    "section_id": "37508",
+    "use": "Runway (wide)",
+    "desc": "2\" AC + 6\" PCC + 12\" Agg Base",
+    "subgrade": "Gravelly Coarse Sand (AASHTO A-1-a), CBR=40",
+    "growth": -0.005,
+    "cdf_ac": 5.4302421194164e-10,
+    "cdf_sub": 3.383578521303189e-32,
+    "cdf_pcc": 5.807946698905631e-14,
+    "cdf_max": 5.4302421194164e-10,
+    "controlling": "AC Fatigue",
+    "adequate": true,
+    "top_aircraft": [
+      {
+        "ac": "BE9L",
+        "mtow": 10097,
+        "gear": "D",
+        "cdf_total": 5.786097322606892e-14,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "PRM1",
+        "mtow": 8800,
+        "gear": "S",
+        "cdf_total": 1.9113669789772687e-16,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 BE9L"
+      },
+      {
+        "ac": "AC80",
+        "mtow": 9400,
+        "gear": "S",
+        "cdf_total": 2.7353559558949624e-17,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 BE9L"
+      },
+      {
+        "ac": "F15",
+        "mtow": 68000,
+        "gear": "S",
+        "cdf_total": 3.505485017473275e-21,
+        "wheelSource": "xml",
+        "wheelSourceNote": "exact FAARFIELD XML"
+      },
+      {
+        "ac": "F18",
+        "mtow": 51900,
+        "gear": "S",
+        "cdf_total": 1.8142871753425712e-26,
+        "wheelSource": "nearest_proxy",
+        "wheelSourceNote": "nearest_proxy donor \u2192 F15"
+      }
+    ],
+    "engine": "FAARFIELD_desktop_parity",
+    "aircraftResolvedBy": "backend_library",
+    "simplifiedGearCount": 0,
+    "aircraftSent": 135,
+    "elapsedSec": 30.44
+  }
+]

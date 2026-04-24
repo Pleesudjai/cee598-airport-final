@@ -1,0 +1,17 @@
+source_file,vb_routine,matlab_target,notes
+FEMClassLib/FAASR/clsFAASR3D.vb,FAASR3D,+faasr3d/faasr3d.m,Main FAASR orchestration layer
+FEMClassLib/FAASR/clsFAASR3D.vb,InputCards,+faasr3d/make_input_cards.m,Template creator for the VB InputCards structure
+FEMClassLib/FAASR/clsTransData.vb,TransData,+faasr3d/trans_data.m,Copies InputCards into shared solver state
+FEMClassLib/FAASR/clsWriteNike.vb,WriteNike,+faasr3d/write_nike.m,Writes the FAASR NIKE-style text deck
+FEMClassLib/FAASR/clsInitialSet.vb,InitialSet,+faasr3d/initial_set.m,Initializes case id and optional log file
+FEMClassLib/FAASR/clsSetStep1.vb,Setstep1,+faasr3d/set_step1.m,Stores original loads and creates a one-step load curve
+FEMClassLib/FAASR/clsSetStep2.vb,Setstep2,+faasr3d/set_step2.m,Filters loads for the active time step
+FEMClassLib/FAASR/clsEraseInput.vb,EraseInput,+faasr3d/erase_input.m,Clears translated shared input state
+FEMClassLib/FAASR/clsEraseOutput.vb,EraseOutput,+faasr3d/erase_output.m,Clears translated stress buffers
+FEMClassLib/FAASR/clsWinYield.vb,WinYield,+faasr3d/win_yield.m,Uses a file-based stop flag instead of Win32 atoms
+FEMClassLib/FAASR/clsDelAtom.vb,DelAtom,+faasr3d/del_atom.m,Uses a file-based stop flag instead of Win32 atoms
+FEMClassLib/FAASR/clsCnlds.vb,cnlds,+faasr3d/cnlds.m,Reads concentrated nodal loads from text lines
+FEMClassLib/FAASR/clsLdcvs.vb,ldcvs,+faasr3d/ldcvs.m,Reads load curves from text lines
+FEMClassLib/Com/clsGettime.vb,get_time,+faasr3d/get_time_string.m,Helper used by the translated FAASR logger
+FEMClassLib/Com/clsCom.vb,Shared state,+faasr3d/make_com_state.m,Template creator for clsCom-like shared state
+FEMClassLib/FAASR/modWrite.vb,Check2D/Check2D1/Check2DT/Check3D/Check1D/Check1D2/Check13/Checkrhs/Checkrhs2/Checka2/Checka22/Checkrdot/Check5/Check4/Check1D3/Check1D32/Check1D33/Check3/CheckName/CheckName2/read,+faasr3d/DebugWrite.m,Grouped into one MATLAB class because the VB source was one module

@@ -1,0 +1,75 @@
+[
+  {
+    "icao": "KLHX",
+    "name": "La Junta Municipal",
+    "state": "CO",
+    "lat": 38.05,
+    "lon": -103.5098,
+    "elevation": 4229,
+    "sections": [
+      "6627",
+      "7347"
+    ]
+  },
+  {
+    "icao": "KPUB",
+    "name": "Pueblo Memorial",
+    "state": "CO",
+    "lat": 38.2899,
+    "lon": -104.498,
+    "elevation": 4729,
+    "sections": [
+      "6948"
+    ]
+  },
+  {
+    "icao": "KMQJ",
+    "name": "Indianapolis Regional",
+    "state": "IN",
+    "lat": 39.8431,
+    "lon": -85.8977,
+    "elevation": 862,
+    "sections": [
+      "8662",
+      "8881",
+      "8640",
+      "8780"
+    ]
+  },
+  {
+    "icao": "KCIU",
+    "name": "Chippewa County Intl",
+    "state": "MI",
+    "lat": 46.2508,
+    "lon": -84.4724,
+    "elevation": 799,
+    "sections": [
+      "21222"
+    ]
+  },
+  {
+    "icao": "KOTM",
+    "name": "Ottumwa Regional",
+    "state": "IA",
+    "lat": 41.1072,
+    "lon": -92.4472,
+    "elevation": 846,
+    "sections": [
+      "28171",
+      "27450",
+      "27641"
+    ]
+  },
+  {
+    "icao": "KMWH",
+    "name": "Grant County Intl",
+    "state": "WA",
+    "lat": 47.2086,
+    "lon": -119.3191,
+    "elevation": 1189,
+    "sections": [
+      "37325",
+      "37508"
+    ]
+  }
+]

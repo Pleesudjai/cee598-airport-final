@@ -1,0 +1,1785 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ArrayOfAirplaneInfo xmlns="http://schemas.datacontract.org/2004/07/FaarFieldModel" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" LibraryVersion="1.1.2" SoftwareVersion="2.1.0">
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick i:nil="true"></ACRThick>
+    <ACRThick1 i:nil="true"></ACRThick1>
+    <ACRThick2 i:nil="true"></ACRThick2>
+    <ACRThick3 i:nil="true"></ACRThick3>
+    <ACRThick4 i:nil="true"></ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData i:nil="true"></CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>1116.95112</si>
+      <us>162</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1722.12</si>
+          <us>-67.8</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1877.06</si>
+          <us>-73.9</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1955.8</si>
+          <us>-77</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2033.524</si>
+          <us>-80.06</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>90</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>Regional/Commuter</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>CRJ900</Name>
+    <NumberGear>13</NumberGear>
+    <NumberTireTracks>0</NumberTireTracks>
+    <NumberWheels>2</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea i:nil="true"></TireArea>
+    <TireLength i:nil="true"></TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX i:nil="true"></TireTrackX>
+    <TireWidth i:nil="true"></TireWidth>
+    <TotalDepartures>26.400000000000002</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2345.6899999999996</si>
+          <us>-92.35</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1722.8819999999998</si>
+          <us>-67.83</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2345.6899999999996</si>
+          <us>92.35</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>1722.8819999999998</si>
+          <us>67.83</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>38555.32</si>
+      <us>85000</us>
+    </_GrossWeight>
+    <_NumberDepartures>1.0</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>723.9498</si>
+      <us>105</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2171.7</si>
+          <us>-85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>-889</si>
+          <us>-35</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2171.7</si>
+          <us>-85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>-635</si>
+          <us>-25</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2171.7</si>
+          <us>-85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>-381</si>
+          <us>-15</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2171.7</si>
+          <us>-85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>-127</si>
+          <us>-5</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>90</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>Military</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>C-130-70</Name>
+    <NumberGear>2</NumberGear>
+    <NumberTireTracks>2</NumberTireTracks>
+    <NumberWheels>2</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>226190.02849731443</si>
+      <us>350.59524536132812</us>
+    </TireArea>
+    <TireLength>
+      <si>678.81585266113279</si>
+      <us>26.725033569335938</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-2171.7</si>
+        <us>-85.5</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>2171.7</si>
+        <us>85.5</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>424.259907913208</si>
+      <us>16.703145980834961</us>
+    </TireWidth>
+    <TotalDepartures>44.088</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2171.7</si>
+          <us>-85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>-889</si>
+          <us>-35</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2171.7</si>
+          <us>-85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>889</si>
+          <us>35</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2171.7</si>
+          <us>85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>-889</si>
+          <us>-35</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2171.7</si>
+          <us>85.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>889</si>
+          <us>35</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>70306.76</si>
+      <us>155000</us>
+    </_GrossWeight>
+    <_NumberDepartures>1.67</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>358.52752</si>
+      <us>52</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2286</si>
+          <us>-90</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2322.7665</si>
+          <us>-91.4475</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2359.533</si>
+          <us>-92.895</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2433.066</si>
+          <us>-95.79</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>90</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>General Aviation</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>Beechcraft King Air B100</Name>
+    <NumberGear>3</NumberGear>
+    <NumberTireTracks>4</NumberTireTracks>
+    <NumberWheels>2</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>33886.4073286438</si>
+      <us>52.5240364074707</us>
+    </TireArea>
+    <TireLength>
+      <si>262.74109436035155</si>
+      <us>10.344137573242188</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-2580.1319999999996</si>
+        <us>-101.58</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>-2286</si>
+        <us>-90</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>2286</si>
+        <us>90</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>2580.1319999999996</si>
+        <us>101.58</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>164.21318397521972</si>
+      <us>6.4650859832763672</us>
+    </TireWidth>
+    <TotalDepartures>151.8</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2286</si>
+          <us>-90</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2580.1319999999996</si>
+          <us>-101.58</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2580.1319999999996</si>
+          <us>101.58</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2286</si>
+          <us>90</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>5216.308</si>
+      <us>11500</us>
+    </_GrossWeight>
+    <_NumberDepartures>5.75</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>634.31792</si>
+      <us>92</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2469.1339767456052</si>
+          <us>-97.209999084472656</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2505.9004767456054</si>
+          <us>-98.657499084472661</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2542.6669767456051</si>
+          <us>-100.10499908447265</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2616.1999767456055</si>
+          <us>-102.99999908447266</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>90</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>General Aviation</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>Beechcraft King Air 300</Name>
+    <NumberGear>3</NumberGear>
+    <NumberTireTracks>4</NumberTireTracks>
+    <NumberWheels>2</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>23483.473048553467</si>
+      <us>36.399456024169922</us>
+    </TireArea>
+    <TireLength>
+      <si>218.72397491455078</si>
+      <us>8.6111801147460945</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-2763.266</si>
+        <us>-108.79</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>-2469.1339999999996</si>
+        <us>-97.21</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>2469.1339999999996</si>
+        <us>97.21</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>2763.266</si>
+        <us>108.79</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>136.70248432159423</si>
+      <us>5.3819875717163086</us>
+    </TireWidth>
+    <TotalDepartures>72.60000000000001</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2469.1339767456052</si>
+          <us>-97.209999084472656</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-2763.2659767456053</si>
+          <us>-108.78999908447266</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2763.2659767456053</si>
+          <us>108.78999908447266</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>2469.1339767456052</si>
+          <us>97.209999084472656</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>6395.6472</si>
+      <us>14100</us>
+    </_GrossWeight>
+    <_NumberDepartures>2.75</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>999.7402</si>
+      <us>145</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1366.5199999999998</si>
+          <us>-53.8</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1421.7649999999999</si>
+          <us>-55.975</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1477.01</si>
+          <us>-58.15</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1587.5</si>
+          <us>-62.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>0</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>Regional/Commuter</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>Bombardier CL-604/605</Name>
+    <NumberGear>3</NumberGear>
+    <NumberTireTracks>4</NumberTireTracks>
+    <NumberWheels>2</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>50934.2676184082</si>
+      <us>78.948272705078125</us>
+    </TireArea>
+    <TireLength>
+      <si>322.12190780639645</si>
+      <us>12.681964874267578</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-1778</si>
+        <us>-70</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>-1397</si>
+        <us>-55</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>1397</si>
+        <us>55</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>1778</si>
+        <us>70</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>201.3261923789978</si>
+      <us>7.9262280464172363</us>
+    </TireWidth>
+    <TotalDepartures>26.400000000000002</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1397</si>
+          <us>-55</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1778</si>
+          <us>-70</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>1778</si>
+          <us>70</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>1397</si>
+          <us>55</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>21863.1344</si>
+      <us>48200</us>
+    </_GrossWeight>
+    <_NumberDepartures>1.0</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>675.68648</si>
+      <us>98</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1917.6999999999998</si>
+          <us>-75.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>0</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>General Aviation</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>Cessna Citation M2 C525</Name>
+    <NumberGear>2</NumberGear>
+    <NumberTireTracks>2</NumberTireTracks>
+    <NumberWheels>1</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>32834.035362701412</si>
+      <us>50.892856597900391</us>
+    </TireArea>
+    <TireLength>
+      <si>258.62907791137695</si>
+      <us>10.182247161865234</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-1917.6999999999998</si>
+        <us>-75.5</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>1917.6999999999998</si>
+        <us>75.5</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>161.6431736946106</si>
+      <us>6.3639044761657715</us>
+    </TireWidth>
+    <TotalDepartures>79.2</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1917.6999999999998</si>
+          <us>-75.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>1917.6999999999998</si>
+          <us>75.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>4762.716</si>
+      <us>10500</us>
+    </_GrossWeight>
+    <_NumberDepartures>3.0</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>399.89608000000004</si>
+      <us>58.000000000000007</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1943.1</si>
+          <us>-76.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>90</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>General Aviation</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>Beechcraft King Air C90</Name>
+    <NumberGear>2</NumberGear>
+    <NumberTireTracks>2</NumberTireTracks>
+    <NumberWheels>1</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>51304.125158996576</si>
+      <us>79.521553039550781</us>
+    </TireArea>
+    <TireLength>
+      <si>323.28933654785158</si>
+      <us>12.727926635742188</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-1943.1</si>
+        <us>-76.5</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>1943.1</si>
+        <us>76.5</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>202.05583534240722</si>
+      <us>7.9549541473388672</us>
+    </TireWidth>
+    <TotalDepartures>52.800000000000004</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-3886.2</si>
+          <us>-153</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>4404.37832</si>
+      <us>9710</us>
+    </_GrossWeight>
+    <_NumberDepartures>2.0</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+  <AirplaneInfo>
+    <ACRB>0</ACRB>
+    <ACRB1>0</ACRB1>
+    <ACRB2>0</ACRB2>
+    <ACRB3>0</ACRB3>
+    <ACRB4>0</ACRB4>
+    <ACRCoverage>0</ACRCoverage>
+    <ACRThick>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick>
+    <ACRThick1>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick1>
+    <ACRThick2>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick2>
+    <ACRThick3>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick3>
+    <ACRThick4>
+      <si>0</si>
+      <us>0</us>
+    </ACRThick4>
+    <ACRThickMGW>0</ACRThickMGW>
+    <AircraftNumber>0</AircraftNumber>
+    <CDFGraphData>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+      <a:float>0</a:float>
+    </CDFGraphData>
+    <Cdf>0</Cdf>
+    <Cdf401>0</Cdf401>
+    <CdfAc>0</CdfAc>
+    <CdfAircraftMax>0</CdfAircraftMax>
+    <CdfAircraftMax401>0</CdfAircraftMax401>
+    <CdfAircraftMaxAc>0</CdfAircraftMaxAc>
+    <CdfAircraftMaxHma>0</CdfAircraftMaxHma>
+    <CdfAircraftMaxSub>0</CdfAircraftMaxSub>
+    <CdfHma>0</CdfHma>
+    <CdfSub>0</CdfSub>
+    <Coverage>0</Coverage>
+    <Cp>
+      <si>896.3188</si>
+      <us>130</us>
+    </Cp>
+    <CtoP>0</CtoP>
+    <CtoP401>0</CtoP401>
+    <CtoPAc>0</CtoPAc>
+    <CtoPHma>0</CtoPHma>
+    <CtoPSub>0</CtoPSub>
+    <D2 i:nil="true"></D2>
+    <D4 i:nil="true"></D4>
+    <D6 i:nil="true"></D6>
+    <Deprecated>false</Deprecated>
+    <Dtemp>0</Dtemp>
+    <EvaluationPoints>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1993.8999999999999</si>
+          <us>-78.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </EvaluationPoints>
+    <GX>0</GX>
+    <Gear>X</Gear>
+    <GearOrientation>0</GearOrientation>
+    <IsBelly>false</IsBelly>
+    <Manufacturer>Regional/Commuter</Manufacturer>
+    <MgPercent>0.95</MgPercent>
+    <MgPercentPCN>0.475</MgPercentPCN>
+    <Name>Cessna Citation II/Bravo C550/551</Name>
+    <NumberGear>2</NumberGear>
+    <NumberTireTracks>2</NumberTireTracks>
+    <NumberWheels>1</NumberWheels>
+    <PCRNumber>0</PCRNumber>
+    <PCRThick>0</PCRThick>
+    <RunMgPercent>0.475</RunMgPercent>
+    <TBT i:nil="true"></TBT>
+    <Tg>0</Tg>
+    <TireArea>
+      <si>35359.731526489253</si>
+      <us>54.807693481445312</us>
+    </TireArea>
+    <TireLength>
+      <si>268.39208663940434</si>
+      <us>10.566617584228517</us>
+    </TireLength>
+    <TirePressureF i:nil="true"></TirePressureF>
+    <TireTrackX>
+      <a:anyType i:type="Length">
+        <si>-1993.8999999999999</si>
+        <us>-78.5</us>
+      </a:anyType>
+      <a:anyType i:type="Length">
+        <si>1993.8999999999999</si>
+        <us>78.5</us>
+      </a:anyType>
+    </TireTrackX>
+    <TireWidth>
+      <si>167.74505414962766</si>
+      <us>6.6041359901428223</us>
+    </TireWidth>
+    <TotalDepartures>52.800000000000004</TotalDepartures>
+    <Ts>0</Ts>
+    <Tv>0</Tv>
+    <WheelCoordinates>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>-1993.8999999999999</si>
+          <us>-78.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+      <a:anyType i:type="LengthCoordinates">
+        <X i:type="Length">
+          <si>1993.8999999999999</si>
+          <us>78.5</us>
+        </X>
+        <Y i:type="Length">
+          <si>0</si>
+          <us>0</us>
+        </Y>
+      </a:anyType>
+    </WheelCoordinates>
+    <Xcoorodinates>0</Xcoorodinates>
+    <Ycoordinates>0</Ycoordinates>
+    <_AnnualGrowth>0.032</_AnnualGrowth>
+    <_GrossWeight>
+      <si>6803.88</si>
+      <us>15000</us>
+    </_GrossWeight>
+    <_NumberDepartures>2.0</_NumberDepartures>
+    <aa i:nil="true"></aa>
+    <d1 i:nil="true"></d1>
+    <d3 i:nil="true"></d3>
+    <d5 i:nil="true"></d5>
+    <dmax i:nil="true"></dmax>
+    <gNewAnnualdepartue>0</gNewAnnualdepartue>
+    <gNewGL i:nil="true"></gNewGL>
+    <Tt>
+      <si>0</si>
+      <us>0</us>
+    </Tt>
+    <B>
+      <si>0</si>
+      <us>0</us>
+    </B>
+  </AirplaneInfo>
+</ArrayOfAirplaneInfo>

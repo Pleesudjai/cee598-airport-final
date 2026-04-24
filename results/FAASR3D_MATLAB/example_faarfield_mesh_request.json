@@ -1,0 +1,26 @@
+{
+  "layers": [
+    { "type": "AC overlay", "h": 5.0, "E": 400000, "nu": 0.35 },
+    { "type": "PCC slab",   "h": 14.0, "E": 4000000, "nu": 0.15 },
+    { "type": "Base layer", "h": 8.0, "E": 50000, "nu": 0.35 }
+  ],
+  "subgrade": { "E": 15000, "nu": 0.40 },
+  "aircraft": {
+    "name": "B737-800",
+    "gearLoad": 0,
+    "nTires": 0,
+    "tirePressure": 200,
+    "tireSpacingIn": 0,
+    "icao": "B738",
+    "gear": "D",
+    "mtow": 174200
+  },
+  "evalDepthIn": 0,
+  "gridExtentIn": 0,
+  "gridPoints": 0,
+  "includeMesh": true,
+  "highDetail": false,
+  "filterCoarse": true,
+  "includeStressField": false,
+  "includeFullConnectivity": true
+}

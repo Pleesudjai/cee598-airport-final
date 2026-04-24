@@ -1,0 +1,479 @@
+{
+  "generated": "2026-04-23T15:03",
+  "data_source": "NOAA NCEI Climate Normals Daily 1991-2020",
+  "data_source_url": "https://www.ncei.noaa.gov/data/normals-daily/1991-2020/access/",
+  "methodology": {
+    "afi": "Air Freezing Index = sum over year of max(0, 32 - TAVG_daily); units F-days",
+    "frost_depth": "Modified Berggren simplified: X = K * sqrt(AFI), K depends on FAA frost class",
+    "frost_classes": "FAA AC 150/5320-6F Table 3-2: FG-1 (negligible) to FG-4 (high susceptibility)",
+    "treatment_tiers": {
+      "complete_protection": "pavement total >= frost depth",
+      "limited_penetration": "pavement total >= 0.65 * frost depth (FAA-acceptable)",
+      "inadequate": "pavement total < 0.65 * frost depth -> requires non-frost-susceptible material extension"
+    }
+  },
+  "airports": [
+    {
+      "icao": "KLHX",
+      "station": "USC00054834",
+      "station_name": "LAS ANIMAS, CO US",
+      "station_note": "Closest available climate normals station, ~20 miles east of La Junta",
+      "air_freezing_index_F_days": 39.4,
+      "freezing_days_per_year": 39,
+      "coldest_normal_day": "12-24",
+      "coldest_normal_F": 30.4,
+      "subgrade": {
+        "frost_class": "FG-3",
+        "soil_description": "Silt Loam (A-6, CBR=7)",
+        "cbr": 7,
+        "class_rationale": "Silty soils with moderate plasticity"
+      },
+      "berggren_K": 1.2,
+      "frost_depth_in": 7.53,
+      "pavement_total_in": 12.0,
+      "recommendation": {
+        "tier": "Complete frost protection",
+        "design_approach": "Reduced subgrade strength approach acceptable; or thicken non-frost-susceptible base to full frost depth for complete protection.",
+        "rationale": "Total pavement section (12.0\") meets or exceeds computed frost depth (7.53\"); subgrade fully protected.",
+        "compliant": true,
+        "limited_depth_required_in": 4.89,
+        "complete_depth_required_in": 7.53,
+        "total_pavement_in": 12.0
+      },
+      "monthly_tavg_F": [
+        {
+          "month": 1,
+          "tavg_F": 31.7
+        },
+        {
+          "month": 2,
+          "tavg_F": 35.6
+        },
+        {
+          "month": 3,
+          "tavg_F": 44.9
+        },
+        {
+          "month": 4,
+          "tavg_F": 53.2
+        },
+        {
+          "month": 5,
+          "tavg_F": 63.3
+        },
+        {
+          "month": 6,
+          "tavg_F": 73.9
+        },
+        {
+          "month": 7,
+          "tavg_F": 78.8
+        },
+        {
+          "month": 8,
+          "tavg_F": 76.4
+        },
+        {
+          "month": 9,
+          "tavg_F": 68.2
+        },
+        {
+          "month": 10,
+          "tavg_F": 54.3
+        },
+        {
+          "month": 11,
+          "tavg_F": 41.6
+        },
+        {
+          "month": 12,
+          "tavg_F": 31.8
+        }
+      ]
+    },
+    {
+      "icao": "KPUB",
+      "station": "USW00093058",
+      "station_name": "PUEBLO MEM AP, CO US",
+      "station_note": "Co-located with the airport",
+      "air_freezing_index_F_days": 29.7,
+      "freezing_days_per_year": 36,
+      "coldest_normal_day": "12-21",
+      "coldest_normal_F": 30.7,
+      "subgrade": {
+        "frost_class": "FG-1",
+        "soil_description": "Bedrock/Shale (CBR=12)",
+        "cbr": 12,
+        "class_rationale": "Bedrock substrate \u2014 negligible frost susceptibility"
+      },
+      "berggren_K": 1.4,
+      "frost_depth_in": 7.63,
+      "pavement_total_in": 15.5,
+      "recommendation": {
+        "tier": "No special treatment required",
+        "design_approach": "Standard FAARFIELD design (no frost adjustment)",
+        "rationale": "Subgrade is FG-1 (negligible frost susceptibility)",
+        "compliant": true
+      },
+      "monthly_tavg_F": [
+        {
+          "month": 1,
+          "tavg_F": 31.9
+        },
+        {
+          "month": 2,
+          "tavg_F": 35.2
+        },
+        {
+          "month": 3,
+          "tavg_F": 43.9
+        },
+        {
+          "month": 4,
+          "tavg_F": 51.3
+        },
+        {
+          "month": 5,
+          "tavg_F": 61.4
+        },
+        {
+          "month": 6,
+          "tavg_F": 71.8
+        },
+        {
+          "month": 7,
+          "tavg_F": 77.2
+        },
+        {
+          "month": 8,
+          "tavg_F": 74.8
+        },
+        {
+          "month": 9,
+          "tavg_F": 66.6
+        },
+        {
+          "month": 10,
+          "tavg_F": 52.8
+        },
+        {
+          "month": 11,
+          "tavg_F": 40.4
+        },
+        {
+          "month": 12,
+          "tavg_F": 31.7
+        }
+      ]
+    },
+    {
+      "icao": "KMQJ",
+      "station": "USW00093819",
+      "station_name": "INDIANAPOLIS, IN US",
+      "station_note": "~12 miles west of Indianapolis Regional (KMQJ) \u2014 same climate region",
+      "air_freezing_index_F_days": 143.0,
+      "freezing_days_per_year": 55,
+      "coldest_normal_day": "01-17",
+      "coldest_normal_F": 28.0,
+      "subgrade": {
+        "frost_class": "FG-4",
+        "soil_description": "Silty Clay (A-7-6, CBR=4)",
+        "cbr": 4,
+        "class_rationale": "Silty clay with high plasticity index \u2014 most frost-susceptible class"
+      },
+      "berggren_K": 1.1,
+      "frost_depth_in": 13.15,
+      "pavement_total_in": 17.5,
+      "recommendation": {
+        "tier": "Complete frost protection",
+        "design_approach": "Reduced subgrade strength approach acceptable; or thicken non-frost-susceptible base to full frost depth for complete protection.",
+        "rationale": "Total pavement section (17.5\") meets or exceeds computed frost depth (13.15\"); subgrade fully protected.",
+        "compliant": true,
+        "limited_depth_required_in": 8.55,
+        "complete_depth_required_in": 13.15,
+        "total_pavement_in": 17.5
+      },
+      "monthly_tavg_F": [
+        {
+          "month": 1,
+          "tavg_F": 28.5
+        },
+        {
+          "month": 2,
+          "tavg_F": 32.6
+        },
+        {
+          "month": 3,
+          "tavg_F": 42.5
+        },
+        {
+          "month": 4,
+          "tavg_F": 53.6
+        },
+        {
+          "month": 5,
+          "tavg_F": 63.5
+        },
+        {
+          "month": 6,
+          "tavg_F": 72.5
+        },
+        {
+          "month": 7,
+          "tavg_F": 75.8
+        },
+        {
+          "month": 8,
+          "tavg_F": 74.7
+        },
+        {
+          "month": 9,
+          "tavg_F": 67.8
+        },
+        {
+          "month": 10,
+          "tavg_F": 55.5
+        },
+        {
+          "month": 11,
+          "tavg_F": 43.4
+        },
+        {
+          "month": 12,
+          "tavg_F": 33.3
+        }
+      ]
+    },
+    {
+      "icao": "KCIU",
+      "station": "USW00014847",
+      "station_name": "SAULT STE MARIE SANDERSON FLD, MI US",
+      "station_note": "Close proxy for Chippewa County Intl (KCIU)",
+      "air_freezing_index_F_days": 1326.4,
+      "freezing_days_per_year": 127,
+      "coldest_normal_day": "01-25",
+      "coldest_normal_F": 15.1,
+      "subgrade": {
+        "frost_class": "FG-2",
+        "soil_description": "Fine Sand (A-3, CBR=20)",
+        "cbr": 20,
+        "class_rationale": "Clean sand, low frost susceptibility but shallow water table possible"
+      },
+      "berggren_K": 1.3,
+      "frost_depth_in": 47.35,
+      "pavement_total_in": 26.5,
+      "recommendation": {
+        "tier": "INADEQUATE \u2014 frost-susceptible subgrade exposed",
+        "design_approach": "Reduced subgrade strength approach acceptable; or thicken non-frost-susceptible base to full frost depth for complete protection.",
+        "rationale": "Total pavement section (26.5\") is less than 65% of frost depth (47.35\"). Recommend non-frost-susceptible base/subbase extension to a depth of 30.8\" minimum, OR full reconstruction to 47.4\" of non-frost-susceptible material.",
+        "compliant": false,
+        "limited_depth_required_in": 30.78,
+        "complete_depth_required_in": 47.35,
+        "total_pavement_in": 26.5
+      },
+      "monthly_tavg_F": [
+        {
+          "month": 1,
+          "tavg_F": 16.2
+        },
+        {
+          "month": 2,
+          "tavg_F": 18.0
+        },
+        {
+          "month": 3,
+          "tavg_F": 26.7
+        },
+        {
+          "month": 4,
+          "tavg_F": 39.3
+        },
+        {
+          "month": 5,
+          "tavg_F": 52.1
+        },
+        {
+          "month": 6,
+          "tavg_F": 61.1
+        },
+        {
+          "month": 7,
+          "tavg_F": 66.0
+        },
+        {
+          "month": 8,
+          "tavg_F": 65.6
+        },
+        {
+          "month": 9,
+          "tavg_F": 58.4
+        },
+        {
+          "month": 10,
+          "tavg_F": 46.3
+        },
+        {
+          "month": 11,
+          "tavg_F": 34.7
+        },
+        {
+          "month": 12,
+          "tavg_F": 23.8
+        }
+      ]
+    },
+    {
+      "icao": "KOTM",
+      "station": "USW00014931",
+      "station_name": "BURLINGTON MUNI AP, IA US",
+      "station_note": "KOTM (Ottumwa Industrial AP) does not have its own climate-normals station; Burlington is ~80 miles east at the same latitude (similar southeastern Iowa continental climate)",
+      "air_freezing_index_F_days": 408.4,
+      "freezing_days_per_year": 77,
+      "coldest_normal_day": "01-17",
+      "coldest_normal_F": 23.8,
+      "subgrade": {
+        "frost_class": "FG-4",
+        "soil_description": "Silty Clay Loam (A-7-6, CBR=4)",
+        "cbr": 4,
+        "class_rationale": "Silty clay loam, high plasticity"
+      },
+      "berggren_K": 1.1,
+      "frost_depth_in": 22.23,
+      "pavement_total_in": 12.0,
+      "recommendation": {
+        "tier": "INADEQUATE \u2014 frost-susceptible subgrade exposed",
+        "design_approach": "Reduced subgrade strength approach acceptable; or thicken non-frost-susceptible base to full frost depth for complete protection.",
+        "rationale": "Total pavement section (12.0\") is less than 65% of frost depth (22.23\"). Recommend non-frost-susceptible base/subbase extension to a depth of 14.4\" minimum, OR full reconstruction to 22.2\" of non-frost-susceptible material.",
+        "compliant": false,
+        "limited_depth_required_in": 14.45,
+        "complete_depth_required_in": 22.23,
+        "total_pavement_in": 12.0
+      },
+      "monthly_tavg_F": [
+        {
+          "month": 1,
+          "tavg_F": 24.3
+        },
+        {
+          "month": 2,
+          "tavg_F": 29.0
+        },
+        {
+          "month": 3,
+          "tavg_F": 40.7
+        },
+        {
+          "month": 4,
+          "tavg_F": 52.4
+        },
+        {
+          "month": 5,
+          "tavg_F": 63.0
+        },
+        {
+          "month": 6,
+          "tavg_F": 72.5
+        },
+        {
+          "month": 7,
+          "tavg_F": 75.6
+        },
+        {
+          "month": 8,
+          "tavg_F": 73.8
+        },
+        {
+          "month": 9,
+          "tavg_F": 66.6
+        },
+        {
+          "month": 10,
+          "tavg_F": 54.3
+        },
+        {
+          "month": 11,
+          "tavg_F": 41.0
+        },
+        {
+          "month": 12,
+          "tavg_F": 29.8
+        }
+      ]
+    },
+    {
+      "icao": "KMWH",
+      "station": "USW00024110",
+      "station_name": "MOSES LAKE GRANT CO AP, WA US",
+      "station_note": "Co-located with the airport",
+      "air_freezing_index_F_days": 126.5,
+      "freezing_days_per_year": 59,
+      "coldest_normal_day": "12-25",
+      "coldest_normal_F": 28.7,
+      "subgrade": {
+        "frost_class": "FG-1",
+        "soil_description": "Gravelly Coarse Sand (A-1-a, CBR=40)",
+        "cbr": 40,
+        "class_rationale": "Coarse gravelly sand \u2014 negligible frost susceptibility"
+      },
+      "berggren_K": 1.4,
+      "frost_depth_in": 15.75,
+      "pavement_total_in": 20.0,
+      "recommendation": {
+        "tier": "No special treatment required",
+        "design_approach": "Standard FAARFIELD design (no frost adjustment)",
+        "rationale": "Subgrade is FG-1 (negligible frost susceptibility)",
+        "compliant": true
+      },
+      "monthly_tavg_F": [
+        {
+          "month": 1,
+          "tavg_F": 30.1
+        },
+        {
+          "month": 2,
+          "tavg_F": 35.5
+        },
+        {
+          "month": 3,
+          "tavg_F": 43.3
+        },
+        {
+          "month": 4,
+          "tavg_F": 50.5
+        },
+        {
+          "month": 5,
+          "tavg_F": 59.5
+        },
+        {
+          "month": 6,
+          "tavg_F": 66.2
+        },
+        {
+          "month": 7,
+          "tavg_F": 73.4
+        },
+        {
+          "month": 8,
+          "tavg_F": 72.2
+        },
+        {
+          "month": 9,
+          "tavg_F": 62.8
+        },
+        {
+          "month": 10,
+          "tavg_F": 49.9
+        },
+        {
+          "month": 11,
+          "tavg_F": 37.5
+        },
+        {
+          "month": 12,
+          "tavg_F": 29.8
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+FAARFIELD CDF (Native Engine: LEAF + 3D Rigid FEM via FAASR3D) — KMWH (Grant County International, WA)
+Engine: FAARFIELD_desktop_parity+FEM3D  |  useFem3d=true  |  R=360 psi  |  SCI=80.0  |  life=20yr
+Material rule: FAA AC 150/5320-6F lower-bound (R = 0.08 * f'c_assumed = 0.08 * 4500 = 360 psi for >20-yr aged PCC, no field cores)
+Subgrade: Gravelly Coarse Sand (AASHTO A-1-a, NRCS), CBR=40, E=50,000 psi
+Growth: -0.500%/yr over 20 yr (linear, FAARFIELD modFAILURE_MODEL_NP.vb:840)
+Wander: sigma = 30.435" (FAA standard for rigid pavement) over 41-offset lateral sweep (0-400" at 10" steps)
+====================================================================================================
+
+--- Section 37325 (Runway (narrow) - 2" AC + 6" PCC + 12" Agg Base) — UNDER ---
+Construction: PCC poured 1942, AC overlay 2020 (PCC age 84 yr at analysis).
+CDF breakdown: AC=5.4302e-10  Subgrade=3.3836e-32  PCC=2.2977e+04  -> CDF_max = 2.2977e+04
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 140" from centerline
+Predicted structural life: 0.00 yr (vs 20-yr target -> short by 20.0 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  C17        585,000  2D      1.416e+04  xml (exact FAARFIELD XML)
+    2  B738       174,200  D       3.362e+03  xml (exact FAARFIELD XML)
+    3  P3         135,000  D       1.129e+03  xml
+    4  B739       187,700  D       5.448e+02  xml
+    5  B737       154,500  D       5.174e+02  xml
+
+--- Section 37508 (Runway (wide) - 2" AC + 6" PCC + 12" Agg Base) — UNDER ---
+Construction: PCC poured 1942, AC overlay 2020 (PCC age 84 yr at analysis).
+CDF breakdown: AC=5.4302e-10  Subgrade=3.3836e-32  PCC=2.2977e+04  -> CDF_max = 2.2977e+04
+Controlling failure mode: PCC Fatigue   |   peak at lateral offset = 140" from centerline
+Predicted structural life: 0.00 yr (vs 20-yr target -> short by 20.0 yr)
+Engine: FAARFIELD_desktop_parity
+
+  Top 5 aircraft by CDF contribution:
+    #  ICAO     MTOW (lb)  Gear          CDF  Source
+  ---  ------  ----------  -----  ----------  ----------------------------------------
+    1  C17        585,000  2D      1.416e+04  xml (exact FAARFIELD XML)
+    2  B738       174,200  D       3.362e+03  xml (exact FAARFIELD XML)
+    3  P3         135,000  D       1.129e+03  xml
+    4  B739       187,700  D       5.448e+02  xml
+    5  B737       154,500  D       5.174e+02  xml
+
+====================================================================================================
+Generated 2026-04-22 19:09 from results/cdf_results.json

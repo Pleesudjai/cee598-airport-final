@@ -1,0 +1,11 @@
+rank,icao,mtow_lb,gear,annual_departures,growth_rate,cdf_contribution,source
+1,R135,321874,2D,1.00,-0.0220,9.408277e-01,batch_FEM
+2,GALX,33289,D,20.43,-0.0220,3.876318e-05,batch_FEM
+3,CL35,40600,D,1.00,-0.0220,3.516812e-06,batch_FEM
+4,CL30,37478,D,1.00,-0.0220,2.741805e-06,batch_FEM
+5,F2TH,34833,D,1.00,-0.0220,1.128279e-06,batch_FEM
+6,C550,14800,S,14.40,-0.0220,6.797366e-10,LEAF_only_supplement
+7,B350,16500,D,2.00,-0.0220,5.482607e-10,LEAF_only_supplement
+8,BE20,12500,D,2.25,-0.0220,4.749184e-10,LEAF_only_supplement
+9,B190,17120,D,1.00,-0.0220,2.741303e-10,LEAF_only_supplement
+10,BE30,14000,D,1.00,-0.0220,2.741303e-10,LEAF_only_supplement

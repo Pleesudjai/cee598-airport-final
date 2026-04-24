@@ -1,0 +1,1 @@
+For the 105 aircraft not in FAARFIELD's built-in library, you can now create custom aircraft in FAARFIELD using the MTOW and gear data from the FAA ACD, or use the closest Generic aircraft by weight class.

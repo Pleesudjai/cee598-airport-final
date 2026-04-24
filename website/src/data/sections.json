@@ -1,0 +1,382 @@
+[
+  {
+    "section_id": "6627",
+    "icao": "KLHX",
+    "use": "Taxiway",
+    "desc": "2.5\" AC + 6\" PCC",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 6.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 10500,
+      "cbr": 7,
+      "soil": "Silt Loam",
+      "aashto": "A-6"
+    }
+  },
+  {
+    "section_id": "7347",
+    "icao": "KLHX",
+    "use": "Taxiway",
+    "desc": "2\" AC + 10\" PCC",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.0,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 10.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 10500,
+      "cbr": 7,
+      "soil": "Silt Loam",
+      "aashto": "A-6"
+    }
+  },
+  {
+    "section_id": "6948",
+    "icao": "KPUB",
+    "use": "Taxiway",
+    "desc": "2.5\" AC + 7\" PCC + 6\" P-154",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 7.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "P-154 Subbase",
+        "h": 6.0,
+        "E": 40000,
+        "nu": 0.35
+      }
+    ],
+    "subgrade": {
+      "E": 18000,
+      "cbr": 12,
+      "soil": "Bedrock/Shale",
+      "aashto": "Rock"
+    }
+  },
+  {
+    "section_id": "8662",
+    "icao": "KMQJ",
+    "use": "Taxiway TWA2",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 3.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 8.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "Stabilized Base",
+        "h": 6.0,
+        "E": 500000,
+        "nu": 0.2
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "8881",
+    "icao": "KMQJ",
+    "use": "Taxiway TWA1",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 3.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 8.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "Stabilized Subbase",
+        "h": 6.0,
+        "E": 500000,
+        "nu": 0.2
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "8640",
+    "icao": "KMQJ",
+    "use": "Taxiway TWA3",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 3.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 8.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "Stabilized Base",
+        "h": 6.0,
+        "E": 500000,
+        "nu": 0.2
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "8780",
+    "icao": "KMQJ",
+    "use": "Taxiway TWA4",
+    "desc": "3.5\" AC + 8\" PCC + 6\" Stab",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 3.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 8.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "Stabilized Base",
+        "h": 6.0,
+        "E": 500000,
+        "nu": 0.2
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "21222",
+    "icao": "KCIU",
+    "use": "Runway",
+    "desc": "2.5\" AC + 24\" PCC",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 24.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 30000,
+      "cbr": 20,
+      "soil": "Fine Sand",
+      "aashto": "A-3"
+    }
+  },
+  {
+    "section_id": "28171",
+    "icao": "KOTM",
+    "use": "Taxiway",
+    "desc": "2.5\" AC + 8\" PCC",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.5,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 8.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay Loam",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "27450",
+    "icao": "KOTM",
+    "use": "Runway",
+    "desc": "3\" AC + 9\" PCC",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 3.0,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 9.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay Loam",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "27641",
+    "icao": "KOTM",
+    "use": "Runway",
+    "desc": "3\" AC + 8\" PCC",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 3.0,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 8.0,
+        "E": 4000000,
+        "nu": 0.15
+      }
+    ],
+    "subgrade": {
+      "E": 6000,
+      "cbr": 4,
+      "soil": "Silty Clay Loam",
+      "aashto": "A-7-6"
+    }
+  },
+  {
+    "section_id": "37325",
+    "icao": "KMWH",
+    "use": "Runway",
+    "desc": "2\" AC + 6\" PCC + 12\" Agg",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.0,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 6.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "P-209 Agg Base",
+        "h": 12.0,
+        "E": 75000,
+        "nu": 0.35
+      }
+    ],
+    "subgrade": {
+      "E": 50000,
+      "cbr": 40,
+      "soil": "Gravelly Coarse Sand",
+      "aashto": "A-1-a"
+    }
+  },
+  {
+    "section_id": "37508",
+    "icao": "KMWH",
+    "use": "Runway",
+    "desc": "2\" AC + 6\" PCC + 12\" Agg",
+    "layers": [
+      {
+        "type": "P-401 AC",
+        "h": 2.0,
+        "E": 200000,
+        "nu": 0.35
+      },
+      {
+        "type": "P-501 PCC",
+        "h": 6.0,
+        "E": 4000000,
+        "nu": 0.15
+      },
+      {
+        "type": "P-209 Agg Base",
+        "h": 12.0,
+        "E": 75000,
+        "nu": 0.35
+      }
+    ],
+    "subgrade": {
+      "E": 50000,
+      "cbr": 40,
+      "soil": "Gravelly Coarse Sand",
+      "aashto": "A-1-a"
+    }
+  }
+]
