@@ -146,7 +146,7 @@ export default function DesignTool({
   const [resetKey, setResetKey] = useState(0)
 
   // Stress visualization aircraft selection — FAA default: highest CDF contribution
-  const [stressAircraftMode, setStressAircraftMode] = useState('top_cdf')
+  const [stressAircraftIcao, setStressAircraftIcao] = useState(null)  // null = auto-pick top-CDF
 
   // FEM3D toggle — off by default (adds ~15s per aircraft)
   // Default ON — FEM gives the FAARFIELD max(FEM, LEAF×0.95) rule which is
@@ -408,19 +408,20 @@ export default function DesignTool({
   // Memoized subgrade for stress visualization — avoids re-render loops from new object refs
   const stressSubgrade = useMemo(() => ({ E: cbrToModulus(cbr || 7), nu: 0.4 }), [cbr])
 
-  // Memoized aircraft for stress visualization — driven by native FAARFIELD per-aircraft data
+  // Memoized aircraft for stress visualization — driven by native FAARFIELD per-aircraft data.
+  // Default: top-CDF contributor. User can pick any other aircraft via stressAircraftIcao.
   const stressAircraft = useMemo(() => {
     const details = nativeCdf?.perAircraft || []
     const defaultAc = { type: 'B738', mtow: 174200, gear: 'D' }
     if (!details.length) return defaultAc
-    const sorted = stressAircraftMode === 'top_cdf'
-      ? [...details].sort((a, b) => (b.cdf || 0) - (a.cdf || 0))
-      : [...details].sort((a, b) => (b.mtow || 0) - (a.mtow || 0))
-    const top = sorted[0]
-    return top
-      ? { type: top.icao || top.name, mtow: top.mtow, gear: top.gear }
+    const sorted = [...details].sort((a, b) => (b.cdf || 0) - (a.cdf || 0))
+    const picked = stressAircraftIcao
+      ? sorted.find(a => (a.icao || a.name) === stressAircraftIcao) || sorted[0]
+      : sorted[0]
+    return picked
+      ? { type: picked.icao || picked.name, mtow: picked.mtow, gear: picked.gear }
       : defaultAc
-  }, [nativeCdf?.perAircraft, stressAircraftMode])
+  }, [nativeCdf?.perAircraft, stressAircraftIcao])
 
   // Step 4: completion checks
   const hasLayers = (customLayers || currentSection?.layers || []).length > 0
@@ -847,14 +848,11 @@ export default function DesignTool({
           const totalDepth = activeLayers.reduce((s, l) => s + l.h, 0)
 
           // Label helpers (computed fresh for display, but stressAircraft is memoized)
-          const byMtow = [...details].sort((a, b) => (b.mtow || 0) - (a.mtow || 0))
           const byCdf = [...details].sort((a, b) => (b.cdf || 0) - (a.cdf || 0))
-          const heaviest = byMtow[0]
-          const topCdf = byCdf[0]
           const acIcao = stressAircraft.type || '?'
           const acMtow = (stressAircraft.mtow || 0).toLocaleString()
-          const heaviestLabel = heaviest ? `${heaviest.icao || heaviest.name} (${(heaviest.mtow||0).toLocaleString()} lbs)` : 'N/A'
-          const topCdfLabel = topCdf ? `${topCdf.icao || topCdf.name} (CDF ${(topCdf.cdf||0).toExponential(2)})` : 'N/A'
+          // Build per-aircraft option list — full contributor list, ranked by CDF.
+          // Pre-cal'd offline coverage = top 5 only; ranks 6+ work only when backend is live.
 
           return (
             <>
@@ -863,10 +861,20 @@ export default function DesignTool({
                 <span className="material-symbols-outlined text-primary text-xl">flight</span>
                 <div className="flex-1">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Stress Visualization Aircraft</p>
-                  <select value={stressAircraftMode} onChange={e => setStressAircraftMode(e.target.value)}
+                  <select
+                    value={stressAircraftIcao || ''}
+                    onChange={e => setStressAircraftIcao(e.target.value || null)}
                     className="bg-surface-low border border-outline-variant/30 rounded-lg px-3 py-1.5 text-sm font-medium focus:ring-2 focus:ring-primary w-full max-w-md">
-                    <option value="top_cdf">Design Aircraft (FAA: Highest CDF) — {topCdfLabel}</option>
-                    <option value="heaviest">Heaviest Aircraft (Max MTOW) — {heaviestLabel}</option>
+                    <option value="">Auto: top-CDF contributor (rank 1)</option>
+                    {byCdf.map((a, i) => {
+                      const id = a.icao || a.name
+                      const offlineOk = i < 5 ? '' : ' — live only'
+                      return (
+                        <option key={id} value={id}>
+                          Rank {i + 1}: {id} (CDF {(a.cdf || 0).toExponential(2)}, {(a.mtow || 0).toLocaleString()} lbs){offlineOk}
+                        </option>
+                      )
+                    })}
                   </select>
                 </div>
                 <div className="text-right">
