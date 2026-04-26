@@ -96,18 +96,21 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
         type: 'contour',
         colorscale: 'Viridis',
         contours: { coloring: 'heatmap' },
-        colorbar: { title: { text: fieldInfo.unit, side: 'right' }, thickness: 15, len: 0.9 },
+        colorbar: { title: { text: fieldInfo.unit, side: 'right' }, thickness: 12, len: 0.85, x: 1.0 },
       }], {
         title: { text: `${fieldInfo.label} at depth ${evalDepth}"`, font: { size: 13 } },
         xaxis: { title: 'X (in)', range: [xMin, xMax], scaleanchor: 'y' },
         yaxis: { title: 'Y (in)', range: [yMin, yMax] },
-        margin: { t: 40, r: 10, b: 50, l: 50 },
+        margin: { t: 60, r: 90, b: 50, l: 50 },
         height: 400,
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent',
+        // Park the modebar in the top margin, horizontal — never overlaps the
+        // colorbar (which lives inside the right margin).
+        modebar: { orientation: 'h', bgcolor: 'rgba(255,255,255,0)', color: '#737784', activecolor: '#0047ab' },
       }, {
         responsive: true,
-        displayModeBar: true,           // show zoom/pan/reset toolbar
+        displayModeBar: 'hover',         // appears only when hovering the plot
         displaylogo: false,              // hide Plotly watermark
         // Keep only the buttons engineers actually use on a stress contour:
         // zoom (drag-rect), zoomIn / zoomOut, pan, autoScale (= reset), download.
