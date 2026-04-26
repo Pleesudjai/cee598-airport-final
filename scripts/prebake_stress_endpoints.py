@@ -55,7 +55,7 @@ SRC_PRECAL = os.path.join(AEROPAVE, 'src', 'data', 'precal')
 PUB_PRECAL = os.path.join(AEROPAVE, 'public', 'data', 'precal')
 RESULTS = os.path.join(PROJECT, 'results')
 
-TOP_N = 5
+TOP_N = 10
 GRID_POINTS = 21
 PROACTIVE_RESTART_EVERY = 20
 SLEEP_BETWEEN_CALLS = 2.0
@@ -106,8 +106,10 @@ def build_aircraft_payload(ac_full):
     }
 
 
-def compute_grid_extent(ac_full, default=80):
-    """Mirror the frontend's auto-scale: ceil((max(|x|,|y|) + 40) / 10) * 10, floored at 80."""
+def compute_grid_extent(ac_full, default=120):
+    """Mirror the frontend's auto-scale: 40% margin past max wheel coord,
+    floored at 120". Keeps wide-body grids (e.g., B772 ±243" -> 350") sane
+    while still showing context past tiny GA gear footprints."""
     xs = ac_full.get('wheelX') or []
     ys = ac_full.get('wheelY') or []
     if not xs or not ys:
@@ -115,7 +117,7 @@ def compute_grid_extent(ac_full, default=80):
     max_x = max(abs(v) for v in xs)
     max_y = max(abs(v) for v in ys)
     import math
-    computed = math.ceil((max(max_x, max_y) + 40) / 10) * 10
+    computed = math.ceil((max(max_x, max_y) * 1.4) / 10) * 10
     return max(default, computed)
 
 
