@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-26T07:57:00.786277+00:00",
+  "generatedAt": "2026-04-26T18:04:45.696477+00:00",
   "backendVersion": "0.3.0",
-  "topN": 5,
+  "topN": 10,
   "gridPoints": 21,
   "sections": [
     {
@@ -19,9 +19,9 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_C130.json",
           "requestHash": "sha256:87c46eb0f9e04c9c9ceb1b54c2f5bc75",
           "sizes": {
-            "leafGrid": 57061,
+            "leafGrid": 57018,
             "leafPoint": 7745,
-            "fem3dMesh": 1227823
+            "fem3dMesh": 1227824
           }
         },
         {
@@ -34,7 +34,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_CRJ9.json",
           "requestHash": "sha256:036f300ad548ea6181b0ac65a0d17c77",
           "sizes": {
-            "leafGrid": 57541,
+            "leafGrid": 57505,
             "leafPoint": 7763,
             "fem3dMesh": 1227737
           }
@@ -49,7 +49,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_CL30.json",
           "requestHash": "sha256:bed6bf040241fcbfe07b4a9b36d5db3c",
           "sizes": {
-            "leafGrid": 58014,
+            "leafGrid": 57983,
             "leafPoint": 7780,
             "fem3dMesh": 1232593
           }
@@ -79,9 +79,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_H25B.json",
           "requestHash": "sha256:9e330db1797c0f753c1c404b32782765",
           "sizes": {
-            "leafGrid": 58247,
+            "leafGrid": 58222,
             "leafPoint": 7805,
             "fem3dMesh": 1234590
+          }
+        },
+        {
+          "icao": "C650",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 2.17331437329387e-06,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_C650.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_C650.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_C650.json",
+          "requestHash": "sha256:24b420b630345461b87e8a3eb97cb825",
+          "sizes": {
+            "leafGrid": 58366,
+            "leafPoint": 7810,
+            "fem3dMesh": 1235853
+          }
+        },
+        {
+          "icao": "LJ45",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 4.0943408335429384e-07,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_LJ45.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_LJ45.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_LJ45.json",
+          "requestHash": "sha256:83b238b8465aaeb800d18ddf91594de4",
+          "sizes": {
+            "leafGrid": 58387,
+            "leafPoint": 7781,
+            "fem3dMesh": 1236698
+          }
+        },
+        {
+          "icao": "SW4",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 1.8936347595547753e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_SW4.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_SW4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_SW4.json",
+          "requestHash": "sha256:dc43450888dd03555ed8f5f468f8b219",
+          "sizes": {
+            "leafGrid": 59150,
+            "leafPoint": 7906,
+            "fem3dMesh": 1241394
+          }
+        },
+        {
+          "icao": "BE20",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 1.0789374973292257e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_BE20.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_BE20.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_BE20.json",
+          "requestHash": "sha256:93598a6152d25e050c1a3c589dada72f",
+          "sizes": {
+            "leafGrid": 59243,
+            "leafPoint": 7932,
+            "fem3dMesh": 1241623
+          }
+        },
+        {
+          "icao": "BE9L",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 6.986932746757165e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_BE9L.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_BE9L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_BE9L.json",
+          "requestHash": "sha256:66e11ddf5f1888311442c942a9157fc8",
+          "sizes": {
+            "leafGrid": 59880,
+            "leafPoint": 7760,
+            "fem3dMesh": 1241576
           }
         }
       ]
@@ -101,7 +176,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_CRJ9.json",
           "requestHash": "sha256:939139fe56f1b930464a188298ff47d7",
           "sizes": {
-            "leafGrid": 57837,
+            "leafGrid": 57692,
             "leafPoint": 7727,
             "fem3dMesh": 1219928
           }
@@ -116,7 +191,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_C130.json",
           "requestHash": "sha256:47e8d70cc5dfa3c3cf7ae7c8a8c2f3db",
           "sizes": {
-            "leafGrid": 57243,
+            "leafGrid": 57150,
             "leafPoint": 7671,
             "fem3dMesh": 1219780
           }
@@ -131,7 +206,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_SW4.json",
           "requestHash": "sha256:a9be9d3338c33bb69db9d6835bf65386",
           "sizes": {
-            "leafGrid": 59042,
+            "leafGrid": 59076,
             "leafPoint": 7770,
             "fem3dMesh": 1232346
           }
@@ -161,9 +236,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_CL30.json",
           "requestHash": "sha256:f15b454b5a867ed595cf9ae2030f574f",
           "sizes": {
-            "leafGrid": 58439,
+            "leafGrid": 58284,
             "leafPoint": 7702,
             "fem3dMesh": 1224411
+          }
+        },
+        {
+          "icao": "BE9L",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 8.425815259072128e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_BE9L.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_BE9L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_BE9L.json",
+          "requestHash": "sha256:795260c8ceb459ea6ee539dfe72bd5c6",
+          "sizes": {
+            "leafGrid": 59676,
+            "leafPoint": 7668,
+            "fem3dMesh": 1224368
+          }
+        },
+        {
+          "icao": "C25A",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 4.645352235706424e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_C25A.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_C25A.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_C25A.json",
+          "requestHash": "sha256:1396d9bd8a3cddea8ff6a0fb476e587d",
+          "sizes": {
+            "leafGrid": 59267,
+            "leafPoint": 7783,
+            "fem3dMesh": 1224379
+          }
+        },
+        {
+          "icao": "DHC6",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 3.8711268630886865e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_DHC6.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_DHC6.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_DHC6.json",
+          "requestHash": "sha256:1fb1556414081b1b735e1a09c6640bc7",
+          "sizes": {
+            "leafGrid": 59307,
+            "leafPoint": 7775,
+            "fem3dMesh": 1224379
+          }
+        },
+        {
+          "icao": "EA50",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 3.4219499339099506e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_EA50.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_EA50.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_EA50.json",
+          "requestHash": "sha256:b7bf7135eaa9c12d79e732fa8df4bafe",
+          "sizes": {
+            "leafGrid": 58332,
+            "leafPoint": 7734,
+            "fem3dMesh": 1224360
+          }
+        },
+        {
+          "icao": "PC12",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 3.1689760723660647e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_PC12.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_PC12.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_PC12.json",
+          "requestHash": "sha256:a1ca225068e34210af2aafa0fd089404",
+          "sizes": {
+            "leafGrid": 59484,
+            "leafPoint": 7847,
+            "fem3dMesh": 1224384
           }
         }
       ]
@@ -183,7 +333,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_C130.json",
           "requestHash": "sha256:a37085425c7cacf7cc16f98441af831d",
           "sizes": {
-            "leafGrid": 57361,
+            "leafGrid": 57352,
             "leafPoint": 7841,
             "fem3dMesh": 1229829
           }
@@ -198,7 +348,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_B734.json",
           "requestHash": "sha256:2e4b56474a9f645cb740e3d0a55fc12e",
           "sizes": {
-            "leafGrid": 57632,
+            "leafGrid": 57482,
             "leafPoint": 7857,
             "fem3dMesh": 1227277
           }
@@ -213,7 +363,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_B738.json",
           "requestHash": "sha256:2c31093854cda9b0a547263a0f6a6293",
           "sizes": {
-            "leafGrid": 57586,
+            "leafGrid": 57654,
             "leafPoint": 7890,
             "fem3dMesh": 1226942
           }
@@ -228,7 +378,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_CRJ7.json",
           "requestHash": "sha256:97f53ad08457f4ba289006992884db6d",
           "sizes": {
-            "leafGrid": 57775,
+            "leafGrid": 57702,
             "leafPoint": 7853,
             "fem3dMesh": 1229258
           }
@@ -246,6 +396,81 @@
             "leafGrid": 58065,
             "leafPoint": 7868,
             "fem3dMesh": 1232269
+          }
+        },
+        {
+          "icao": "B737",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 59.59592876154601,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_B737.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_B737.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_B737.json",
+          "requestHash": "sha256:affe247fef4b14d8a825f38ef44c0e46",
+          "sizes": {
+            "leafGrid": 57747,
+            "leafPoint": 7902,
+            "fem3dMesh": 1228050
+          }
+        },
+        {
+          "icao": "GLF4",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 45.239647488236514,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_GLF4.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_GLF4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_GLF4.json",
+          "requestHash": "sha256:e44a5e5ea8d989674adf9106832a3304",
+          "sizes": {
+            "leafGrid": 57901,
+            "leafPoint": 7878,
+            "fem3dMesh": 1230565
+          }
+        },
+        {
+          "icao": "GLF5",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 43.68870898372196,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_GLF5.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_GLF5.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_GLF5.json",
+          "requestHash": "sha256:20f439f01f099d39a5726c7c7f670364",
+          "sizes": {
+            "leafGrid": 57841,
+            "leafPoint": 7875,
+            "fem3dMesh": 1229233
+          }
+        },
+        {
+          "icao": "C17",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 40.86061336589718,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_C17.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_C17.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_C17.json",
+          "requestHash": "sha256:67ddc90ed9a3b36605436f5eac8e07d7",
+          "sizes": {
+            "leafGrid": 56886,
+            "leafPoint": 7752,
+            "fem3dMesh": 1220423
+          }
+        },
+        {
+          "icao": "GLEX",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 24.119129236518486,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_GLEX.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_GLEX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_GLEX.json",
+          "requestHash": "sha256:de137fb56fe65cd16df4c595679dc09a",
+          "sizes": {
+            "leafGrid": 57647,
+            "leafPoint": 7845,
+            "fem3dMesh": 1228375
           }
         }
       ]
@@ -310,7 +535,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_GLEX.json",
           "requestHash": "sha256:0c79237b827c6bf0b0df84a3b3ed22ee",
           "sizes": {
-            "leafGrid": 57319,
+            "leafGrid": 57405,
             "leafPoint": 7770,
             "fem3dMesh": 1223691
           }
@@ -325,9 +550,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_B738.json",
           "requestHash": "sha256:24cacc3a6a0d36ff81b8b0d468627562",
           "sizes": {
-            "leafGrid": 57055,
+            "leafGrid": 57100,
             "leafPoint": 7745,
             "fem3dMesh": 1222211
+          }
+        },
+        {
+          "icao": "FA7X",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 0.7021915778816503,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_FA7X.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_FA7X.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_FA7X.json",
+          "requestHash": "sha256:cc9f12b2e7a34b5105aca447b25d578f",
+          "sizes": {
+            "leafGrid": 57685,
+            "leafPoint": 7784,
+            "fem3dMesh": 1226171
+          }
+        },
+        {
+          "icao": "CRJ7",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 0.031285791436439274,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_CRJ7.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_CRJ7.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_CRJ7.json",
+          "requestHash": "sha256:99048e21793a5eac40ba4fb0273eb09c",
+          "sizes": {
+            "leafGrid": 57497,
+            "leafPoint": 7776,
+            "fem3dMesh": 1224572
+          }
+        },
+        {
+          "icao": "E170",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 0.02861650616529495,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_E170.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_E170.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_E170.json",
+          "requestHash": "sha256:b416dc5384a6d82ea91a815869d66f52",
+          "sizes": {
+            "leafGrid": 57723,
+            "leafPoint": 7767,
+            "fem3dMesh": 1225802
+          }
+        },
+        {
+          "icao": "B752",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 0.02703434173433605,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_B752.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_B752.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_B752.json",
+          "requestHash": "sha256:765473d3e57521eb28284450b43a0148",
+          "sizes": {
+            "leafGrid": 57029,
+            "leafPoint": 7790,
+            "fem3dMesh": 1223494
+          }
+        },
+        {
+          "icao": "B77L",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 0.017672925558732372,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_B77L.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_B77L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_B77L.json",
+          "requestHash": "sha256:13786a291ee95e6ee3381597380c2bbd",
+          "sizes": {
+            "leafGrid": 56584,
+            "leafPoint": 7716,
+            "fem3dMesh": 1215367
           }
         }
       ]
@@ -362,7 +662,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_B738.json",
           "requestHash": "sha256:fa70b0caba34398fe6e1b494d0016ae8",
           "sizes": {
-            "leafGrid": 57055,
+            "leafGrid": 57100,
             "leafPoint": 7745,
             "fem3dMesh": 1222214
           }
@@ -407,9 +707,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_GLEX.json",
           "requestHash": "sha256:be862f513333e51d4b325619fc855f5f",
           "sizes": {
-            "leafGrid": 57319,
+            "leafGrid": 57405,
             "leafPoint": 7770,
             "fem3dMesh": 1223694
+          }
+        },
+        {
+          "icao": "FA7X",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 1.1235065246106404,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_FA7X.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_FA7X.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_FA7X.json",
+          "requestHash": "sha256:16a348902b2c569ad5dfbed0e103a456",
+          "sizes": {
+            "leafGrid": 57685,
+            "leafPoint": 7784,
+            "fem3dMesh": 1226174
+          }
+        },
+        {
+          "icao": "CRJ7",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 0.2502863314915142,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_CRJ7.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_CRJ7.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_CRJ7.json",
+          "requestHash": "sha256:c2f6b15b38ed72f7739a934110f6de84",
+          "sizes": {
+            "leafGrid": 57497,
+            "leafPoint": 7776,
+            "fem3dMesh": 1224575
+          }
+        },
+        {
+          "icao": "B752",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 0.2162747338746884,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_B752.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_B752.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_B752.json",
+          "requestHash": "sha256:d18827d41c2b9cdeb8e2993e589eeace",
+          "sizes": {
+            "leafGrid": 57029,
+            "leafPoint": 7790,
+            "fem3dMesh": 1223497
+          }
+        },
+        {
+          "icao": "E170",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 0.1144660246611798,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_E170.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_E170.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_E170.json",
+          "requestHash": "sha256:de8bab3c4a25748680646d1a9553cc47",
+          "sizes": {
+            "leafGrid": 57723,
+            "leafPoint": 7767,
+            "fem3dMesh": 1225805
+          }
+        },
+        {
+          "icao": "B77L",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 0.07069170223492949,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_B77L.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_B77L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_B77L.json",
+          "requestHash": "sha256:3fb34225061541d746063436d1741521",
+          "sizes": {
+            "leafGrid": 56584,
+            "leafPoint": 7716,
+            "fem3dMesh": 1215370
           }
         }
       ]
@@ -474,7 +849,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_GLEX.json",
           "requestHash": "sha256:0c79237b827c6bf0b0df84a3b3ed22ee",
           "sizes": {
-            "leafGrid": 57319,
+            "leafGrid": 57405,
             "leafPoint": 7770,
             "fem3dMesh": 1223676
           }
@@ -489,9 +864,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_B738.json",
           "requestHash": "sha256:24cacc3a6a0d36ff81b8b0d468627562",
           "sizes": {
-            "leafGrid": 57055,
+            "leafGrid": 57100,
             "leafPoint": 7745,
             "fem3dMesh": 1222196
+          }
+        },
+        {
+          "icao": "FA7X",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 0.7021915778816503,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_FA7X.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_FA7X.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_FA7X.json",
+          "requestHash": "sha256:cc9f12b2e7a34b5105aca447b25d578f",
+          "sizes": {
+            "leafGrid": 57685,
+            "leafPoint": 7784,
+            "fem3dMesh": 1226156
+          }
+        },
+        {
+          "icao": "CRJ7",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 0.031285791436439274,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_CRJ7.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_CRJ7.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_CRJ7.json",
+          "requestHash": "sha256:99048e21793a5eac40ba4fb0273eb09c",
+          "sizes": {
+            "leafGrid": 57497,
+            "leafPoint": 7776,
+            "fem3dMesh": 1224557
+          }
+        },
+        {
+          "icao": "E170",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 0.02861650616529495,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_E170.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_E170.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_E170.json",
+          "requestHash": "sha256:b416dc5384a6d82ea91a815869d66f52",
+          "sizes": {
+            "leafGrid": 57723,
+            "leafPoint": 7767,
+            "fem3dMesh": 1225787
+          }
+        },
+        {
+          "icao": "B752",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 0.02703434173433605,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_B752.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_B752.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_B752.json",
+          "requestHash": "sha256:765473d3e57521eb28284450b43a0148",
+          "sizes": {
+            "leafGrid": 57029,
+            "leafPoint": 7790,
+            "fem3dMesh": 1223493
+          }
+        },
+        {
+          "icao": "B77L",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 0.017672925558732372,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_B77L.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_B77L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_B77L.json",
+          "requestHash": "sha256:13786a291ee95e6ee3381597380c2bbd",
+          "sizes": {
+            "leafGrid": 56584,
+            "leafPoint": 7716,
+            "fem3dMesh": 1215366
           }
         }
       ]
@@ -556,7 +1006,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_GLEX.json",
           "requestHash": "sha256:0c79237b827c6bf0b0df84a3b3ed22ee",
           "sizes": {
-            "leafGrid": 57319,
+            "leafGrid": 57405,
             "leafPoint": 7770,
             "fem3dMesh": 1223676
           }
@@ -571,9 +1021,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_B738.json",
           "requestHash": "sha256:24cacc3a6a0d36ff81b8b0d468627562",
           "sizes": {
-            "leafGrid": 57055,
+            "leafGrid": 57100,
             "leafPoint": 7745,
             "fem3dMesh": 1222196
+          }
+        },
+        {
+          "icao": "FA7X",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 0.7021915778816503,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_FA7X.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_FA7X.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_FA7X.json",
+          "requestHash": "sha256:cc9f12b2e7a34b5105aca447b25d578f",
+          "sizes": {
+            "leafGrid": 57685,
+            "leafPoint": 7784,
+            "fem3dMesh": 1226156
+          }
+        },
+        {
+          "icao": "CRJ7",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 0.031285791436439274,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_CRJ7.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_CRJ7.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_CRJ7.json",
+          "requestHash": "sha256:99048e21793a5eac40ba4fb0273eb09c",
+          "sizes": {
+            "leafGrid": 57497,
+            "leafPoint": 7776,
+            "fem3dMesh": 1224557
+          }
+        },
+        {
+          "icao": "E170",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 0.02861650616529495,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_E170.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_E170.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_E170.json",
+          "requestHash": "sha256:b416dc5384a6d82ea91a815869d66f52",
+          "sizes": {
+            "leafGrid": 57723,
+            "leafPoint": 7767,
+            "fem3dMesh": 1225787
+          }
+        },
+        {
+          "icao": "B752",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 0.02703434173433605,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_B752.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_B752.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_B752.json",
+          "requestHash": "sha256:765473d3e57521eb28284450b43a0148",
+          "sizes": {
+            "leafGrid": 57029,
+            "leafPoint": 7790,
+            "fem3dMesh": 1223493
+          }
+        },
+        {
+          "icao": "B77L",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 0.017672925558732372,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_B77L.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_B77L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_B77L.json",
+          "requestHash": "sha256:13786a291ee95e6ee3381597380c2bbd",
+          "sizes": {
+            "leafGrid": 56584,
+            "leafPoint": 7716,
+            "fem3dMesh": 1215366
           }
         }
       ]
@@ -593,7 +1118,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B763.json",
           "requestHash": "sha256:fe0446e1bbb890ee462a022c32593de6",
           "sizes": {
-            "leafGrid": 57420,
+            "leafGrid": 57521,
             "leafPoint": 7806,
             "fem3dMesh": 1227544
           }
@@ -608,7 +1133,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_A332.json",
           "requestHash": "sha256:a052877e8aad588a4c6766ba2a5a28f5",
           "sizes": {
-            "leafGrid": 57239,
+            "leafGrid": 57292,
             "leafPoint": 7792,
             "fem3dMesh": 1226212
           }
@@ -623,7 +1148,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B77W.json",
           "requestHash": "sha256:d6698d582d3113900d8b07ca843c572c",
           "sizes": {
-            "leafGrid": 56874,
+            "leafGrid": 57083,
             "leafPoint": 7771,
             "fem3dMesh": 1224558
           }
@@ -638,7 +1163,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B77L.json",
           "requestHash": "sha256:8afde8285800aaccbc1e94e8613a54f9",
           "sizes": {
-            "leafGrid": 56874,
+            "leafGrid": 57083,
             "leafPoint": 7771,
             "fem3dMesh": 1224558
           }
@@ -653,9 +1178,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B772.json",
           "requestHash": "sha256:0eecfe2021e2dfa7b1b55ff4c9ad77c5",
           "sizes": {
-            "leafGrid": 56957,
+            "leafGrid": 57055,
             "leafPoint": 7761,
             "fem3dMesh": 1224529
+          }
+        },
+        {
+          "icao": "C30J",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 7.279813758610478,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_C30J.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_C30J.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_C30J.json",
+          "requestHash": "sha256:4f039068dfc1461c2bb17f8316e4c03f",
+          "sizes": {
+            "leafGrid": 58374,
+            "leafPoint": 7808,
+            "fem3dMesh": 1233176
+          }
+        },
+        {
+          "icao": "K35R",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 1.954879749538486,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_K35R.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_K35R.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_K35R.json",
+          "requestHash": "sha256:0b2447e44ca12732b42ef8ad51ba8c6a",
+          "sizes": {
+            "leafGrid": 57700,
+            "leafPoint": 7817,
+            "fem3dMesh": 1229535
+          }
+        },
+        {
+          "icao": "B752",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 0.7656924891480628,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_B752.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_B752.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B752.json",
+          "requestHash": "sha256:43793b0047094c5a5886f8bb21f14ddd",
+          "sizes": {
+            "leafGrid": 57974,
+            "leafPoint": 7813,
+            "fem3dMesh": 1231051
+          }
+        },
+        {
+          "icao": "C17",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 0.08303646041986577,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_C17.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_C17.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_C17.json",
+          "requestHash": "sha256:52a5f8cbcda0140bed6fb7a6765a97a8",
+          "sizes": {
+            "leafGrid": 57230,
+            "leafPoint": 7799,
+            "fem3dMesh": 1226337
+          }
+        },
+        {
+          "icao": "E190",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 0.01113680484464006,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_E190.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_E190.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_E190.json",
+          "requestHash": "sha256:cc77d827f5ea5905fdd09f5dc60debb9",
+          "sizes": {
+            "leafGrid": 58682,
+            "leafPoint": 7830,
+            "fem3dMesh": 1237083
           }
         }
       ]
@@ -675,7 +1275,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_R135.json",
           "requestHash": "sha256:0e4f8ab7d14ad151bbdc506a9fbcf0a9",
           "sizes": {
-            "leafGrid": 56707,
+            "leafGrid": 56761,
             "leafPoint": 7756,
             "fem3dMesh": 1225109
           }
@@ -690,7 +1290,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_GALX.json",
           "requestHash": "sha256:f0dfd4ba378d7832b1159a6ddee5ee1c",
           "sizes": {
-            "leafGrid": 58178,
+            "leafGrid": 58286,
             "leafPoint": 7785,
             "fem3dMesh": 1235359
           }
@@ -705,7 +1305,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_CL35.json",
           "requestHash": "sha256:9470946499bc7d088bea5fa60dbb195b",
           "sizes": {
-            "leafGrid": 57997,
+            "leafGrid": 58019,
             "leafPoint": 7751,
             "fem3dMesh": 1234040
           }
@@ -720,7 +1320,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_CL30.json",
           "requestHash": "sha256:d8b95b31a6bad345c50693d743565a22",
           "sizes": {
-            "leafGrid": 58157,
+            "leafGrid": 58150,
             "leafPoint": 7792,
             "fem3dMesh": 1234701
           }
@@ -738,6 +1338,81 @@
             "leafGrid": 58234,
             "leafPoint": 7799,
             "fem3dMesh": 1236425
+          }
+        },
+        {
+          "icao": "C680",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 4.4760550051829576e-07,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_C680.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_C680.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_C680.json",
+          "requestHash": "sha256:008a207bc52ec25b453705ac551b95bd",
+          "sizes": {
+            "leafGrid": 58365,
+            "leafPoint": 7792,
+            "fem3dMesh": 1236066
+          }
+        },
+        {
+          "icao": "C68A",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 5.655825977205444e-08,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_C68A.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_C68A.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_C68A.json",
+          "requestHash": "sha256:f1dcf992634a9e3af5e10153bbeacd9a",
+          "sizes": {
+            "leafGrid": 58255,
+            "leafPoint": 7785,
+            "fem3dMesh": 1235748
+          }
+        },
+        {
+          "icao": "H25B",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 1.1094590585390043e-08,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_H25B.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_H25B.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_H25B.json",
+          "requestHash": "sha256:19e704d9adde2c8173fcc0f521125173",
+          "sizes": {
+            "leafGrid": 58416,
+            "leafPoint": 7788,
+            "fem3dMesh": 1236418
+          }
+        },
+        {
+          "icao": "B350",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 4.797280958446718e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_B350.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_B350.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_B350.json",
+          "requestHash": "sha256:a99d203e98685075f9af043183309d7b",
+          "sizes": {
+            "leafGrid": 58792,
+            "leafPoint": 7824,
+            "fem3dMesh": 1241727
+          }
+        },
+        {
+          "icao": "BE20",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 4.749183850720644e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_BE20.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_BE20.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_BE20.json",
+          "requestHash": "sha256:b1b95e87d6815b50d78d286bca7ef876",
+          "sizes": {
+            "leafGrid": 59036,
+            "leafPoint": 7839,
+            "fem3dMesh": 1243077
           }
         }
       ]
@@ -757,9 +1432,9 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_R135.json",
           "requestHash": "sha256:3ebf5fe10ca06aae0fd73da9e10036ea",
           "sizes": {
-            "leafGrid": 56843,
+            "leafGrid": 56766,
             "leafPoint": 7662,
-            "fem3dMesh": 1217008
+            "fem3dMesh": 1217009
           }
         },
         {
@@ -772,7 +1447,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_GALX.json",
           "requestHash": "sha256:a695d97552052b55a0cc3bb8c5592647",
           "sizes": {
-            "leafGrid": 58283,
+            "leafGrid": 58374,
             "leafPoint": 7744,
             "fem3dMesh": 1226825
           }
@@ -787,7 +1462,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_CL35.json",
           "requestHash": "sha256:6670c1a659d0c0d78e894a1699b0ad5a",
           "sizes": {
-            "leafGrid": 58159,
+            "leafGrid": 58240,
             "leafPoint": 7713,
             "fem3dMesh": 1225834
           }
@@ -802,7 +1477,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_CL30.json",
           "requestHash": "sha256:39daa930765ff68ca161368dae058ef7",
           "sizes": {
-            "leafGrid": 58192,
+            "leafGrid": 58272,
             "leafPoint": 7705,
             "fem3dMesh": 1226208
           }
@@ -820,6 +1495,81 @@
             "leafGrid": 58423,
             "leafPoint": 7741,
             "fem3dMesh": 1227818
+          }
+        },
+        {
+          "icao": "C680",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 1.6389539550460996e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_C680.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_C680.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_C680.json",
+          "requestHash": "sha256:c383aa36b1cc8b4cfe3c2695ac2d959c",
+          "sizes": {
+            "leafGrid": 58408,
+            "leafPoint": 7706,
+            "fem3dMesh": 1227490
+          }
+        },
+        {
+          "icao": "B350",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 5.065186987340734e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_B350.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_B350.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_B350.json",
+          "requestHash": "sha256:be80923fe676e6c1c53f2d7268952870",
+          "sizes": {
+            "leafGrid": 58939,
+            "leafPoint": 7767,
+            "fem3dMesh": 1232787
+          }
+        },
+        {
+          "icao": "BE20",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 5.017641975643657e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_BE20.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_BE20.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_BE20.json",
+          "requestHash": "sha256:a2269a59699ce839ff510b771c91fb5f",
+          "sizes": {
+            "leafGrid": 59290,
+            "leafPoint": 7786,
+            "fem3dMesh": 1234291
+          }
+        },
+        {
+          "icao": "C550",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 4.6535359256918614e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_C550.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_C550.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_C550.json",
+          "requestHash": "sha256:2fceeeb982e9410f66d72d35b2bb66ab",
+          "sizes": {
+            "leafGrid": 58908,
+            "leafPoint": 7756,
+            "fem3dMesh": 1234256
+          }
+        },
+        {
+          "icao": "C421",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 2.622391135347901e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_C421.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_C421.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_C421.json",
+          "requestHash": "sha256:73972d1b823139b6869a0a7abf25fa9b",
+          "sizes": {
+            "leafGrid": 59594,
+            "leafPoint": 7842,
+            "fem3dMesh": 1234259
           }
         }
       ]
@@ -839,7 +1589,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_R135.json",
           "requestHash": "sha256:9001e6f285759b94bcd31217a024d4fc",
           "sizes": {
-            "leafGrid": 56691,
+            "leafGrid": 56704,
             "leafPoint": 7734,
             "fem3dMesh": 1211229
           }
@@ -854,7 +1604,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_GALX.json",
           "requestHash": "sha256:475944579c557b2efb836e25c24a13fc",
           "sizes": {
-            "leafGrid": 58213,
+            "leafGrid": 58295,
             "leafPoint": 7778,
             "fem3dMesh": 1221008
           }
@@ -869,7 +1619,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_CL35.json",
           "requestHash": "sha256:d44411e06a7ab9f1186fc694bc3d247d",
           "sizes": {
-            "leafGrid": 57994,
+            "leafGrid": 58103,
             "leafPoint": 7760,
             "fem3dMesh": 1219957
           }
@@ -884,7 +1634,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_CL30.json",
           "requestHash": "sha256:e87bc7aa1e17f215eda2152406959f14",
           "sizes": {
-            "leafGrid": 58103,
+            "leafGrid": 58036,
             "leafPoint": 7767,
             "fem3dMesh": 1220361
           }
@@ -902,6 +1652,81 @@
             "leafGrid": 58308,
             "leafPoint": 7795,
             "fem3dMesh": 1221947
+          }
+        },
+        {
+          "icao": "C680",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 2.2777193908858781e-07,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_C680.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_C680.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_C680.json",
+          "requestHash": "sha256:da3c4f6776e90ede24b1be08dc837ffc",
+          "sizes": {
+            "leafGrid": 58287,
+            "leafPoint": 7767,
+            "fem3dMesh": 1221610
+          }
+        },
+        {
+          "icao": "C68A",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 2.9297491934428518e-08,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_C68A.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_C68A.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_C68A.json",
+          "requestHash": "sha256:d79c384ebd608e1552df30421dae5edf",
+          "sizes": {
+            "leafGrid": 58333,
+            "leafPoint": 7771,
+            "fem3dMesh": 1221505
+          }
+        },
+        {
+          "icao": "H25B",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 5.475449944143003e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_H25B.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_H25B.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_H25B.json",
+          "requestHash": "sha256:1db39554f7d55c1ece5c271de40f986f",
+          "sizes": {
+            "leafGrid": 58462,
+            "leafPoint": 7765,
+            "fem3dMesh": 1222082
+          }
+        },
+        {
+          "icao": "B350",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 4.886467739952969e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_B350.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_B350.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_B350.json",
+          "requestHash": "sha256:d0481c14ee2c04666915da5cdf04512a",
+          "sizes": {
+            "leafGrid": 58911,
+            "leafPoint": 7826,
+            "fem3dMesh": 1227385
+          }
+        },
+        {
+          "icao": "BE20",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 4.838379568302547e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_BE20.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_BE20.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_BE20.json",
+          "requestHash": "sha256:ce79e8dca0ff907bed8568fa6f949e7d",
+          "sizes": {
+            "leafGrid": 59089,
+            "leafPoint": 7839,
+            "fem3dMesh": 1228463
           }
         }
       ]
@@ -921,7 +1746,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_C17.json",
           "requestHash": "sha256:eb769a0a44f1cd064142d9b60b07d674",
           "sizes": {
-            "leafGrid": 57399,
+            "leafGrid": 57385,
             "leafPoint": 7734,
             "fem3dMesh": 1209004
           }
@@ -936,7 +1761,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B738.json",
           "requestHash": "sha256:7c8102db9cbb1e739b319e3bc96fab69",
           "sizes": {
-            "leafGrid": 57982,
+            "leafGrid": 58108,
             "leafPoint": 7729,
             "fem3dMesh": 1216436
           }
@@ -951,7 +1776,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_P3.json",
           "requestHash": "sha256:672de3557981bb1b7d3e2fd3aad3d04d",
           "sizes": {
-            "leafGrid": 58518,
+            "leafGrid": 58506,
             "leafPoint": 7834,
             "fem3dMesh": 1223695
           }
@@ -966,7 +1791,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B739.json",
           "requestHash": "sha256:1ea323ad8319e968ce783d62bf4ef305",
           "sizes": {
-            "leafGrid": 58004,
+            "leafGrid": 58094,
             "leafPoint": 7751,
             "fem3dMesh": 1215794
           }
@@ -981,9 +1806,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B737.json",
           "requestHash": "sha256:5f5699a6bf3344773d40c8a5cc653b82",
           "sizes": {
-            "leafGrid": 58223,
+            "leafGrid": 58198,
             "leafPoint": 7757,
             "fem3dMesh": 1217658
+          }
+        },
+        {
+          "icao": "B789",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 475.56465909712534,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_B789.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_B789.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B789.json",
+          "requestHash": "sha256:1e5c8f045416313ead8e7f7ae8bff3b4",
+          "sizes": {
+            "leafGrid": 57564,
+            "leafPoint": 7753,
+            "fem3dMesh": 1208559
+          }
+        },
+        {
+          "icao": "K35R",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 444.55995567959854,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_K35R.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_K35R.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_K35R.json",
+          "requestHash": "sha256:ba3a6fc936b8c1c50390782ef9434abb",
+          "sizes": {
+            "leafGrid": 57862,
+            "leafPoint": 7746,
+            "fem3dMesh": 1213538
+          }
+        },
+        {
+          "icao": "B38M",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 373.45073874033784,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_B38M.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_B38M.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B38M.json",
+          "requestHash": "sha256:a26b57af75288b44450567d8650b3251",
+          "sizes": {
+            "leafGrid": 58043,
+            "leafPoint": 7740,
+            "fem3dMesh": 1216187
+          }
+        },
+        {
+          "icao": "B788",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 283.34684878728257,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_B788.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_B788.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B788.json",
+          "requestHash": "sha256:04e2cece93f7a446ada7eda83c3d018f",
+          "sizes": {
+            "leafGrid": 57667,
+            "leafPoint": 7783,
+            "fem3dMesh": 1209688
+          }
+        },
+        {
+          "icao": "C30J",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 249.23423869236865,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_C30J.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_C30J.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_C30J.json",
+          "requestHash": "sha256:369cc4633ff0ac3f373958e4cfbfb5c5",
+          "sizes": {
+            "leafGrid": 58323,
+            "leafPoint": 7738,
+            "fem3dMesh": 1218928
           }
         }
       ]
@@ -1003,7 +1903,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_C17.json",
           "requestHash": "sha256:eb769a0a44f1cd064142d9b60b07d674",
           "sizes": {
-            "leafGrid": 57399,
+            "leafGrid": 57385,
             "leafPoint": 7734,
             "fem3dMesh": 1209003
           }
@@ -1018,7 +1918,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B738.json",
           "requestHash": "sha256:7c8102db9cbb1e739b319e3bc96fab69",
           "sizes": {
-            "leafGrid": 57982,
+            "leafGrid": 58108,
             "leafPoint": 7729,
             "fem3dMesh": 1216421
           }
@@ -1033,7 +1933,7 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_P3.json",
           "requestHash": "sha256:672de3557981bb1b7d3e2fd3aad3d04d",
           "sizes": {
-            "leafGrid": 58518,
+            "leafGrid": 58506,
             "leafPoint": 7834,
             "fem3dMesh": 1223680
           }
@@ -1048,9 +1948,9 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B38M.json",
           "requestHash": "sha256:a26b57af75288b44450567d8650b3251",
           "sizes": {
-            "leafGrid": 57928,
+            "leafGrid": 58043,
             "leafPoint": 7740,
-            "fem3dMesh": 1216187
+            "fem3dMesh": 1216172
           }
         },
         {
@@ -1063,9 +1963,84 @@
           "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B739.json",
           "requestHash": "sha256:1ea323ad8319e968ce783d62bf4ef305",
           "sizes": {
-            "leafGrid": 58004,
+            "leafGrid": 58094,
             "leafPoint": 7751,
             "fem3dMesh": 1215779
+          }
+        },
+        {
+          "icao": "B737",
+          "rank": 6,
+          "isControlling": false,
+          "cdfContribution": 517.3889604412416,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_B737.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_B737.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B737.json",
+          "requestHash": "sha256:5f5699a6bf3344773d40c8a5cc653b82",
+          "sizes": {
+            "leafGrid": 58198,
+            "leafPoint": 7757,
+            "fem3dMesh": 1217643
+          }
+        },
+        {
+          "icao": "B789",
+          "rank": 7,
+          "isControlling": false,
+          "cdfContribution": 475.56465909712534,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_B789.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_B789.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B789.json",
+          "requestHash": "sha256:1e5c8f045416313ead8e7f7ae8bff3b4",
+          "sizes": {
+            "leafGrid": 57564,
+            "leafPoint": 7753,
+            "fem3dMesh": 1208558
+          }
+        },
+        {
+          "icao": "K35R",
+          "rank": 8,
+          "isControlling": false,
+          "cdfContribution": 444.55995567959854,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_K35R.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_K35R.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_K35R.json",
+          "requestHash": "sha256:ba3a6fc936b8c1c50390782ef9434abb",
+          "sizes": {
+            "leafGrid": 57862,
+            "leafPoint": 7746,
+            "fem3dMesh": 1213537
+          }
+        },
+        {
+          "icao": "MRJ9",
+          "rank": 9,
+          "isControlling": false,
+          "cdfContribution": 343.7977324517802,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_MRJ9.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_MRJ9.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_MRJ9.json",
+          "requestHash": "sha256:6cf6057843507a12750c3c9d533391a2",
+          "sizes": {
+            "leafGrid": 58331,
+            "leafPoint": 7773,
+            "fem3dMesh": 1218624
+          }
+        },
+        {
+          "icao": "B788",
+          "rank": 10,
+          "isControlling": false,
+          "cdfContribution": 283.34684878728257,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_B788.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_B788.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B788.json",
+          "requestHash": "sha256:04e2cece93f7a446ada7eda83c3d018f",
+          "sizes": {
+            "leafGrid": 57667,
+            "leafPoint": 7783,
+            "fem3dMesh": 1209687
           }
         }
       ]
