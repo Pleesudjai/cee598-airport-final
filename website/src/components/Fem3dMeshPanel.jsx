@@ -218,25 +218,29 @@ function buildTraces(mesh, colorMode, triStress, stressRange, wheelDiagnostics, 
     const zLift = (slabDomain && (slabDomain.zMax - slabDomain.zMin) * 0.02) || 0.5
 
     // If the backend sent per-wheel diagnostics (complex_exact_manual path),
-    // render each group separately so the user can SEE which wheels contribute,
-    // which are implicit symmetry mirrors, and which fell outside the mesh.
+    // render contributing + symmetry-mirror wheels only. Wheels outside the
+    // single-slab FEM region are intentionally hidden — FAARFIELD's wider gear
+    // coverage requires its multi-offset sweep, which we don't reproduce here.
+    // The user's authoritative full-footprint view is the LEAF Stress Contour
+    // panel above, which uses our wider gridExtent and shows every wheel.
     if (wheelDiagnostics && wheelDiagnostics.length > 0) {
       const groups = {
         contributing: { x: [], y: [], text: [], color: '#16a34a', border: '#14532d', symbol: 'diamond', name: 'Wheels — captured by FEM' },
         mirror:       { x: [], y: [], text: [], color: '#94a3b8', border: '#475569', symbol: 'diamond-open', name: 'Wheels — implicit symmetry mirror' },
-        outside:      { x: [], y: [], text: [], color: '#dc2626', border: '#7f1d1d', symbol: 'x', name: 'Wheels — outside FEM mesh' },
       }
       wheelDiagnostics.forEach(w => {
         const reason = w.skipReason || ''
         const inside = w.nodeOverlapCount > 0
-        const bucket = inside
-          ? groups.contributing
-          : reason.toLowerCase().includes('symmetry')
-            ? groups.mirror
-            : groups.outside
-        bucket.x.push(w.x)
-        bucket.y.push(w.y)
-        bucket.text.push(reason || `${w.loadContributedLb?.toFixed(0) || 0} lb, ${w.nodeOverlapCount} nodes`)
+        if (inside) {
+          groups.contributing.x.push(w.x)
+          groups.contributing.y.push(w.y)
+          groups.contributing.text.push(`${w.loadContributedLb?.toFixed(0) || 0} lb, ${w.nodeOverlapCount} nodes`)
+        } else if (reason.toLowerCase().includes('symmetry')) {
+          groups.mirror.x.push(w.x)
+          groups.mirror.y.push(w.y)
+          groups.mirror.text.push(reason)
+        }
+        // wheels truly outside the mesh: dropped, not drawn
       })
       Object.values(groups).forEach(g => {
         if (g.x.length === 0) return
@@ -765,8 +769,9 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
                 {' '}fall inside FAARFIELD's single-slab FEM region
                 {' '}(X∈[{meshData.meshBoundsXmin?.toFixed(0)}, {meshData.meshBoundsXmax?.toFixed(0)}]",
                 {' '}Y∈[{meshData.meshBoundsYmin?.toFixed(0)}, {meshData.meshBoundsYmax?.toFixed(0)}]").
-                {' '}Wheels outside are not captured in this single FEM pass — desktop FAARFIELD handles wide gears via multi-position offset sweep.
-                {' '}Gray wheels are implicit symmetry mirrors (the solver doubles their effect automatically); red X marks indicate wheels truly beyond the mesh.
+                {' '}Desktop FAARFIELD handles wide gears via a multi-position offset sweep that we don't reproduce here.
+                {' '}Gray wheels are implicit symmetry mirrors (the solver doubles their effect automatically).
+                {' '}For the full footprint of every wheel, see the <span className="font-semibold">Stress Contour (Native LEAF)</span> panel above — LEAF takes a configurable grid extent and shows every wheel.
               </p>
             </div>
           </div>
@@ -826,7 +831,7 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
           )}
           {!femSkipped && meshData.warnings?.length > 0 && (
             <div className="mt-2 text-[10px] bg-blue-50 text-blue-900 rounded px-3 py-2 space-y-1">
-              {meshData.warnings.map((w, i) => (
+              {meshData.warnings.filter(w => !/fell outside the FEM mesh/i.test(w)).map((w, i) => (
                 <p key={i}>
                   <span className="font-bold">Note:</span> {w}
                 </p>
