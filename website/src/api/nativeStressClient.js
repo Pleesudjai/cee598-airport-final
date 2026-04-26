@@ -8,7 +8,13 @@ const BASE = 'http://localhost:5100'
 // (~160 MB, fetched at runtime only when needed).
 import precalIndex from '../data/precal/index.json'
 
-async function loadPrecal(sectionKey, aircraftIcao, endpoint) {
+// Precal cache helper. Returns the cached payload when (sectionKey, aircraftIcao)
+// matches a baked entry. The caller (DesignTool) is responsible for setting
+// sectionKey to null when the user has edited inputs past as-built — we trust
+// that gate rather than re-deriving a request hash here, because Python's float
+// serialization (e.g., 6.0) and JS's (e.g., 6 after JSON round-trip) don't
+// agree byte-for-byte.
+async function loadPrecal(sectionKey, aircraftIcao, layers, subgrade, endpoint) {
   if (!sectionKey || !aircraftIcao) return null
   const section = precalIndex.sections?.find(s => s.sectionKey === sectionKey)
   if (!section) return null
@@ -39,18 +45,28 @@ export async function checkHealth() {
 }
 
 export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gridPoints = 21, gridExtentIn = null, sectionKey = null) {
+  // v2: pass icao/gear/mtow for library-resolved geometry
+  const ac = {
+    name: aircraft.type || aircraft.name || 'Aircraft',
+    gearLoad: aircraft.gearLoad || (aircraft.mtow || 50000) * 0.95,
+    nTires: aircraft.nTires || 2,
+    tirePressure: aircraft.tirePressure || 200,
+    tireSpacingIn: aircraft.tireSpacingIn || 34,
+    icao: aircraft.type || aircraft.icao || '',
+    gear: aircraft.gear || '',
+    mtow: aircraft.mtow || 0,
+  }
+
+  // Precal-first: serve cached LEAF grid when (sectionKey, aircraft.icao)
+  // matches a baked entry AND the request hash still matches (i.e., user
+  // hasn't edited layers/subgrade past as-built). Avoids a 200-1000 ms live
+  // recompute on every aircraft swap for project-section views.
+  if (sectionKey && ac.icao) {
+    const precal = await loadPrecal(sectionKey, ac.icao, layers, subgrade, 'leafGrid')
+    if (precal) return precal
+  }
+
   try {
-    // v2: pass icao/gear/mtow for library-resolved geometry
-    const ac = {
-      name: aircraft.type || aircraft.name || 'Aircraft',
-      gearLoad: aircraft.gearLoad || (aircraft.mtow || 50000) * 0.95,
-      nTires: aircraft.nTires || 2,
-      tirePressure: aircraft.tirePressure || 200,
-      tireSpacingIn: aircraft.tireSpacingIn || 34,
-      icao: aircraft.type || aircraft.icao || '',
-      gear: aircraft.gear || '',
-      mtow: aircraft.mtow || 0,
-    }
 
     // Auto-scale grid extent from library wheel coords (if not explicitly set).
     // Rule: 40% margin past the outermost wheel, floored at 120" so even tiny
@@ -84,14 +100,10 @@ export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gri
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ layers, subgrade, aircraft: ac, evalDepthIn, gridExtentIn: extent, gridPoints })
     })
-    if (!res.ok) {
-      const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafGrid')
-      return precal || { data: null, source: 'error' }
-    }
+    if (!res.ok) return { data: null, source: 'error' }
     return { data: await res.json(), source: 'native' }
   } catch {
-    const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafGrid')
-    return precal || { data: null, source: 'unavailable' }
+    return { data: null, source: 'unavailable' }
   }
 }
 
@@ -166,18 +178,26 @@ export async function fetchDesign(layers, subgrade, aircraftList, growth, life, 
 }
 
 export async function fetchFem3dMesh(layers, subgrade, aircraft, highDetail = false, filterCoarse = true, includeStressField = false, stressAggregation = 'mean', sectionKey = null) {
+  const icao = aircraft.type || aircraft.icao || ''
+  const ac = {
+    name: icao || aircraft.name || 'Aircraft',
+    icao,
+    gear: aircraft.gear || '',
+    mtow: aircraft.mtow || 0,
+    gearLoad: aircraft.gearLoad || (aircraft.mtow || 50000) * 0.95,
+    nTires: aircraft.nTires || 2,
+    tirePressure: aircraft.tirePressure || 200,
+    tireSpacingIn: aircraft.tireSpacingIn || 34,
+  }
+
+  // Precal-first (see fetchLeafGrid). Avoids 5-15 s FEM3D recomputes when
+  // browsing aircraft on as-built sections.
+  if (sectionKey && icao) {
+    const precal = await loadPrecal(sectionKey, icao, layers, subgrade, 'fem3dMesh')
+    if (precal) return precal
+  }
+
   try {
-    const icao = aircraft.type || aircraft.icao || ''
-    const ac = {
-      name: icao || aircraft.name || 'Aircraft',
-      icao,
-      gear: aircraft.gear || '',
-      mtow: aircraft.mtow || 0,
-      gearLoad: aircraft.gearLoad || (aircraft.mtow || 50000) * 0.95,
-      nTires: aircraft.nTires || 2,
-      tirePressure: aircraft.tirePressure || 200,
-      tireSpacingIn: aircraft.tireSpacingIn || 34,
-    }
     const res = await fetch(`${BASE}/api/fem3d/mesh`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -194,30 +214,35 @@ export async function fetchFem3dMesh(layers, subgrade, aircraft, highDetail = fa
     if (!res.ok) {
       const body = await res.text().catch(() => '')
       console.error('[fetchFem3dMesh] HTTP', res.status, body.slice(0, 500))
-      const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'fem3dMesh')
-      return precal || { data: null, source: `error ${res.status}`, detail: body.slice(0, 300) }
+      return { data: null, source: `error ${res.status}`, detail: body.slice(0, 300) }
     }
     return { data: await res.json(), source: 'native' }
   } catch (e) {
     console.error('[fetchFem3dMesh] exception', e)
-    const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'fem3dMesh')
-    return precal || { data: null, source: 'unavailable', detail: e.message }
+    return { data: null, source: 'unavailable', detail: e.message }
   }
 }
 
 export async function fetchLeafProfile(layers, subgrade, aircraft, evalDepths, sectionKey = null) {
+  // v2: pass icao/gear/mtow for library-resolved geometry
+  const ac = {
+    name: aircraft.type || aircraft.name || 'Aircraft',
+    gearLoad: aircraft.gearLoad || (aircraft.mtow || 50000) * 0.95,
+    nTires: aircraft.nTires || 2,
+    tirePressure: aircraft.tirePressure || 200,
+    tireSpacingIn: aircraft.tireSpacingIn || 34,
+    icao: aircraft.type || aircraft.icao || '',
+    gear: aircraft.gear || '',
+    mtow: aircraft.mtow || 0,
+  }
+
+  // Precal-first (see fetchLeafGrid).
+  if (sectionKey && ac.icao) {
+    const precal = await loadPrecal(sectionKey, ac.icao, layers, subgrade, 'leafPoint')
+    if (precal) return precal
+  }
+
   try {
-    // v2: pass icao/gear/mtow for library-resolved geometry
-    const ac = {
-      name: aircraft.type || aircraft.name || 'Aircraft',
-      gearLoad: aircraft.gearLoad || (aircraft.mtow || 50000) * 0.95,
-      nTires: aircraft.nTires || 2,
-      tirePressure: aircraft.tirePressure || 200,
-      tireSpacingIn: aircraft.tireSpacingIn || 34,
-      icao: aircraft.type || aircraft.icao || '',
-      gear: aircraft.gear || '',
-      mtow: aircraft.mtow || 0,
-    }
     const res = await fetch(`${BASE}/api/leaf/point`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -226,13 +251,11 @@ export async function fetchLeafProfile(layers, subgrade, aircraft, evalDepths, s
     if (!res.ok) {
       const body = await res.text().catch(() => '')
       console.error('[fetchLeafProfile] HTTP', res.status, body.slice(0, 500))
-      const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafPoint')
-      return precal || { data: null, source: `error ${res.status}`, detail: body.slice(0, 200) }
+      return { data: null, source: `error ${res.status}`, detail: body.slice(0, 200) }
     }
     return { data: await res.json(), source: 'native' }
   } catch (e) {
     console.error('[fetchLeafProfile] exception', e)
-    const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafPoint')
-    return precal || { data: null, source: 'unavailable', detail: e.message }
+    return { data: null, source: 'unavailable', detail: e.message }
   }
 }

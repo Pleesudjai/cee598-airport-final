@@ -173,7 +173,19 @@ export default function DesignTool({
   const currentSection = allSections.find(s => s.section_id === currentSectionId)
   // Key into the pre-baked stress cache (`public/data/precal/`). Format must
   // match `{ICAO}_{sectionId}` exactly as written by scripts/prebake_stress_endpoints.py.
-  const sectionKey = (currentAirport && currentSectionId) ? `${currentAirport}_${currentSectionId}` : null
+  // Set to null when the user has edited any input past as-built — the cache
+  // was baked at as-built parameters, so serving it for custom inputs would
+  // show stale data.
+  const sectionKey = useMemo(() => {
+    if (!currentAirport || !currentSectionId || !isProject || !currentSection) return null
+    const sigLayers = (arr) => (arr || []).map(l => `${l.type}:${l.h}:${l.E}:${l.nu}`).join('|')
+    const baselineLayersSig = sigLayers(currentSection.layers)
+    const activeLayersSig = sigLayers(customLayers || currentSection.layers)
+    if (activeLayersSig !== baselineLayersSig) return null
+    const baselineCbr = currentSection.subgrade?.cbr ?? 7
+    if (Number(cbr) !== Number(baselineCbr)) return null
+    return `${currentAirport}_${currentSectionId}`
+  }, [currentAirport, currentSectionId, isProject, currentSection, customLayers, cbr])
   const originalResult = cdfResults.find(r => r.section_id === currentSectionId)
   const sub = subgradeData[currentAirport]
   const trafficData = traffic[currentAirport]
