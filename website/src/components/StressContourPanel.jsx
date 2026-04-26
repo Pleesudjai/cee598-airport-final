@@ -11,6 +11,7 @@ const FIELDS = [
 
 export default function StressContourPanel({ layers, subgrade, aircraft, evalDepth, nativeAvailable, sectionKey = null }) {
   const [gridData, setGridData] = useState(null)
+  const [gridSource, setGridSource] = useState(null)  // 'precal' | 'native'
   const [loading, setLoading] = useState(false)
   const [field, setField] = useState('stressZ')
   const [error, setError] = useState(null)
@@ -55,6 +56,7 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
         const result = await fetchLeafGrid(leafLayers, subgrade, leafAc, evalDepth, 21, null, sectionKey)
         if (result.data) {
           setGridData(result.data)
+          setGridSource(result.source || 'native')
         } else {
           setError(nativeAvailable ? 'Backend unavailable' : 'No pre-cal\'d data for this aircraft. Start faarfield-api for live LEAF.')
         }
@@ -148,6 +150,7 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
 
       {gridData?.meta && !loading && (
         <p className="text-[10px] text-outline mt-2 text-right">
+          {gridSource === 'precal' && <span className="text-green-700 font-semibold">⚡ precal · </span>}
           Solver: {gridData.meta.solver} | Grid: {gridData.xCoords?.length}x{gridData.yCoords?.length} | {gridData.meta.computeTimeMs}ms
         </p>
       )}

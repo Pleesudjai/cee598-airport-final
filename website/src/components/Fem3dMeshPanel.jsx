@@ -292,6 +292,7 @@ const CAMERA_PRESETS = {
 
 export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cdfRunToken = 0, sectionKey = null }) {
   const [meshData, setMeshData] = useState(null)
+  const [meshSource, setMeshSource] = useState(null)  // 'precal' | 'native' — for the badge
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [highDetail, setHighDetail] = useState(false)
@@ -364,6 +365,7 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
       const result = await fetchFem3dMesh(layers, subgrade, normalizedAc, highDetail, true, wantStressField, stressAgg, sectionKey)
       if (result.data?.mesh) {
         setMeshData(result.data)
+        setMeshSource(result.source || 'native')
         hasEverRendered.current = true
         lastRunInputs.current = snapshot
       } else {
@@ -805,7 +807,13 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
               <p className="text-sm font-mono font-bold text-on-surface">
                 {femSkipped ? <span className="italic text-outline text-sm">Skipped</span> : `${(compute / 1000).toFixed(1)} s`}
               </p>
-              <p className="text-[10px] text-outline">AMClassLib → FAASR3D</p>
+              <p className="text-[10px] text-outline">
+                {meshSource === 'precal' ? (
+                  <span className="text-green-700 font-semibold">⚡ from precal cache</span>
+                ) : (
+                  <>AMClassLib → FAASR3D <span className="text-outline italic">(live)</span></>
+                )}
+              </p>
             </div>
           </div>
           {femSkipped && (

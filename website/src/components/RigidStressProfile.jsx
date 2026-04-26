@@ -3,6 +3,7 @@ import { fetchLeafProfile } from '../api/nativeStressClient'
 
 export default function RigidStressProfile({ layers, subgrade, aircraft, nativeAvailable, sectionKey = null }) {
   const [profileData, setProfileData] = useState(null)
+  const [profileSource, setProfileSource] = useState(null)  // 'precal' | 'native'
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const plotRef = useRef(null)
@@ -45,6 +46,7 @@ export default function RigidStressProfile({ layers, subgrade, aircraft, nativeA
         const result = await fetchLeafProfile(leafLayers, subgrade, leafAc, depths, sectionKey)
         if (result.data) {
           setProfileData(result.data)
+          setProfileSource(result.source || 'native')
         } else if (!nativeAvailable) {
           setError('No pre-cal\'d profile for this aircraft. Start faarfield-api for live LEAF.')
         } else {
@@ -148,6 +150,7 @@ export default function RigidStressProfile({ layers, subgrade, aircraft, nativeA
 
       {profileData?.meta && !loading && (
         <p className="text-[10px] text-outline mt-2 text-right">
+          {profileSource === 'precal' && <span className="text-green-700 font-semibold">⚡ precal · </span>}
           Solver: {profileData.meta.solver} | {profileData.depths?.length} depths | {profileData.meta.computeTimeMs}ms
         </p>
       )}
