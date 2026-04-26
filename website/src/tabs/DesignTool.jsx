@@ -868,10 +868,11 @@ export default function DesignTool({
                     <option value="">Auto: top-CDF contributor (rank 1)</option>
                     {byCdf.map((a, i) => {
                       const id = a.icao || a.name
+                      const gearLabel = a.libGear || a.gear || '?'
                       const offlineOk = i < 5 ? '' : ' — live only'
                       return (
                         <option key={id} value={id}>
-                          Rank {i + 1}: {id} (CDF {(a.cdf || 0).toExponential(2)}, {(a.mtow || 0).toLocaleString()} lbs){offlineOk}
+                          Rank {i + 1}: {id} [{gearLabel}] (CDF {(a.cdf || 0).toExponential(2)}, {(a.mtow || 0).toLocaleString()} lbs){offlineOk}
                         </option>
                       )
                     })}
