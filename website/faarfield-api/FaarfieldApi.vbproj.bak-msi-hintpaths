@@ -74,15 +74,12 @@
     <Compile Include="LeafSolverWrapper.vb" />
     <Compile Include="Fem3dWrapper.vb" />
     <Compile Include="Fem3dStressSpike.vb" />
-    <Compile Include="GearTraceWrapper.vb" />
     <Compile Include="Dto\Fem3dMesh.vb" />
     <Compile Include="Dto\HealthResponse.vb" />
     <Compile Include="Dto\LeafGridRequest.vb" />
     <Compile Include="Dto\LeafGridResponse.vb" />
     <Compile Include="Dto\LeafPointRequest.vb" />
     <Compile Include="Dto\ErrorResponse.vb" />
-    <Compile Include="Dto\GearTraceRequest.vb" />
-    <Compile Include="Dto\GearTraceResponse.vb" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />

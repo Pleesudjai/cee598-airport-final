@@ -1,116 +1,42 @@
-import { Fragment, useState } from 'react'
+// Per-section drill-down: CDF breakdown (3 failure modes) + verdict + construction
+// history + top-N aircraft table with libGear mismatch indicators.
+// Extracted from SummaryTable.jsx during the unified-summary-panel migration so
+// both the unified panel and any other consumer can reuse the same drill-down.
 
-export default function SummaryTable({ results, sections, airports, onSelectSection }) {
-  const airportMap = Object.fromEntries(airports.map(a => [a.icao, a]))
-  const [expanded, setExpanded] = useState(null)
-
-  const toggle = key => setExpanded(prev => (prev === key ? null : key))
-
+function CdfBar({ label, value, max, active }) {
+  const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0
   return (
-    <section>
-      <div className="flex items-center gap-3 mb-4">
-        <span className="material-symbols-outlined text-primary">table_chart</span>
-        <h3 className="text-xl font-bold tracking-tight">All 13 Sections — CDF Summary</h3>
-        <span className="ml-auto text-[10px] text-outline">Click a row for details · arrow opens in Design Tool</span>
+    <div>
+      <div className="flex justify-between items-center text-[11px]">
+        <span className={`${active ? 'font-bold text-failing' : 'font-medium text-outline'}`}>
+          {label}
+          {active && <span className="ml-1.5 text-[9px] font-bold uppercase tracking-widest">controlling</span>}
+        </span>
+        <span className="font-mono">{value > 0 ? value.toExponential(2) : '0'}</span>
       </div>
-      <div className="bg-surface-lowest rounded-xl shadow-[0px_12px_32px_rgba(25,28,30,0.06)] overflow-hidden">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-surface-low">
-              <th className="text-left px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">Airport</th>
-              <th className="text-left px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">Section</th>
-              <th className="text-left px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">Use</th>
-              <th className="text-left px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">Layers</th>
-              <th className="text-right px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">CDF (max)</th>
-              <th className="text-left px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">Controlling</th>
-              <th className="text-center px-5 py-3 text-[10px] font-bold uppercase tracking-widest text-outline">Verdict</th>
-              <th className="px-5 py-3 text-right text-[10px] font-bold uppercase tracking-widest text-outline">Detail</th>
-            </tr>
-          </thead>
-          <tbody>
-            {results.map((r, i) => {
-              const apt = airportMap[r.icao] || {}
-              const key = `${r.icao}/${r.section_id}`
-              const isOpen = expanded === key
-              return (
-                <Fragment key={key}>
-                  <tr
-                    className={`group transition-colors cursor-pointer border-t border-outline-variant/10 ${
-                      isOpen ? 'bg-surface-low' : 'hover:bg-surface-low'
-                    }`}
-                    onClick={() => toggle(key)}
-                  >
-                    <td className="px-5 py-3">
-                      <span className="font-bold text-on-surface">{r.icao}</span>
-                      <span className="text-xs text-outline ml-2">{apt.name}</span>
-                    </td>
-                    <td className="px-5 py-3 font-mono text-xs">{r.section_id}</td>
-                    <td className="px-5 py-3 text-xs text-outline">{r.use}</td>
-                    <td className="px-5 py-3 text-xs font-medium">{r.desc}</td>
-                    <td className="px-5 py-3 text-right font-mono text-xs font-bold">
-                      {r.cdf_max < 0.001 ? r.cdf_max.toExponential(2) : r.cdf_max.toFixed(4)}
-                    </td>
-                    <td className="px-5 py-3 text-xs text-outline">{r.controlling}</td>
-                    <td className="px-5 py-3 text-center">
-                      <span
-                        className={`inline-block text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded ${
-                          r.adequate ? 'bg-adequate/10 text-adequate' : 'bg-failing/10 text-failing'
-                        }`}
-                      >
-                        {r.adequate ? 'OVER' : 'UNDER'}
-                      </span>
-                    </td>
-                    <td className="px-5 py-3">
-                      <div className="flex items-center justify-end gap-1">
-                        <span
-                          className={`material-symbols-outlined text-outline/60 transition-transform text-lg ${
-                            isOpen ? 'rotate-180' : ''
-                          }`}
-                          title={isOpen ? 'Collapse details' : 'Expand details'}
-                        >
-                          expand_more
-                        </span>
-                        <button
-                          type="button"
-                          onClick={e => {
-                            e.stopPropagation()
-                            onSelectSection(r.icao, r.section_id)
-                          }}
-                          title="Open in Design Tool"
-                          className="ml-1 text-outline/40 hover:text-primary transition-colors p-1 rounded hover:bg-primary/10"
-                        >
-                          <span className="material-symbols-outlined text-lg">arrow_forward</span>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  {isOpen && (
-                    <tr className="bg-surface-low/60 border-t border-outline-variant/5">
-                      <td colSpan={8} className="px-5 py-5">
-                        <SectionDetail r={r} apt={apt} />
-                      </td>
-                    </tr>
-                  )}
-                </Fragment>
-              )
-            })}
-          </tbody>
-        </table>
+      <div className="h-1.5 bg-outline-variant/15 rounded mt-1 overflow-hidden">
+        <div
+          className={`h-full rounded transition-all ${active ? 'bg-failing' : 'bg-primary/50'}`}
+          style={{ width: `${pct}%` }}
+        />
       </div>
-    </section>
+    </div>
   )
 }
 
-function SectionDetail({ r, apt }) {
+export default function PerSectionDetail({ r, apt }) {
   const life = r.cdf_max > 0 ? 1 / r.cdf_max : Infinity
   // Merge libGear (authoritative FAARFIELD library gear) from top_aircraft_full
-  // onto each top_aircraft row by ICAO, so the per-aircraft table can show the
-  // same library-first gear label that DesignTool uses.  Aircraft not present
-  // in top_aircraft_full (rare — older records) fall through with libGear=null.
+  // onto each top_aircraft row by ICAO so the per-aircraft table can show the
+  // same library-first gear label that DesignTool uses.
   const libGearByIcao = Object.fromEntries(
     (r.top_aircraft_full || []).map(a => [a.icao || a.name, a.libGear ?? null])
   )
-  const top = (r.top_aircraft || []).map(a => ({
+  // Limit to top 10 by CDF contribution — the pre-cal'd JSON sometimes carries
+  // up to 20 entries, but the chart legend, gear footprint, and report narrative
+  // standardize on top-10 (matches the Design Tool's CDF profile chart and the
+  // 130-row gear-coordinate trace audit's top-10 sample).
+  const top = (r.top_aircraft || []).slice(0, 10).map(a => ({
     ...a,
     libGear: libGearByIcao[a.ac] ?? null,
   }))
@@ -119,8 +45,8 @@ function SectionDetail({ r, apt }) {
   )
 
   return (
-    <div className="grid grid-cols-12 gap-6">
-      <div className="col-span-5">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+      <div className="lg:col-span-5">
         <h4 className="text-[10px] font-bold uppercase tracking-widest text-outline mb-3">
           CDF breakdown (3 failure modes)
         </h4>
@@ -195,7 +121,7 @@ function SectionDetail({ r, apt }) {
         </div>
       </div>
 
-      <div className="col-span-7">
+      <div className="lg:col-span-7 overflow-x-auto">
         <h4 className="text-[10px] font-bold uppercase tracking-widest text-outline mb-3">
           Top {top.length} aircraft by CDF contribution
         </h4>
@@ -248,27 +174,6 @@ function SectionDetail({ r, apt }) {
             <code className="font-mono">results/gear_coord_audit.json</code>
           </div>
         )}
-      </div>
-    </div>
-  )
-}
-
-function CdfBar({ label, value, max, active }) {
-  const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0
-  return (
-    <div>
-      <div className="flex justify-between items-center text-[11px]">
-        <span className={`${active ? 'font-bold text-failing' : 'font-medium text-outline'}`}>
-          {label}
-          {active && <span className="ml-1.5 text-[9px] font-bold uppercase tracking-widest">controlling</span>}
-        </span>
-        <span className="font-mono">{value > 0 ? value.toExponential(2) : '0'}</span>
-      </div>
-      <div className="h-1.5 bg-outline-variant/15 rounded mt-1 overflow-hidden">
-        <div
-          className={`h-full rounded transition-all ${active ? 'bg-failing' : 'bg-primary/50'}`}
-          style={{ width: `${pct}%` }}
-        />
       </div>
     </div>
   )

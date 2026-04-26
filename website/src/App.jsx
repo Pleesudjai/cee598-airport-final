@@ -83,7 +83,7 @@ export default function App() {
     <ErrorBoundary>
       <div className="min-h-screen bg-surface">
         {/* Header with tabs */}
-        <header className="sticky top-0 z-50 h-14 bg-surface-lowest/90 backdrop-blur-xl flex items-center px-8 shadow-[0px_1px_0px_rgba(0,0,0,0.05)]">
+        <header className="sticky top-0 z-50 h-14 bg-surface-lowest/90 backdrop-blur-xl flex items-center px-3 sm:px-8 shadow-[0px_1px_0px_rgba(0,0,0,0.05)]">
           <div className="flex items-center gap-2 mr-6">
             <span className="material-symbols-outlined text-primary text-2xl">flight_takeoff</span>
             <h1 className="text-sm font-bold tracking-tight text-on-surface">AeroPave</h1>
@@ -110,7 +110,7 @@ export default function App() {
         </header>
 
         {/* Tab content */}
-        <main className="max-w-[1600px] mx-auto px-8 py-8">
+        <main className="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
           <ErrorBoundary>
             <Suspense fallback={<Loading />}>
               {activeTab === 'report' && (

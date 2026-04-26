@@ -135,6 +135,18 @@ Public Module Fem3dWrapper
     End Class
 
     ''' <summary>
+    ''' Public diagnostic delegate for GearTraceWrapper / /api/diag/gear-trace.
+    ''' Runs PrepareAircraftForFem3d on the supplied LEAFACParms and returns
+    ''' the GearPrepStatus so the audit can record pre/post snapshots without
+    ''' triggering a full FEM3D solve.  No mesh, no FAASR3D, no clsAM call —
+    ''' just the gear-prep step.
+    ''' </summary>
+    Public Function RunPrepDiagnostic(ByRef acParms As clsLEAF.LEAFACParms,
+                                       Optional geo As AircraftLibrary.AircraftGeometry = Nothing) As GearPrepStatus
+        Return PrepareAircraftForFem3d(acParms, bypassNormalization:=False, geo:=geo)
+    End Function
+
+    ''' <summary>
     ''' Two-stage gear preparation flow per the codex note.
     '''   1. Simple gears (S/D): pass through as `simple_native`, no mutation.
     '''   2. Complex gears: try native-family mapping FIRST (preserves real TireX/TireY array).

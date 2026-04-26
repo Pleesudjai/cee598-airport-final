@@ -320,6 +320,45 @@ export default function DesignTool({
       clearTimeout(nativeCdfTimer.current)
       nativeCdfTimer.current = null
     }
+    // SKIP-LIVE-RECOMPUTE GUARD (added 2026-04-25):
+    // For project sections at their baseline inputs, the pre-cal'd record from
+    // cdf_results.json is authoritative — skip the backend round-trip.
+    // Why a structural value-equality check (not signature equality, not null
+    // check on customLayers/customTraffic):
+    //   - Effect at line 197 calls onLayersChange?.(currentSection.layers) on
+    //     section change, so customLayers is NEVER null on project sections —
+    //     a `customLayers === null` check would always fail.
+    //   - Effect 2 seeds lastCdfSignature with values it observes at run time,
+    //     but state setters in the parallel Effect at line 197 may stringify
+    //     slightly differently when Effect 3 re-fires later, causing fragile
+    //     mismatches that trigger useless backend calls — flooding the single-
+    //     threaded HttpListener and blocking the LEAF/FEM3D stress panels.
+    // Robust approach: serialize both layers and traffic the same way the
+    // signature does, and compare to the section/traffic baselines. ANY user
+    // edit (slider, CBR, MOR, growth, life, traffic row) breaks one match and
+    // we fall through to fire the backend normally.
+    if (isProject && originalResult && currentSection) {
+      const sigLayers = (arr) => (arr || []).map(l => `${l.type}:${l.h}:${l.E}:${l.nu}`).join('|')
+      const sigTraffic = (arr) => (arr || []).map(a =>
+        `${a.icao || a.type || ''}:${a.mtow || 0}:${a.annualDepartures || a.deps || 0}:${a.nTires || 0}:${a.tirePressure || 0}`
+      ).join('|')
+      const baselineLayersSig = sigLayers(currentSection.layers)
+      const activeLayersSig   = sigLayers(customLayers || currentSection.layers)
+      const baselineTrafSig = sigTraffic(trafficData?.aircraft || [])
+      const activeTrafSig   = sigTraffic(customTraffic || trafficData?.aircraft || [])
+      const baselineCbr    = currentSection.subgrade?.cbr ?? 7
+      const baselineMor    = originalResult.mor_psi ?? 700
+      const baselineGrowth = trafficData?.growth ?? 0
+      const layersUnchanged  = activeLayersSig === baselineLayersSig
+      const trafficUnchanged = activeTrafSig === baselineTrafSig
+      const cbrAtBaseline    = Number(cbr) === Number(baselineCbr)
+      const morAtBaseline    = Number(flexStr) === Number(baselineMor)
+      const growAtBaseline   = Number(growthRate) === Number(baselineGrowth)
+      const lifeAtBaseline   = designLife === 20
+      if (layersUnchanged && trafficUnchanged && cbrAtBaseline && morAtBaseline && growAtBaseline && lifeAtBaseline) {
+        return  // pre-cal authoritative, skip live recompute
+      }
+    }
     // If the backend is momentarily unreachable (poll between heartbeats), or
     // layers/traffic haven't been computed yet for the new section, just bail
     // out without firing.  CRITICALLY: do NOT setNativeCdf(null) here — the
@@ -1072,10 +1111,8 @@ export default function DesignTool({
                     <tr key={i} className="border-t border-outline-variant/10 hover:bg-surface-low">
                       <td className="py-2 px-3 font-mono font-bold">{a.icao || a.name}</td>
                       <td className="py-2 px-3 text-right font-mono">{a.mtow?.toLocaleString()}</td>
-                      <td className="py-2 px-3 text-center" title={a.libGear && a.gear && a.libGear.toUpperCase() !== (a.gear || '').toUpperCase() ? `Library: ${a.libGear}  ·  Traffic supplied: ${a.gear}` : undefined}>
-                        {a.libGear && a.gear && a.libGear.toUpperCase() !== (a.gear || '').toUpperCase()
-                          ? <span className="text-failing" title={`Library: ${a.libGear}  ·  Traffic: ${a.gear}`}>{a.libGear}<span className="text-[8px] text-outline ml-0.5">≠{a.gear}</span></span>
-                          : (a.libGear || a.gear || '?')}
+                      <td className="py-2 px-3 text-center">
+                        {a.libGear || a.gear || '?'}
                       </td>
                       <td className="py-2 px-3 text-right font-mono">{a.annualDeps?.toFixed(1)}</td>
                       <td className="py-2 px-3 text-right font-mono">{a.coverageToPass?.toFixed(3) ?? '—'}</td>

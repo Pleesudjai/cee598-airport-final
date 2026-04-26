@@ -1,0 +1,2068 @@
+{
+  "source": "FAA_Project_Data_4_Grad_Students/02_Pavement_Design_with_Traffic/20260223_Traffic_Filtered_Airport_Data.xlsx",
+  "extracted": "2026-04-24",
+  "distress_codes": {
+    "1": "ALLIGATOR CR",
+    "2": "BLEEDING",
+    "3": "BLOCK CR",
+    "4": "BUMPS/SAGS",
+    "5": "CORRUGATION",
+    "6": "DEPRESSION",
+    "7": "EDGE CR",
+    "8": "JOINT REFLECTION CRACKING",
+    "9": "LANE SH DROP",
+    "10": "L & T CR",
+    "11": "PATCH/UT CUT",
+    "12": "POLISHED AG",
+    "13": "POTHOLE",
+    "14": "RR CROSSING",
+    "15": "RUTTING",
+    "16": "SHOVING",
+    "17": "SLIPPAGE CR",
+    "18": "SWELL",
+    "19": "RAVELING",
+    "20": "RAVELING",
+    "21": "BLOW-UP/SHATTER",
+    "22": "CORNER BREAK",
+    "23": "DIVIDED SLAB",
+    "24": "DURABILITY CRACKING",
+    "25": "FAULTING",
+    "26": "JOINT SEAL DAMAGE",
+    "27": "LANE SH DROP",
+    "28": "LINEAR CRACKING",
+    "29": "LARGE PATCH/UTILITY CUT",
+    "30": "SMALL PATCH",
+    "31": "POLISHED AGGREGATE",
+    "32": "POPOUTS",
+    "34": "PUNCHOUT",
+    "36": "SCALING/CRAZING",
+    "37": "SHRINKAGE CRACKING",
+    "38": "CORNER SPALLING",
+    "39": "JOINT SPALLING",
+    "41": "ALLIGATOR CR",
+    "42": "BLEEDING",
+    "43": "BLOCK CR",
+    "44": "CORRUGATION",
+    "45": "DEPRESSION",
+    "46": "JET BLAST",
+    "47": "JT REF. CR",
+    "48": "L_T CR",
+    "49": "OIL SPILLAGE",
+    "50": "PATCH/UT CUT",
+    "51": "POLISHED AG",
+    "52": "RAVELING",
+    "53": "RUTTING",
+    "54": "SHOVING",
+    "55": "SLIPPAGE CR",
+    "56": "SWELLING",
+    "57": "WEATHERING",
+    "60": "OPEN",
+    "61": "BLOWUP",
+    "62": "CORNER BREAK",
+    "63": "LINEAR CRACKING",
+    "64": "DURABILITY CR",
+    "65": "JT SEALL DMG",
+    "66": "SMALL PATCH",
+    "67": "LARGE PATCH/UTILITY",
+    "68": "POPOUTS",
+    "69": "PUMPING",
+    "70": "SCALING",
+    "71": "FAULTING",
+    "72": "SHAT.SLAB",
+    "73": "SHRINK CR",
+    "74": "JOINT SPALL",
+    "75": "CORNER SPALL",
+    "76": "ASR",
+    "77": "OPEN",
+    "82": "INAD. RS DR."
+  },
+  "sections": {
+    "CIU_21222": {
+      "icao": "CIU",
+      "section_id": 21222,
+      "name": "10",
+      "use": "RUNWAY",
+      "construction_date": "2014-07-14",
+      "pci_history": [
+        {
+          "date": "2014-07-14",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2016-12-07",
+          "pci": 64.18058776855469,
+          "pct_load": 0.0,
+          "sample": 227
+        },
+        {
+          "date": "2020-09-19",
+          "pci": 61.14294052124023,
+          "pct_load": 0.0,
+          "sample": 227
+        },
+        {
+          "date": "2023-05-17",
+          "pci": 58.74176406860352,
+          "pct_load": 0.0,
+          "sample": 227
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2016-12-07",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 3911.87617,
+          "unit": "m"
+        },
+        {
+          "date": "2016-12-07",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 17929.43304,
+          "unit": "m"
+        },
+        {
+          "date": "2016-12-07",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 105571.76302,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-19",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 1939.63833,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-19",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 23226.76546,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-19",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 220.04217,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-19",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 105571.76302,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-05-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 713.10242,
+          "unit": "m"
+        },
+        {
+          "date": "2023-05-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 27281.26169,
+          "unit": "m"
+        },
+        {
+          "date": "2023-05-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 794.5996,
+          "unit": "m"
+        },
+        {
+          "date": "2023-05-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 105571.76302,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "LHX_6627": {
+      "icao": "LHX",
+      "section_id": 6627,
+      "name": "02",
+      "use": "TAXIWAY",
+      "construction_date": "2012-06-03",
+      "pci_history": [
+        {
+          "date": "2012-06-03",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2014-05-27",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 22
+        },
+        {
+          "date": "2017-05-16",
+          "pci": 86.57764434814453,
+          "pct_load": 0.0,
+          "sample": 22
+        },
+        {
+          "date": "2020-07-15",
+          "pci": 69.00423431396484,
+          "pct_load": 0.0,
+          "sample": 22
+        },
+        {
+          "date": "2023-06-12",
+          "pci": 63.50199508666992,
+          "pct_load": 0.0,
+          "sample": 22
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2017-05-16",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 790.67078,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 61.68353,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 22.43034,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 10767.92685,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 149.25703,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 1692.31236,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 271.07717,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 1136.98798,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 1712.06699,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 113.0403,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 43.89912,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "M",
+          "qty": 33.4511,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 2153.58526,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "LHX_7347": {
+      "icao": "LHX",
+      "section_id": 7347,
+      "name": "05",
+      "use": "TAXIWAY",
+      "construction_date": "2010-06-03",
+      "pci_history": [
+        {
+          "date": "2010-06-03",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2011-07-13",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 10
+        },
+        {
+          "date": "2014-05-27",
+          "pci": 92.288330078125,
+          "pct_load": 0.0,
+          "sample": 10
+        },
+        {
+          "date": "2017-05-16",
+          "pci": 84.71549224853516,
+          "pct_load": 0.0,
+          "sample": 10
+        },
+        {
+          "date": "2020-07-15",
+          "pci": 72.86227416992188,
+          "pct_load": 0.0,
+          "sample": 10
+        },
+        {
+          "date": "2023-06-12",
+          "pci": 66.7149658203125,
+          "pct_load": 0.0,
+          "sample": 10
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2014-05-27",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 390.36646,
+          "unit": "m"
+        },
+        {
+          "date": "2014-05-27",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 38.14653,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 594.45056,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 82.65087,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 4693.46158,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 42,
+          "desc": "BLEEDING",
+          "severity": "N",
+          "qty": 0.57964,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 72.90354,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 386.70571,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 136.93184,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-15",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 334.72233,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 450.1001,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 640.28325,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 190.18315,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-12",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 469.34611,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "MQJ_8640": {
+      "icao": "MQJ",
+      "section_id": 8640,
+      "name": "11",
+      "use": "TAXIWAY",
+      "construction_date": "2005-09-01",
+      "pci_history": [
+        {
+          "date": "2005-09-01",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2014-10-21",
+          "pci": 80.77471160888672,
+          "pct_load": 0.0,
+          "sample": 50
+        },
+        {
+          "date": "2017-11-02",
+          "pci": 58.6934700012207,
+          "pct_load": 0.0,
+          "sample": 3
+        },
+        {
+          "date": "2020-09-17",
+          "pci": 48.67046356201172,
+          "pct_load": 0.0,
+          "sample": 3
+        },
+        {
+          "date": "2023-07-31",
+          "pci": 41.67998504638672,
+          "pct_load": 0.0,
+          "sample": 3
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2014-10-21",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 506.49689,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 286.51199,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 141.73199,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 9.14399,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 24.38399,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 3.71612,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1033.0818,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 123.444,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 303.276,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 43.58639,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 3.71612,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1033.0818,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 428.244,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 83.81999,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 3.04799,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 41.80636,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 3.71612,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1033.0818,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "MQJ_8662": {
+      "icao": "MQJ",
+      "section_id": 8662,
+      "name": "15",
+      "use": "TAXIWAY",
+      "construction_date": "2005-09-01",
+      "pci_history": [
+        {
+          "date": "2005-09-01",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2014-10-21",
+          "pci": 78.47258758544922,
+          "pct_load": 0.0,
+          "sample": 50
+        },
+        {
+          "date": "2017-11-02",
+          "pci": 50.83453369140625,
+          "pct_load": 7.230000019073486,
+          "sample": 3
+        },
+        {
+          "date": "2020-09-17",
+          "pci": 38.47695922851562,
+          "pct_load": 5.960000038146973,
+          "sample": 3
+        },
+        {
+          "date": "2023-07-31",
+          "pci": 33.91304779052734,
+          "pct_load": 10.97999954223633,
+          "sample": 3
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2014-10-21",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 476.51354,
+          "unit": "m"
+        },
+        {
+          "date": "2014-10-21",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 8.10884,
+          "unit": "m"
+        },
+        {
+          "date": "2014-10-21",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 4.3616,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "M",
+          "qty": 1.11484,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 185.3184,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 292.608,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 5.4864,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 0.55741,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1032.24568,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "M",
+          "qty": 1.11484,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 48.76799,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 399.288,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 9.14399,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "H",
+          "qty": 0.09289,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "M",
+          "qty": 6.59611,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 2.32257,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "M",
+          "qty": 6.96772,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "H",
+          "qty": 1.85805,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1023.69859,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "M",
+          "qty": 2.04387,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 441.95999,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 39.624,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "H",
+          "qty": 0.1858,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 65.03213,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "M",
+          "qty": 9.29029,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 2.32257,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "M",
+          "qty": 6.96772,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "H",
+          "qty": 4.64515,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1018.12441,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "MQJ_8780": {
+      "icao": "MQJ",
+      "section_id": 8780,
+      "name": "50",
+      "use": "TAXIWAY",
+      "construction_date": "2005-09-01",
+      "pci_history": [
+        {
+          "date": "2005-09-01",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2014-10-21",
+          "pci": 75.85179901123047,
+          "pct_load": 0.0,
+          "sample": 50
+        },
+        {
+          "date": "2017-11-02",
+          "pci": 61.4747200012207,
+          "pct_load": 0.0,
+          "sample": 4
+        },
+        {
+          "date": "2020-09-17",
+          "pci": 51.16408157348633,
+          "pct_load": 0.0,
+          "sample": 4
+        },
+        {
+          "date": "2023-07-31",
+          "pci": 42.81045913696289,
+          "pct_load": 0.0,
+          "sample": 4
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2014-10-21",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 838.9338,
+          "unit": "m"
+        },
+        {
+          "date": "2014-10-21",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 45.51263,
+          "unit": "m"
+        },
+        {
+          "date": "2014-10-21",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 5.72051,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 474.86568,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 187.01274,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 66.37118,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1519.48074,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 251.91717,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 409.96126,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 89.10607,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 40.33607,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1608.89485,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 623.00912,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 71.50487,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 111.84094,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 134.12114,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1608.89485,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "MQJ_8881": {
+      "icao": "MQJ",
+      "section_id": 8881,
+      "name": "04",
+      "use": "TAXIWAY",
+      "construction_date": "2005-09-01",
+      "pci_history": [
+        {
+          "date": "2005-09-01",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2014-10-21",
+          "pci": 73.40522003173828,
+          "pct_load": 0.0,
+          "sample": 50
+        },
+        {
+          "date": "2017-11-02",
+          "pci": 47.25822830200195,
+          "pct_load": 0.0,
+          "sample": 5
+        },
+        {
+          "date": "2020-09-17",
+          "pci": 39.12765121459961,
+          "pct_load": 7.880000114440918,
+          "sample": 5
+        },
+        {
+          "date": "2023-07-31",
+          "pci": 33.49889373779297,
+          "pct_load": 15.31999969482422,
+          "sample": 5
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2014-10-21",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 876.16976,
+          "unit": "m"
+        },
+        {
+          "date": "2014-10-21",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 92.08443,
+          "unit": "m"
+        },
+        {
+          "date": "2014-10-21",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 55.57888,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 293.50311,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 496.41884,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 175.37716,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 7.24698,
+          "unit": "m"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 132.53295,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2017-11-02",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1806.31381,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "L",
+          "qty": 1.10443,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "M",
+          "qty": 1.65666,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 323.94047,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 489.5342,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 146.3892,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 117.40124,
+          "unit": "m"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 728.93127,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 413.61326,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-09-17",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1392.70051,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "L",
+          "qty": 4.41776,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "M",
+          "qty": 12.14883,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 57.97592,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 769.99272,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 120.30003,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 135.88106,
+          "unit": "m"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 1424.1771,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "M",
+          "qty": 22.08882,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 413.61326,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-07-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "M",
+          "qty": 1370.6117,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "MWH_37325": {
+      "icao": "MWH",
+      "section_id": 37325,
+      "name": "03C",
+      "use": "RUNWAY",
+      "construction_date": "2005-09-01",
+      "pci_history": [
+        {
+          "date": "2005-09-01",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2012-09-26",
+          "pci": 88.98908233642578,
+          "pct_load": 0.0,
+          "sample": 80
+        },
+        {
+          "date": "2018-05-31",
+          "pci": 67.29000091552734,
+          "pct_load": 26.20999908447266,
+          "sample": 80
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2012-09-26",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 4101.03725,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "L",
+          "qty": 260.15778,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 816.95563,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 7763.11288,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 1097.40311,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 37165.39626,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "MWH_37508": {
+      "icao": "MWH",
+      "section_id": 37508,
+      "name": "03W",
+      "use": "RUNWAY",
+      "construction_date": "2005-05-01",
+      "pci_history": [
+        {
+          "date": "2005-07-19",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 107
+        },
+        {
+          "date": "2012-09-26",
+          "pci": 86.86845397949219,
+          "pct_load": 0.0,
+          "sample": 214
+        },
+        {
+          "date": "2018-05-31",
+          "pci": 71.85832977294922,
+          "pct_load": 0.0,
+          "sample": 214
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2012-09-26",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 13087.71568,
+          "unit": "m"
+        },
+        {
+          "date": "2012-09-26",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 644.90091,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 3858.57234,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 2156.89845,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 16344.74072,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 3793.54026,
+          "unit": "m"
+        },
+        {
+          "date": "2018-05-31",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 111497.58342,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "OTM_27450": {
+      "icao": "OTM",
+      "section_id": 27450,
+      "name": "02",
+      "use": "RUNWAY",
+      "construction_date": "2009-08-01",
+      "pci_history": [
+        {
+          "date": "2009-09-22",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 68
+        },
+        {
+          "date": "2012-09-04",
+          "pci": 89.81217956542969,
+          "pct_load": 0.0,
+          "sample": 68
+        },
+        {
+          "date": "2015-11-03",
+          "pci": 76.02011108398438,
+          "pct_load": 0.0,
+          "sample": 68
+        },
+        {
+          "date": "2019-11-19",
+          "pci": 54.35662460327148,
+          "pct_load": 0.0,
+          "sample": 65
+        },
+        {
+          "date": "2022-11-14",
+          "pci": 95.03838348388672,
+          "pct_load": 0.0,
+          "sample": 65
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2012-09-04",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 2512.49783,
+          "unit": "m"
+        },
+        {
+          "date": "2012-09-04",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 112.29037,
+          "unit": "m"
+        },
+        {
+          "date": "2015-11-03",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 2484.42531,
+          "unit": "m"
+        },
+        {
+          "date": "2015-11-03",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 1732.07956,
+          "unit": "m"
+        },
+        {
+          "date": "2015-11-03",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 11979.14094,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 3796.33432,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 1758.99708,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 272.05212,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "H",
+          "qty": 0.85481,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 29946.99725,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "L",
+          "qty": 29.91608,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 56,
+          "desc": "SWELLING",
+          "severity": "M",
+          "qty": 17.65158,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "H",
+          "qty": 769.37465,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 29177.62231,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 2007.80135,
+          "unit": "m"
+        }
+      ]
+    },
+    "OTM_27641": {
+      "icao": "OTM",
+      "section_id": 27641,
+      "name": "01",
+      "use": "RUNWAY",
+      "construction_date": "2009-08-01",
+      "pci_history": [
+        {
+          "date": "2009-09-22",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 11
+        },
+        {
+          "date": "2012-09-04",
+          "pci": 93.7701644897461,
+          "pct_load": 0.0,
+          "sample": 11
+        },
+        {
+          "date": "2015-11-03",
+          "pci": 74.088134765625,
+          "pct_load": 0.0,
+          "sample": 11
+        },
+        {
+          "date": "2019-11-19",
+          "pci": 61.48749923706055,
+          "pct_load": 0.0,
+          "sample": 8
+        },
+        {
+          "date": "2022-11-14",
+          "pci": 94.91384887695312,
+          "pct_load": 0.0,
+          "sample": 8
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2012-09-04",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 154.07436,
+          "unit": "m"
+        },
+        {
+          "date": "2015-11-03",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 490.72685,
+          "unit": "m"
+        },
+        {
+          "date": "2015-11-03",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 198.75591,
+          "unit": "m"
+        },
+        {
+          "date": "2015-11-03",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 1056.64198,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 693.33464,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 86.08903,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 23.11112,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 52,
+          "desc": "RAVELING",
+          "severity": "L",
+          "qty": 2861.73875,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-19",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 3522.14001,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 207.4226,
+          "unit": "m"
+        }
+      ]
+    },
+    "OTM_28171": {
+      "icao": "OTM",
+      "section_id": 28171,
+      "name": "06",
+      "use": "TAXIWAY",
+      "construction_date": "2015-06-01",
+      "pci_history": [
+        {
+          "date": "2015-11-03",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 4
+        },
+        {
+          "date": "2019-11-20",
+          "pci": 77.36666870117188,
+          "pct_load": 0.0,
+          "sample": 4
+        },
+        {
+          "date": "2022-11-14",
+          "pci": 64.1044692993164,
+          "pct_load": 6.260000228881836,
+          "sample": 4
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2019-11-20",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 444.05604,
+          "unit": "m"
+        },
+        {
+          "date": "2019-11-20",
+          "code": 54,
+          "desc": "SHOVING",
+          "severity": "L",
+          "qty": 1.42923,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2019-11-20",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 2251.04066,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 41,
+          "desc": "ALLIGATOR CR",
+          "severity": "M",
+          "qty": 0.92903,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 45,
+          "desc": "DEPRESSION",
+          "severity": "L",
+          "qty": 74.60113,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 639.47039,
+          "unit": "m"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 38.09999,
+          "unit": "m"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 50,
+          "desc": "PATCH/UT CUT",
+          "severity": "L",
+          "qty": 50.16764,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2022-11-14",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 2200.873,
+          "unit": "m\u00b2"
+        }
+      ]
+    },
+    "PUB_6948": {
+      "icao": "PUB",
+      "section_id": 6948,
+      "name": "02",
+      "use": "TAXIWAY",
+      "construction_date": "2015-06-01",
+      "pci_history": [
+        {
+          "date": "2015-06-01",
+          "pci": 100.0,
+          "pct_load": 0.0,
+          "sample": 0
+        },
+        {
+          "date": "2017-05-16",
+          "pci": 96.08294677734375,
+          "pct_load": 0.0,
+          "sample": 15
+        },
+        {
+          "date": "2020-07-14",
+          "pci": 86.43115997314453,
+          "pct_load": 0.0,
+          "sample": 15
+        },
+        {
+          "date": "2023-06-11",
+          "pci": 78.91080474853516,
+          "pct_load": 0.0,
+          "sample": 15
+        }
+      ],
+      "distress_records": [
+        {
+          "date": "2017-05-16",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 2.92126,
+          "unit": "m"
+        },
+        {
+          "date": "2017-05-16",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 1187.21186,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2020-07-14",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 223.96546,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-14",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 24.34407,
+          "unit": "m"
+        },
+        {
+          "date": "2020-07-14",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 5449.59942,
+          "unit": "m\u00b2"
+        },
+        {
+          "date": "2023-06-11",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "L",
+          "qty": 106.14016,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-11",
+          "code": 47,
+          "desc": "JT REF. CR",
+          "severity": "M",
+          "qty": 149.95946,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-11",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "L",
+          "qty": 277.52243,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-11",
+          "code": 48,
+          "desc": "L_T CR",
+          "severity": "M",
+          "qty": 116.85156,
+          "unit": "m"
+        },
+        {
+          "date": "2023-06-11",
+          "code": 57,
+          "desc": "WEATHERING",
+          "severity": "L",
+          "qty": 5449.59942,
+          "unit": "m\u00b2"
+        }
+      ]
+    }
+  }
+}

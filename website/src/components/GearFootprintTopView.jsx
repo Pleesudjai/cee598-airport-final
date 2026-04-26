@@ -236,28 +236,11 @@ export default function GearFootprintTopView({ nativeCdf }) {
                 C/P={cp.toFixed(3)}  CDF={cdf.toExponential(2)}
               </text>
               {(() => {
-                const lib = ac.libGear || ''
-                const traf = ac.gear || ''
-                const mismatch = lib && traf && lib.toUpperCase() !== traf.toUpperCase()
+                const lib = ac.libGear || ac.gear || '?'
                 const nW = ac.nWheels || wheelXs.length
-                if (mismatch) {
-                  // Two-line layout: emphasize that the LIBRARY gear is what was
-                  // actually used (the wheel rectangles drawn above come from
-                  // the library's wheelX/wheelY coords, not the traffic sheet).
-                  return (
-                    <>
-                      <text x={8} y={yMid + 19} fontSize="10" fontWeight="700" fill="#1a1c1e">
-                        library gear: {lib}  (used for analysis)
-                      </text>
-                      <text x={8} y={yMid + 30} fontSize="9" fill="#b85c00">
-                        traffic-sheet gear: {traf}  (overridden) · {nW} wheels · src={src}
-                      </text>
-                    </>
-                  )
-                }
                 return (
                   <text x={8} y={yMid + 19} fontSize="9" fill="#737784">
-                    library gear: {lib || traf || '?'}  ·  {nW} wheels  ·  src={src}
+                    gear: {lib}  ·  {nW} wheels  ·  src={src}
                   </text>
                 )
               })()}

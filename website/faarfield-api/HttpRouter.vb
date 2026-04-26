@@ -80,6 +80,9 @@ Public Module HttpRouter
             ElseIf method = "GET" AndAlso path = "/api/diag/complex-exact" Then
                 HandleComplexExact(req.QueryString, resp)
 
+            ElseIf method = "POST" AndAlso path = "/api/diag/gear-trace" Then
+                HandleGearTrace(ReadBody(req), resp)
+
             Else
                 SendJson(resp, 404, JsonHelper.Serialize(New Dto.ErrorResponse With {
                     .error = "Not Found",
@@ -603,6 +606,42 @@ Public Module HttpRouter
         resp.ContentLength64 = buffer.Length
         resp.OutputStream.Write(buffer, 0, buffer.Length)
         resp.Close()
+    End Sub
+
+    ' ============================================================
+    ' Gear-coordinate trace audit endpoint.
+    ' POST /api/diag/gear-trace  (body: Dto.GearTraceRequest JSON)
+    ' Captures wheel coords at every pipeline stage for ONE aircraft on ONE
+    ' pavement structure.  Used by scripts/audit_gear_coordinate_trace.py
+    ' to build the methodology Excel (specs/gear-coordinate-trace-audit.md).
+    ' ============================================================
+    Private Sub HandleGearTrace(body As String, resp As HttpListenerResponse)
+        Dim request As Dto.GearTraceRequest
+        Try
+            request = JsonHelper.Deserialize(Of Dto.GearTraceRequest)(body)
+        Catch ex As Exception
+            SendJson(resp, 400, JsonHelper.Serialize(New Dto.ErrorResponse With {
+                .error = "Invalid request body", .detail = ex.Message
+            }))
+            Return
+        End Try
+
+        If request Is Nothing OrElse String.IsNullOrWhiteSpace(request.icao) Then
+            SendJson(resp, 400, JsonHelper.Serialize(New Dto.ErrorResponse With {
+                .error = "Missing ICAO", .detail = "request.icao is required"
+            }))
+            Return
+        End If
+
+        Dim sw As New Diagnostics.Stopwatch()
+        sw.Start()
+        Dim result As Dto.GearTraceResponse
+        SyncLock analysisLock
+            result = GearTraceWrapper.TraceAircraft(request)
+        End SyncLock
+        sw.Stop()
+        Console.WriteLine("  gear-trace: " & request.icao & " (" & request.gear & ") in " & sw.ElapsedMilliseconds & "ms")
+        SendJson(resp, 200, JsonHelper.Serialize(result))
     End Sub
 
 End Module

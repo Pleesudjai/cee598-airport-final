@@ -1,146 +1,335 @@
 # Session Handoff
-Date: 2026-04-23 (full-day session)
-Focus: **Pre-cal hydration of saved batch data**, **C-17 gear-label investigation → libGear field added**, **GearFootprintTopView visualization fixes (centroid normalization + correct ω* semantics)**, **NOAA Climate Normals + Berggren frost depth + FAA AC 150/5320-6F frost-protection feature**, **Project Report content audit**, and **single-section rerun infrastructure** to recover from individual-section batch timeouts.
+**Date:** 2026-04-25 (afternoon/evening session — gear-trace audit + UI rebuild + final deliverables)
+**Focus:** Built gear-coordinate trace audit endpoint + 130-row Excel deliverable → unified ProjectSummary panel → field-validation panel (PCI vs CDF) → final report (.docx) + slide deck (.pptx) including detailed proxy-criteria section
+**Earlier this same day:** 2026-04-25 morning — fresh-machine bring-up (FAARFIELD .msi install, backend/frontend running). See "Earlier session 2026-04-25 — fresh-machine bring-up" below.
+**Previous session:** 2026-04-24 (KMWH split rerun, gear audit, UI hardening, GitHub push). See further below.
 
-## Headline state
+---
 
-- **CDF verdict:** **4 OVER / 9 UNDER** with the FAA AC 150/5320-6F MOR rule (R = 360 psi) + SCI = 80. Same as yesterday but with a much richer per-section JSON now (full top-10 per-aircraft fields, cdfProfile arrays, libGear field, Phase D-validated FEM stresses).
-- **Frost verdict:** **4 compliant / 2 inadequate** (KCIU and KOTM). KOTM is the most interesting because it passes CDF but fails frost — a finding the structural-only analysis missed.
-- **One section pending:** KMQJ 8881 timed out in the overnight libGear batch. Currently re-running solo via `scripts/rerun_one_section.py` (background task `b5up88nn3`, ETA 10-25 min). The other 12/13 sections have full new data.
+## This session (2026-04-25 afternoon/evening)
 
-## Completed this session
+### Goal
+Produce the final report deliverable for the upcoming CEE 598 class presentation; finish the field-validation UI; close out remaining methodology specs.
 
-### 1. Pre-cal hydration of project sections (no spinner on section open)
-- `c:/temp/aeropave/src/tabs/DesignTool.jsx` — added `savedRecordToNativeShape()` that converts a saved cdf_results.json record into the live-API shape; on section change, hydrates `nativeCdf` from disk + seeds `lastCdfSignature.current` so the auto-fire useEffect skips the initial backend call. Live recompute still fires the moment any input differs from the saved baseline.
-- `flexStr` slider now defaults to the section's saved `mor_psi` (360 for aged PCC), not the FAARFIELD generic 700, so the slider reflects the inputs that produced the displayed CDF.
-- Per-aircraft table badge flips between "pre-calculated batch (top 5/10)" (purple) and "native FAARFIELD engine" (green) so the user knows which engine produced the shown numbers.
+### What was completed
 
-### 2. Bug fix: spinner appearing when revisiting a section
-**Root cause:** the auto-fire useEffect ran twice when sections were switched — first with stale state values (queueing a 2 s timer), then again after React committed the new state. The second run saw signature-matches-baseline and returned early *without canceling* the first timer, so the stale backend call fired anyway.
-**Fix:** `nativeCdfTimer.current = clearTimeout(...)` is now performed at the very top of the useEffect, before the signature check. Documented in `DesignTool.jsx`.
+**1. Gear-coordinate trace audit (specs/gear-coordinate-trace-audit.md fully executed)**
+- New backend endpoint `POST /api/diag/gear-trace` ([c:/temp/aeropave/faarfield-api/GearTraceWrapper.vb](../../../../../../temp/aeropave/faarfield-api/GearTraceWrapper.vb), Dto/GearTraceRequest.vb, Dto/GearTraceResponse.vb).
+- New public delegate `Fem3dWrapper.RunPrepDiagnostic` for snapshotting Stages 6/7 without triggering a full FEM solve.
+- Added route + handler in HttpRouter.vb; updated FaarfieldApi.vbproj compile list. Clean rebuild.
+- Driver script [scripts/audit_gear_coordinate_trace.py](../scripts/audit_gear_coordinate_trace.py) iterates the top 10 aircraft × 13 sections (130 rows) and writes the Excel.
+- **Output:** [results/gear_coordinate_trace_audit.xlsx](../results/gear_coordinate_trace_audit.xlsx) — 5 sheets (Summary, WheelByWheel, Discrepancies, Provenance, MethodologyEvidence). **0 LEAF/CDF/FEM-pre divergences across 130 rows at 1×10⁻⁶″ tolerance.**
 
-### 3. Backend extension: top 10 with FULL per-aircraft fields + cdfProfile arrays
-- `Dto/FullAnalysisResponse.vb` — added `libGear` to `AircraftCdfResult` (alongside earlier `geometrySource`, `nWheels`, `tireWidth`, `wheelX[]`, `wheelY[]`, σ_LEAF, σ_FEM, σ_eff, femRatio).
-- `FullAnalysisWrapper.vb` — captures `geo.GearType` per aircraft into `libGearArr` and emits in `acResults`.
-- `scripts/all_airports_cdf_with_sci_history.py` — `top_aircraft_full` now records all per-aircraft fields including libGear; the section record carries the 41-element `cdf_profile_*` arrays + FEM3D summary stats (`fem_used`, `fem_max_ratio`, `fem_max_ratio_aircraft`, etc.).
-- Backend rebuilt 2026-04-23 mid-day, restarted, healthy on port 5100.
-- **Overnight batch with new schema completed at ~3:09 PM** (~2.4 hr runtime, FEM enabled). 12/13 sections written; KMQJ 8881 timed out.
+**2. Unified ProjectSummary panel (specs/unified-project-summary-panel.md fully executed)**
+- New `src/components/ProjectSummaryUnified.jsx` replaces `SummaryTable` + `Per-Airport Detail` with one airport-grouped expandable panel.
+- Extracted `src/components/CrossSectionSmall.jsx` and `src/components/PerSectionDetail.jsx` as shared subcomponents.
+- Section cards: cross-section diagram inline, click to drill down (CDF breakdown + top-10 aircraft + PCI history + distress breakdown).
+- Visual polish: chevrons, expand-all/collapse-all, sticky widths, soil-tan Subgrade card matching the SVG.
+- Per user feedback: chart row ordered ABOVE per-section detail; per-section table capped at top 10 aircraft.
 
-### 4. Single-section rerun infrastructure
-- `scripts/rerun_one_section.py` — NEW. Posts a single `/api/analysis/cdf` call for one section using the same inputs as the batch script, builds a record matching the new schema, and **merges into `cdf_results.json`** (replaces stale entry, sorts to project order, auto-copies to website data + `cdf_results_sci_history.json`). Used to recover KMQJ 8881 without forcing a full 2.5 hr re-run.
-- Currently running for KMQJ 8881 — task `b5up88nn3` started ~14:45, ETA 10-25 min.
+**3. Field-validation panel (specs/distress-trend-vs-cdf-panel.md fully executed with ASTM D5340 framing)**
+- New `src/lib/distressClassification.js` — categorizes the 10 codes that actually appear in the project data (codes 41–57, AC overlay distresses) into load / climate / other; ASTM D5340 7-band reference areas.
+- New `src/components/PciHistoryChart.jsx` — Recharts line chart with the 7 D5340 bands, construction-date marker, dots colored by `pct_load`.
+- New `src/components/DistressBreakdownChart.jsx` — stacked-severity bar chart with category color (red/blue/green) × saturation (severity). Header now splits totals by unit (m vs m²) since they cannot be summed. Includes Load-vs-Non-Load deduct-share bar (Option A from the load-vs-climate discussion) and a 2-axis legend (category × severity in grayscale).
+- New `src/components/CdfVsPciScatter.jsx` — the field-validation centerpiece. X = predicted CDF (log scale), Y = load-adjusted deduct = `(100 − PCI) × pct_load/100`. 13 dots, color = OVER/UNDER, amber outline = rehab artifact (KOTM 27450/27641) or special note (KMWH 37325/37508). Quadrant tints, CDF=1 reference line, deduct=30 line.
+- New `src/components/FieldValidationPanel.jsx` — wraps the scatter with paste-ready methodology paragraph citing ASTM D5340-12 + FAA AC 150/5380-6C/7B.
+- Wired into `tabs/ProjectReport.jsx` (panel above DataSources) and into ProjectSummaryUnified expanded section detail.
 
-### 5. C-17 gear-label investigation → libGear field
-**Discovery:** the Excel traffic-sheet entry for C-17 says `gear=2D` (4 wheels), but the actual C-17 Globemaster III has triple-tandem `2T` main gear (12 wheels). FAARFIELD's library correctly stores 2T with 12 wheels at the right coordinates — but the row label in our gear-footprint top-view echoed the misclassified Excel string.
-**Fix:** new `libGear` field carries the library's authoritative gear classification distinct from the request-supplied `gear`. Per-aircraft table column shows `libGear`, in red with `≠2D` suffix when the library disagrees with traffic. Tooltip on hover shows both. Per-aircraft footprint row label shows `2T (lib) ≠ 2D (traffic)` in amber when mismatched.
+**4. Distress classification audit + bug fix**
+- Audited the actual distress codes in `pci_distress_data.json` — only 10 codes appear (41 alligator cr, 42 bleeding, 45 depression, 47 jt-ref cr, 48 l/t cr, 50 patch/ut cut, 52 raveling, 54 shoving, 56 swelling, 57 weathering). The library JSON's `distress_codes` dict uses different (incorrect) labels for these codes.
+- Replaced `DISTRESS_CATEGORY` in distressClassification.js with the audited correct mapping (7 of 10 codes had been mis-categorized as "other" before).
+- Added `CODE_LABELS` override using the records' actual `desc` field; chart x-axis now shows readable names (Alligator Cr, JT Ref Cr, Weathering, …) instead of numeric codes.
+- Header counts split by unit (m linear cracks vs m² area distress) — these were being summed together which is meaningless.
 
-### 6. GearFootprintTopView centroid + ω* semantics fix
-**Two bugs found:**
-1. **BE9L wheel coords stored asymmetrically in FAARFIELD's library** (`wheelX = [0, −153]`, centroid = −76.5″ instead of 0). The visualization read these raw and shifted BE9L's gear off-center. **Fix:** centroid-normalize each gear before plotting.
-2. **Misinterpretation of ω*:** I had been plotting gears at ω* (the controlling lateral offset) and centering the wander envelope on ω*. **Correct interpretation:** ω* is the *peak-CDF evaluation point on the pavement*, NOT where the gear sits. The wander Gaussian is centered on the runway centerline (X = 0) with σ = 30.435; the gear centroid statistically sits at X = 0; ω* is where the outboard wheels happen to land most often during the high-probability region of the wander distribution. **Fix:** gears now plotted with centroid at X = 0; wander envelope ±2σ around X = 0; ω* drawn as a separate green vertical marker labeled "(peak-CDF evaluation point)".
-- Caption rewritten to explain the corrected interpretation.
-- Added `shape-rendering="crispEdges"` to wander rect and wheels to eliminate sub-pixel rounding asymmetry.
-- Aircraft library audit (`scripts/audit_aircraft_centroids.py`) found **BE9L is the ONLY X-asymmetric entry in the entire 136-aircraft geometry library** that affects this project; 8 widebodies (A388, B744/8/SP, IL76, A340-200/300, C-5) have Y-axis asymmetry but none are in project traffic.
+**5. Methodology notes added to `note_claude/`**
+- [`2026-04-25_Gear_Coordinate_Trace_Audit_Results.md`](../note_claude/2026-04-25_Gear_Coordinate_Trace_Audit_Results.md) — 130-row audit results, AeroPave-vs-desktop superiority section, FAA_ACD provenance handling section, paste-ready report paragraphs.
+- [`2026-04-25_PCI_vs_CDF_Field_Validation_Analysis.md`](../note_claude/2026-04-25_PCI_vs_CDF_Field_Validation_Analysis.md) — per-section CDF vs PCI table, why most sections are climate-dominated, 5 narrative categories (direct validation / partial / rehab artifact / cleanest negative / sub-surface lag), suggested methodology + limitations paragraphs.
+- [`2026-04-25_Per_Section_Traffic_and_Layer_Tabulation_Findings.md`](../note_claude/2026-04-25_Per_Section_Traffic_and_Layer_Tabulation_Findings.md) — KMWH 37325/37508 traffic allocation analysis (C-17 identical at 895.5/yr at both; secondary aircraft differ), KMQJ 8881 layer label inconsistency, combined data-quality methodology paragraph.
 
-### 7. Project Report content audit + corrections
-- `Footer.jsx` — replaced "Per-section SCI from construction history" (stale) with "R = 360 psi per FAA AC 150/5320-6F · SCI = 80".
-- `SummaryTable.jsx` — section-detail panel relabeled to "Construction history & material inputs"; new "PCC MOR (R) used" row with FAA-AC reference; SCI row clarified to say degradation is captured by R, not SCI; year math now uses `new Date().getFullYear()`.
-- `DesignTool.jsx` ChangesSummary — Flex Str baseline now compares against `originalResult.mor_psi` (360 for project sections), not the hardcoded 700, so opening a project section no longer produces a phantom "−340 psi changed" entry.
+**6. Final deliverables — report + slides**
+- [scripts/generate_final_report.py](../scripts/generate_final_report.py) → [results/CEE598_Final_Report_PleesudjaiC.docx](../results/CEE598_Final_Report_PleesudjaiC.docx) — 12 numbered sections + 2 appendices. CDF flowchart (input→output ASCII art) is § 2; the three Nf equations are § 3; per-section verdict table is § 5; field validation is § 7; data-quality observations § 8; AeroPave-vs-desktop comparison § 9. **§ 6.2 expanded** per user request to detail the 4 proxy tiers that fired (xml / proxy_override / family_proxy / nearest_proxy), the 4-component scoring formula (gear +20, ICAO +30, manufacturer +8, family +5, MTOW tie-breaker), pseudocode of the selection loop, and 8 concrete examples.
+- [scripts/generate_final_slides.py](../scripts/generate_final_slides.py) → [results/CEE598_Final_Slides_PleesudjaiC.pptx](../results/CEE598_Final_Slides_PleesudjaiC.pptx) — **18 slides 16:9** mirroring the report. Includes a dedicated "Why AeroPave? Why not just FAARFIELD desktop?" slide (#5) per user request, with 3 problem/solution panels (library coverage, audit trail, speed). Both scripts are re-runnable and rebuild from `cdf_results.json` + `note_claude/` automatically.
 
-### 8. NOAA Climate Normals → Berggren frost depth → FAA AC 150/5320-6F treatment
-- `scripts/fetch_climate_normals.py` — NEW. Downloads daily TAVG normals (1991–2020) from NOAA NCEI public CSV API for each project airport's nearest GHCN-D station, computes Air Freezing Index (AFI), modified Berggren frost depth `X = K · √AFI` with K coefficients per FAA frost class, and maps to FAA AC 150/5320-6F treatment tier (complete protection / limited penetration / inadequate).
-- Station mapping confirmed for all 6 airports: KLHX → Las Animas (`USC00054834`), KPUB → Pueblo Memorial (`USW00093058`), KMQJ → Indianapolis (`USW00093819`), KCIU → Sault Ste Marie (`USW00014847`), KOTM → Burlington proxy (`USW00014931`), KMWH → Moses Lake (`USW00024110`).
-- Subgrade frost-class mapping per FAA AC 150/5320-6F Table 3-2 (FG-1 to FG-4) derived from the existing NRCS soil classifications.
-- `results/airport_frost_data.json` + auto-copy to `c:/temp/aeropave/src/data/frost_data.json`.
-- `c:/temp/aeropave/src/components/FrostPanel.jsx` — NEW. 4-section panel (summary card, AFI×frost-depth chart with frost-class color-coding, per-airport table with click-through to Design Tool, inadequate-section recommendations callout, methodology footer).
-- Mounted in Project Report between SubgradeChart and KeyFindings.
+### Current state on this machine
 
-### 9. PhD-level frost note for the report
-- `note_claude/2026-04-23_Frost_Protection_Analysis.md` — NEW. Comprehensive write-up: methodology, per-airport NOAA station mapping, AFI/frost-depth/FG-class/verdict table, detailed treatment recommendations for the 2 inadequate sites, combined CDF + frost assessment, limitations, 4 references.
+| Path | Purpose | Status |
+|---|---|---|
+| `c:\temp\aeropave\` | Frontend dev tree (Vite + React) | Running on port 5173 |
+| `c:\temp\aeropave\faarfield-api\bin\x86\Release\FaarfieldApi.exe` | Backend with new gear-trace endpoint | Running on port 5100 |
+| `c:\temp\aeropave\src\components\ProjectSummaryUnified.jsx` | Unified report panel | NEW |
+| `c:\temp\aeropave\src\components\CrossSectionSmall.jsx`, `PerSectionDetail.jsx` | Shared subcomponents | NEW |
+| `c:\temp\aeropave\src\components\PciHistoryChart.jsx`, `DistressBreakdownChart.jsx`, `CdfVsPciScatter.jsx`, `FieldValidationPanel.jsx` | Field-validation panels | NEW |
+| `c:\temp\aeropave\src\lib\distressClassification.js` | ASTM D5340 categorization helper | NEW |
+| `c:\temp\aeropave\src\data\pci_distress.json` | Field PCI/distress data (49 KB, 13 sections, 58 inspections, 187 records) | NEW |
+| `c:\temp\aeropave\faarfield-api\GearTraceWrapper.vb` + `Dto\GearTrace*.vb` | Diagnostic trace endpoint backend | NEW |
+| `results/CEE598_Final_Report_PleesudjaiC.docx` | Final report (55 KB) | NEW — review before submission |
+| `results/CEE598_Final_Slides_PleesudjaiC.pptx` | 18-slide deck (69 KB) | NEW — review before presentation |
+| `results/gear_coordinate_trace_audit.xlsx` | 130-row methodology audit (70 KB) | NEW |
+
+### Specs status
+
+| Spec | Status |
+|---|---|
+| [embed-faarfield-source-projectref.md](../specs/embed-faarfield-source-projectref.md) | **deferred** (Roslyn vbc blocker; pivoted to .msi this morning) |
+| [gear-coordinate-trace-audit.md](../specs/gear-coordinate-trace-audit.md) | **executed** (this session) |
+| [unified-project-summary-panel.md](../specs/unified-project-summary-panel.md) | **executed** (this session) |
+| [distress-trend-vs-cdf-panel.md](../specs/distress-trend-vs-cdf-panel.md) | **executed** (this session) — spec updated with ASTM D5340 framing before execution |
+
+### What's pending
+
+1. **Open report + slides in Word/PowerPoint and review narrative.** Both files were written from scratch by Python scripts; the engineer should read through and make any wording adjustments directly in the editors. Re-running the scripts overwrites manual edits.
+2. **Practice the presentation.** Deck flow is: scope (3) → CDF intro (4) → why AeroPave (5) → architecture (6) → flow + math (7–9) → verdicts (10) → headlines (11–12) → field validation (13) → methodology evidence (14–15) → limitations + conclusions (16–17). Suggested ~15 min budget.
+3. **Optional polish before presentation:**
+   - Tonight's deferred task: pre-bake stress endpoints (LEAF grid, LEAF point, FEM3D mesh) into `src/data/precal/` so the entire site works offline → enables Netlify static deploy as a permanent shareable URL. ~3.5 hr.
+   - Run KMQJ 8662 desktop FAARFIELD cross-check (recipe at [results/KMQJ_8662_desktop_crosscheck.md](../results/KMQJ_8662_desktop_crosscheck.md)) for an additional CDF-level parity check beyond Phase D's stress-field check.
+
+### Class-presentation startup recipe (next time)
+
+```cmd
+:: Terminal 1 — backend
+c:\temp\aeropave\faarfield-api\bin\x86\Release\FaarfieldApi.exe
+
+:: Terminal 2 — frontend
+cd /d c:\temp\aeropave && npm run dev
+```
+
+Open `http://localhost:5173` in browser. Both files in `results/` are also self-contained for the presentation if you don't want to demo the live tool.
+
+### Decisions made (with WHY)
+
+- **Excel-vs-library gear mismatches: don't fix the Excel.** Reason: the mismatch IS the methodology finding — both FAARFIELD desktop and AeroPave key on ICAO and ignore the Excel `gear` column at the analysis stage; "fixing" the Excel hides the finding and changes the input data that future runs use.
+- **Use ASTM D5340 (NOT D6433).** Reason: this is an airport project; D5340 is the airport-specific standard. Verified by the actual distress codes in the dataset (codes 21–38 PCC slab distresses are D5340-only). Cited in [`2026-04-25_PCI_vs_CDF_Field_Validation_Analysis.md`](../note_claude/2026-04-25_PCI_vs_CDF_Field_Validation_Analysis.md).
+- **Use load-adjusted deduct (not raw PCI) as the CDF-validation metric.** Reason: FAARFIELD predicts load damage only; PCI captures total surface deterioration including climate and other. The right comparison is `(100 − PCI) × pct_load/100`, the load-attributable share — which is what the airport's PMS computes via D5340 deduct curves. Documented + paste-ready paragraph in the audit-results note.
+- **Header counts in Distress Breakdown chart split by unit (m vs m²).** Reason: linear meters of cracking cannot be summed with square meters of area distress — different physical quantities. Header was originally summing them, producing meaningless totals like "Other 5844". Now displays separately.
+- **Chart row above section cards in Unified panel.** Reason: airport-level summary (CDF chart + soil + traffic) gives context BEFORE drilling into per-section detail. Top-down narrative.
+- **Other category color = green.** Reason: distinct from red (load) and blue (climate); avoids confusion with the gray severity ramp.
+
+### Dead ends to avoid
+
+- **Don't modify the FAA source code at `c:\temp\faarfield-source\`.** Methodology claim depends on "untouched FAARFIELD source." Wrapper code in `c:\temp\aeropave\faarfield-api\` is fair game (we wrote it).
+- **Don't bypass the Excel `gear` column inconsistencies by editing the input data.** Both tools ignore that column at runtime; "fixing" the Excel obscures the finding documented in the gear-mismatch note.
+- **Don't add a Recharts default `<Legend />` to the DistressBreakdownChart.** Bars use per-cell custom fills; Recharts can't infer a single legend swatch and renders 3 squares all in default dark color (the bug surfaced in the morning). Use the custom legend block instead.
+- **Don't try to add `pct_climate` and `pct_other` separately to the load-fraction bar.** The PMS only emits `pct_load` (load vs non-load); splitting non-load into climate vs other would require recomputing deduct values from raw distress records using ASTM D5340 deduct curves (not in scope).
+
+---
+
+## Earlier session 2026-04-25 — fresh-machine bring-up
+
+### Goal
+Bring up AeroPave on this fresh Windows machine for the upcoming class presentation.
+
+### What was attempted first — and why it failed
+Followed [specs/embed-faarfield-source-projectref.md](../specs/embed-faarfield-source-projectref.md) (Plan B: build FAARFIELD from source, no .msi install). Phases 0–3 went cleanly — staged source at `c:/temp/faarfield-source/`, edited `FaarfieldApi.vbproj` to ProjectReferences, created `FaarfieldApi.sln`, added `Directory.Build.targets` to handle the AMClassLib FAAMeshClassLib HintPath quirk. **Phase 4 (build) hit a hard tooling blocker:** the FAA source uses `NameOf(...)` (VB.NET 14+) but this machine has only legacy `Framework\v4.0.30319\vbc.exe` (pre-Roslyn). Build failed with `error BC30451: 'NameOf' is not declared` across ~50 sites in `FaarFieldModel`.
+
+Cure would be installing .NET SDK 8 (~250 MB) or VS Build Tools (~2–5 GB). Decision: **pivot to FAARFIELD .msi install** instead — comparable install friction, *stronger* methodology claim (bit-identical FAA binaries vs. self-compiled), and rolls back cleanly. Spec marked `status: deferred` with full context preserved for a future no-FAARFIELD-install machine that has the SDK.
+
+### What's now working
+
+**FAARFIELD installed at `C:\Program Files (x86)\FAARFIELD\`** — 34 DLLs, including the 8 referenced by `FaarfieldApi.vbproj` plus the FF2 desktop GUI.
+
+**Backend built and running:**
+- `c:\temp\aeropave\faarfield-api\bin\x86\Release\FaarfieldApi.exe` — clean build (`exit=0`, only late-bound resolution warnings on Object types)
+- `GET http://localhost:5100/api/health` returns:
+  ```
+  {"status":"ok","version":"0.3.0",
+   "leafAvailable":true,"femAvailable":true,
+   "fem3dAvailable":true,"analysisAvailable":true,
+   "nike3dAvailable":false,
+   "aircraftCount":1310,"aircraftWithGeometry":136}
+  ```
+- All 4 engines available; enriched aircraft library loaded.
+
+**Frontend built and running:**
+- `npm install` clean (381 packages, 0 vulnerabilities)
+- `npm run dev` → Vite 8.0.8 ready in 244 ms at `http://localhost:5173/`
+- Returns HTTP 200
+
+### A + B architecture verified
+
+The user's intent — pre-cal'd 13 sections (instant) + live recompute for any other airport (with spinner) — is the *current* design and now operational on this machine. Project airports load from `cdf_results.json` instantly; arbitrary airports / slider drags / FEM toggles route to the live backend.
+
+### Current local state on this machine
+
+| Path | Purpose | Status |
+|---|---|---|
+| `C:\Program Files (x86)\FAARFIELD\` | FAA DLLs | Installed via .msi |
+| `c:\temp\aeropave\` | Frontend dev tree (vite + React) | Active, `npm run dev` running |
+| `c:\temp\aeropave\faarfield-api\` | Backend source + bin | Built, `FaarfieldApi.exe` running |
+| `c:\temp\aeropave\faarfield-api\FaarfieldApi.vbproj` | Active wrapper project (binary HintPaths) | Restored from .bak-msi-hintpaths backup |
+| `c:\temp\aeropave\faarfield-api\FaarfieldApi.vbproj.bak-msi-hintpaths` | Pre-edit backup (audit trail) | Preserved |
+| `c:\temp\aeropave\faarfield-api\FaarfieldApi.sln` | Solution file from Plan B work | Preserved (unused for .msi build) |
+| `c:\temp\faarfield-source\` | Staged FAA source (Plan B) | Preserved (unused; resume here on a future SDK-equipped machine) |
+| `c:\temp\faarfield-source\Directory.Build.targets` | Plan B msbuild customization | Preserved |
+| Background processes | `FaarfieldApi.exe` (port 5100), `vite dev` (port 5173) | Running; logs at `c:\temp\faarfield-api.log`, `c:\temp\vite.log` |
+
+### Specs written this session (under `specs/`)
+
+| Spec | Status | Use |
+|---|---|---|
+| [embed-faarfield-source-projectref.md](../specs/embed-faarfield-source-projectref.md) | **deferred** | Plan B for future no-FAARFIELD-install + SDK-equipped machine. All Phase 0–3 artifacts already on this machine. |
+| [gear-coordinate-trace-audit.md](../specs/gear-coordinate-trace-audit.md) | **planned** | Pipeline-coord audit Excel deliverable for the report. Top 10 aircraft × 13 sections × 7 stages. ~3.5 hr. Can run today against the live .msi-built backend. |
+
+### What's still pending
+
+1. **Run the gear-coordinate-trace-audit** (the deliverable Excel). All prerequisites are now in place — backend running, library loaded.
+2. **Pre-bake remaining endpoints for full-static deploy** (Netlify path discussed but not committed). Would let the entire site work without any backend, including LEAF stress contour and 3D FEM mesh viewer for the 13 baselines. ~3.5 hr.
+3. **Final report deliverable** (Word .docx via `engineering-report` skill or PPT). Material consolidated in `note_claude/` from previous session.
+4. **Optional: run rebuild + re-mirror** to update Dropbox `website/` snapshot if any client-side fixes happen this session.
+
+### Class-presentation readiness — verified
+
+For the upcoming CEE 598 final-project presentation, the simplest demo is:
+```cmd
+:: Terminal 1
+c:\temp\aeropave\faarfield-api\bin\x86\Release\FaarfieldApi.exe
+
+:: Terminal 2
+cd /d c:\temp\aeropave && npm run dev
+```
+Open `http://localhost:5173`. Project airports show instant pre-cal verdicts (A); any custom airport / slider drag / FEM toggle routes to the live backend (B). No deploy / tunnel / Netlify needed for in-room presentation.
+
+---
+
+## Previous session — 2026-04-24 (afternoon)
+**Focus:** KMWH 37508 split rerun → website pre-cal hardening → gear-classification audit/UI fixes → CDF profile chart redesign → panel reordering → backend resilience → **first GitHub push** → fresh-machine setup guide
+
+---
+
+## Completed
+
+### Data layer
+- **`scripts/rerun_kmwh_37508_split.py`** — created and executed; 2-half alternating (47+47 aircraft) with backend restart between halves, then linear merge of per-offset CDF arrays. Produced CDF=2.42e+04 (PCC Fatigue, controlling at offset 140"), cdf_profile_* fully populated (41 points), top_aircraft_full has 10 entries with C-17 at #1 (libGear=2T, 12 wheels, geomSrc=xml).
+- All 13 sections now have schema-complete pre-cal data: 41-point profile arrays, 10-aircraft top contributor lists with full per-aircraft fields (libGear, geometrySource, nWheels, tireWidth, wheelX/Y, cdfProfile).
+- Website `cdf_results.json` and project `results/cdf_results.json` are in lockstep — verified 13/13 sections match exactly.
+- Verdict: **4 OVER / 9 UNDER** preserved.
+
+### Gear-classification audit
+- Audited Excel vs FAARFIELD library gear across all 859 traffic rows: **38 mismatches in 11 unique aircraft**.
+- High-confidence (xml-direct): BE9L, C130, C17, C750, DC10, E190, FA50.
+- Lower-confidence (nearest_proxy substitution): BE19, BE9T, C30J, SW3.
+- Most consequential: **C-17A** (Excel: 2D → Library: **2T**, 12 wheels not 8) — 7,207 deps across KCIU, KMWH, KPUB, KLHX. Drives the under-design verdict on KMWH 37325/37508 + KPUB 6948.
+
+### Website (React) — code changes pushed, all live at http://localhost:5173
+
+| File | Change |
+|---|---|
+| `src/components/GearFootprintTopView.jsx` | (1) Removed per-row wander envelope (now shown ONCE in header strip with edge labels `−60.87″`/`+60.87″`, label `±2σ wander envelope`, taller and more readable). (2) Fixed wheel-rendering bug: unit mismatch between left-edge offset (inches) and width (pixels) was shifting every wheel ~3" right; now both use pixel-space. (3) Mismatch label split into two lines: `library gear: X (used for analysis)` + `traffic-sheet gear: Y (overridden)`. |
+| `src/components/CdfProfileChart.jsx` | Stripped the mm/in toggle and log/linear toggle. Inches + linear only. Top-N expanded from 5 → **10**, palette extended to 10 colors. Header right shows static `inches · linear scale · top 10 aircraft`. Chart height 320 → 360. |
+| `src/components/SummaryTable.jsx` | Per-aircraft expansion now joins `top_aircraft` ↔ `top_aircraft_full` by ICAO to surface `libGear`. Cell shows library gear in **red bold** with `≠excel` suffix when they differ; tooltip spells out `Library: X · Traffic supplied: Y (library overrides for analysis)`. |
+| `src/components/TrafficHints.jsx` | Hardcoded quick-add presets corrected: **C-130 was 2D → now 2S**, **C-17 was 2D → now 2T**. Comment points to the gear-mismatch note. |
+| `src/tabs/DesignTool.jsx` | (1) Moved `GearFootprintTopView` and `CdfProfileChart` to sit immediately below verdict card / "Running FAARFIELD engine…" pad (was at the very bottom). (2) Fixed pre-cal-loss bug: auto-fire effect was calling `setNativeCdf(null)` whenever `analysisAvailable=false` or layers/traffic momentarily missing — destroyed the disk-hydrated seed. Now both branches just `return` without nullifying. |
+| `src/api/nativeStressClient.js` | Health-check timeout 3 s → **8 s** (was firing false offline flips when backend was busy with a CDF). Returns `null` on timeout/network error (not a fake `{leafAvailable:false}` object). |
+| `src/App.jsx` | Added `failStreak` ref. Health check requires **3 consecutive misses** (~24 s) before flipping `nativeAvailable`/`analysisAvailable` to false. Any successful poll resets the streak. Stops the offline-message flicker during normal CDF processing. |
+
+### Notes saved (PhD-level, defensible-in-Q&A)
+- **`note_claude/2026-04-24_PCI_Distress_Field_Data.md`** — Found field PCI/distress data in `FAA_Project_Data_4_Grad_Students/02_Pavement_Design_with_Traffic/20260223_Traffic_Filtered_Airport_Data.xlsx` (was NOT in `AO_CEE598_FAARFIELD.xlsx`). 187 distress records + 58 PCI inspections covering all 13 sections, 2005–2023. Includes CDF-vs-PCI validation table, distress-code legend, KOTM 27450/27641 rehab artifact flag, citation block.
+- **`note_claude/pci_distress_data.json`** — Structured extract of PCI history + distress records, indexed by `{ICAO}_{SectionID}`.
+- **`note_claude/2026-04-24_Gear_Mismatch_Excel_vs_FAARFIELD_Library.md`** — All 11 mismatches with audit traceability. **Section 10 added today**: code-level evidence (`FullAnalysisWrapper.vb:614,626-630,634`, `AircraftLibrary.vb:178`) showing **library gear drives CDF, not Excel gear**. Includes a ready-to-use Q&A talking point and a 3-sentence Methods paragraph for the report.
+- **`note_claude/2026-04-24_Fresh_Machine_Setup_Guide.md`** — 12-section step-by-step guide for bringing AeroPave up on a fresh Windows machine, including the FAARFIELD install/license caveat, the why-not-Dropbox warning, msbuild recipe, two-terminal startup, click-through verification on KMWH 37508, troubleshooting, and a backend-less presentation fallback.
+
+### GitHub — first push of the project ever
+- **Repo:** https://github.com/Pleesudjai/cee598-airport-final (PRIVATE)
+- **Branch:** `main`
+- **2 commits:**
+  - `ca1fd82` — Initial commit (329 files, 50 MB compressed) with comprehensive `.gitignore` excluding FAA proprietary DLLs, FAARFIELD source/installer, PaveAir (2.1 GB), build artifacts.
+  - `68f7813` — Added the fresh-machine setup guide.
+- `README.md` and `.gitignore` written for the repo root.
+
+---
 
 ## Current State
 
-### Working end-to-end (after browser hard-refresh)
-- Backend at localhost:5100 with full DTO including libGear, healthy.
-- Website at localhost:5173 with **rich pre-cal hydration**: open any project section → verdict card, bar chart, per-aircraft table (with σ_LEAF/σ_FEM/σ_eff/FEM-LEAF/C/P columns + libGear gear column), CDF profile chart, gear footprint top-view, FEM3D badge — all populated from disk in <1 s, no spinner.
-- Live backend fires only when user changes any input (slider, traffic, layer).
-- Frost Protection panel renders below SubgradeChart on the Project Report tab.
-- 12/13 sections in `cdf_results.json` carry the full new schema (top_aircraft_full + cdfProfile arrays + libGear); KMQJ 8881 currently re-running.
+### Working end-to-end
+- All 13 project sections show pre-cal CDF instantly on selection (verdict card, CDF bar chart, profile chart, gear footprint, per-aircraft table) — zero backend round-trip required for project airports.
+- Live recompute fires correctly when user changes inputs (layers, MOR, growth rate).
+- Library-gear override applied consistently in CDF computation, per-aircraft table (DesignTool), per-aircraft expansion (SummaryTable), gear footprint chart, and quick-add presets.
+- Health check is now tolerant — single missed heartbeats no longer flicker the offline message.
+- GitHub repo cloneable, with full setup guide for new machines.
 
 ### Built but untested
-- The libGear "≠" mismatch warning in the per-aircraft table — would only fire for aircraft where Excel traffic-supplied gear differs from FAARFIELD library gear. Currently 0 mismatches in the 120 saved entries (the C-17 case from KPUB 6948 doesn't appear because it dropped below top-10 with the new MOR rule). To test: pick a searched airport with a traffic mix containing C-17, run live CDF, look for the amber `2T (lib) ≠ 2D (traffic)` flag.
-- KOTM and KCIU frost-protection treatment recommendations have not been independently verified against AC 150/5320-6F's actual Figure 3-2 chart — the script uses the simplified `X = K · √AFI` form. For the report this is acceptable as a screening computation; for design final the full Berggren equation with measured soil thermal properties would be needed.
+- Setup guide on `2026-04-24_Fresh_Machine_Setup_Guide.md` — has not been validated on a *fresh* machine yet (user plans to do this themselves).
+- The 2-half alternating split rerun strategy worked once (KMWH 37508) — would work for any other section that hits backend connection-reset issues, but hasn't been needed elsewhere.
 
 ### Broken / Incomplete
-- **KMQJ 8881 not in current `cdf_results.json`** — timed out in the overnight batch. Re-running solo via `rerun_one_section.py` task `b5up88nn3`. When that completes, the file becomes 13/13 again at the expected verdict 4 OVER / 9 UNDER (8881 is sister-identical to 8662/8640/8780 which all returned CDF = 18.13).
-- **KOTM proxy station** — uses Burlington (~80 mi east) because Ottumwa Industrial AP doesn't have its own NOAA climate-normals station. Documented in the frost note. AFI estimate may be low by ~10 % vs an Ottumwa-specific reading.
+- **`FaarfieldApi.exe` PID 6972 was showing "Not Responding" in tasklist** at one point during this session, even though `/api/health` was responding. May or may not still be hung. Recommended: kill + restart at start of next session.
+  ```cmd
+  taskkill /F /PID 6972
+  C:\temp\aeropave\faarfield-api\bin\x86\Release\FaarfieldApi.exe
+  ```
+- **Final written report (Word .docx) not yet drafted.** All the methodological raw material is in `note_claude/` — frost analysis, gear audit, PCI validation, Nf equations — but no consolidated deliverable.
+- **Desktop FAARFIELD GUI cross-check on KMQJ 8662** still outstanding (recipe at `results/KMQJ_8662_desktop_crosscheck.md`). Not blocking the report, but would strengthen the parity claim.
+
+---
 
 ## Next Steps (priority order)
 
-1. **Wait for `b5up88nn3` to finish** (KMQJ 8881 rerun). When complete, the `cdf_results.json` returns to 13/13 sections and the verdict is fully restored to 4 OVER / 9 UNDER.
-2. **Visual confirmation** of the new gear-footprint top view (gears centered on X = 0 with wander envelope ±2σ around 0; ω* as separate green marker) and frost panel after browser hard-refresh (Ctrl + Shift + R required because Vite caches JSON imports aggressively).
-3. **Run the KMQJ 8662 desktop GUI cross-check** per `results/KMQJ_8662_desktop_crosscheck.md`. Outstanding from yesterday — would independently verify the FAA AC 150/5320-6F MOR methodology end-to-end.
-4. **Write the final deliverable** (Word .docx via `engineering-report` skill, or a slide deck). The methodological backbone is in place: rewritten KeyFindings, MethodologyTab, SummaryTable, FrostPanel + frost-protection note + KMQJ cross-check recipe. Combined CDF + frost verdict table is in the frost note (Section 6).
-5. **(Optional)** MOR sensitivity sweep on KOTM 27641 / 28171 (CDF = 0.94 / 0.96, both within ~5 % of CDF = 1.0). With the frost analysis flagging KOTM as INADEQUATE, the structural margin is moot — frost rehab is required regardless. So this sweep is no longer urgent; if anything the OVER verdict is comfortable in the context of "frost is the design driver here".
-6. **(Optional)** Add a frost summary line/badge to the Hero or KeyFindings so the 2-inadequate count is visible at the top of the Project Report.
+1. **At next session start: restart `FaarfieldApi.exe`** if backend is hung. The "Not Responding" tasklist status from this session may persist.
+2. **Write the final written deliverable** (Word .docx via the `engineering-report` skill, or a slide deck via PPT). Material to draw from:
+   - `note_claude/2026-04-24_Gear_Mismatch_Excel_vs_FAARFIELD_Library.md` § 9 (citation block) and § 10.5 (Methods paragraph)
+   - `note_claude/2026-04-24_PCI_Distress_Field_Data.md` § 6 (suggested report sections) and § 8 (citation block)
+   - `note_claude/2026-04-23_Frost_Protection_Analysis.md` (full frost methodology)
+   - `note_claude/2026-04-22_Nf_equations_per_layer.md` (Nf equations)
+   - Verdict table from `cdf_results.json` (the 4-OVER / 9-UNDER summary)
+3. **(User task) Set up the new machine** using `note_claude/2026-04-24_Fresh_Machine_Setup_Guide.md`. If anything goes wrong, capture the failure mode and update §9 (Common Issues).
+4. **Optional: Desktop FAARFIELD GUI cross-check** on KMQJ 8662 to validate the LEAF + FEM3D parity claim.
+5. **Optional: GitHub Pages or Vercel deploy** for a shareable URL of the report-only mode (needs no backend; covers the entire pre-cal verdict story). Repo is private so this requires either a public mirror or a paid GitHub plan.
+
+---
 
 ## Key Decisions (with WHY)
 
-- **Pre-cal hydration via static JSON** — chose this over a live "always re-run" approach because (a) the saved batch already used the desktop-parity FEM engine, so its CDFs are authoritative; (b) opening a section was costing 5–15 min of FEM solve before showing anything; (c) the website still recomputes live the moment the user changes ANY input, so engineering exploration is unaffected. Net: instant verdict display + correct numbers.
-- **libGear field added rather than overwriting `gear`** — preserves the user's input (Excel-supplied) while exposing the library's authoritative classification. UI shows the library value in normal use and flags mismatches in red so the user can see Excel-data quality issues.
-- **GearFootprintTopView gears centered at X = 0** — matches FAARFIELD's wander statistic (gear centroid is N(0, σ²) about the centerline). Earlier interpretation (gears at ω*) was wrong — ω* is the peak damage point on the pavement, not the gear position. The corrected visualization shows engineers WHY peak damage occurs at ω* (because the outboard wheel of a wide-track aircraft lands there).
-- **Frost-protection feature is screening-grade, not final design** — uses simplified `X = K · √AFI` rather than the full modified Berggren equation. Documented as such in the methodology footer + report note. For final design, project would commission frost-heave testing per ASTM D5918.
-- **KOTM proxy is Burlington** (80 mi east) — documented as the closest available NOAA climate-normals station; a slightly north-of-Ottumwa station would also work but Burlington is the only nearby airport-class station with a complete 1991–2020 record.
-- **Auto-fire timer must be cleared at the top of the useEffect**, NOT inside the change-detection branch — otherwise stale-state fires queue timers that never get canceled. Subtle React state-batching issue worth remembering.
+- **Library gear is authoritative; Excel gear is audit-only.** Reason: matches FAARFIELD desktop behavior — once an aircraft is selected by ICAO, FAARFIELD reads its own `AircraftGeometry.xml` for wheel layout. The Excel gear column is a label, not a structural input. Documented in §10 of the gear-mismatch note.
+- **Pre-cal CDF results take priority over backend recompute on initial section load.** Reason: instant verdict for project sections (no spinner), and importantly, the disk-hydrated data survives transient backend outages so the user always sees the answer.
+- **Health check tolerates 3 consecutive misses.** Reason: the .NET `HttpListener` is single-threaded — a `/api/health` poll behind an in-flight CDF request can wait 30+ s. A single missed heartbeat is normal during analysis, not an outage.
+- **Top 10 contributors (not top 5) on the CDF profile chart.** Reason: `top_aircraft_full` already carries all 10; showing only 5 hid valuable context like which mid-CDF aircraft were close to the verdict line.
+- **±2σ wander envelope shown ONCE in legend strip, not on every row.** Reason: it applies identically to every aircraft; repeating it 10× was visual noise. The single labeled band still tells the "why is ω* at 140" not at 0?" story.
+- **GitHub repo private, FAA DLLs excluded.** Reason: private repo so the project isn't visible publicly during/before grading. FAA DLL exclusion regardless because their license forbids redistribution; the README explains how to install FAARFIELD locally.
+- **Website source mirrored from `c:/temp/aeropave/` into `…/03 Final Project/website/` for git tracking.** Reason: active development needs a non-Dropbox path (Vite/.NET don't tolerate cloud sync), but git tracking lives in the Dropbox-synced project folder. Manual `robocopy` syncs the snapshot when there's something worth pushing.
+
+---
 
 ## Dead Ends to Avoid
 
-- **Don't read `gear` from the Excel traffic data and trust it for visualization** — it can be misclassified (C-17 example: Excel says 2D = 4 wheels, library has 2T = 12 wheels). Always cross-check with the library's `geo.GearType` (now exposed as `libGear`).
-- **Don't shift the gear to ω* in any wander-related visualization** — ω* is the evaluation point on the pavement that receives peak damage, not where the gear physically sits. The wander statistic is centered on the runway centerline, not on ω*.
-- **Don't compute centroid from the raw library wheel coords for plotting without normalization** — some library entries (BE9L confirmed; 8 widebody entries also asymmetric in Y) store gears in a gear-local frame. FAARFIELD's solver re-centers internally via `xCenter`; visualization code must do the same.
-- **Don't trust `cp1252` console encoding when running scripts on Windows** — `→`, `°`, etc. cause `UnicodeEncodeError`. Use plain ASCII or set `PYTHONIOENCODING=utf-8` or invoke `py -X utf8`.
-- **Don't issue NOAA NCEI CDO API requests without a token** if you need historical raw data — but the **Climate Normals daily CSV downloads are public and tokenless**, which is the route we used. Endpoint pattern: `https://www.ncei.noaa.gov/data/normals-daily/1991-2020/access/<station>.csv`.
+- **Don't try to mirror to GitHub via a `git submodule`** — would require a SECOND repo for `aeropave/`, defeating the user's "one combined repo" choice. The `robocopy` snapshot approach is simpler and sufficient.
+- **Don't increase health-check polling frequency to fix offline flickers** — root cause is the timeout, not the rate. Bumping rate just multiplies false flips.
+- **Don't try `setNativeCdf(null)` defensively in the auto-fire effect** — it destroys the pre-cal seed. Just `return` early when conditions aren't met for a recompute.
+- **Don't trust `robocopy /XF *.dll` to exclude nested DLLs** — it only matches at top-level. Nested `faarfield-api/bin/x86/Release/*.dll` got copied. Worked around by `rm -rf bin obj` post-mirror, then `.gitignore` defense in depth.
+- **Don't try to rerun KMWH 37508 in one batch** — the 94-aircraft mix overwhelms the FEM state and triggers `ConnectionResetError [WinError 10054]`. The 2-half alternating split with backend restart between halves is the proven workaround.
+
+---
 
 ## Open Questions / Blockers
 
-- [ ] Will KMQJ 8881 rerun (`b5up88nn3`) succeed within 30-min FEM timeout? It failed once in the overnight batch — if it fails again, fall back to copying the 8662 record and renaming `section_id` (sister-identical structure & traffic).
-- [ ] Should the Hero / KeyFindings get a "frost-protection: 4/2" badge alongside the existing CDF "4/9" badge? Or keep frost as a Project Report-only section?
-- [ ] Final report format — Word `.docx` via `engineering-report` skill, slide deck, or both? Brief email asking about presentation requirements may be overdue.
+- [ ] Is the `FaarfieldApi.exe` PID 6972 actually hung, or just unresponsive in tasklist due to its long-running CDF queue? Health endpoint was responding so it's probably fine — but worth a fresh restart.
+- [ ] What's the final report format requested by the instructor — Word .docx, PDF, slide deck, or all three? `note_claude/` has the raw material for any of these but they need to be consolidated.
+- [ ] Should the existing Dropbox `website/` snapshot be kept indefinitely, or removed once the user is comfortable cloning from GitHub on the new machine? It currently duplicates 31 MB.
 
-## Files Modified / Created This Session
+---
 
-### Backend (`c:/temp/aeropave/faarfield-api/`)
-- `Dto/FullAnalysisResponse.vb` — added `libGear` field on `AircraftCdfResult`.
-- `FullAnalysisWrapper.vb` — captures `geo.GearType` per aircraft → `libGearArr`, emits in `acResults`.
-- Rebuilt + restarted (PID 39300 currently).
+## Files Modified This Session
 
-### Scripts (`scripts/`)
-- `all_airports_cdf_with_sci_history.py` — extended `top_aircraft_full` with `libGear` + full per-aircraft fields (cdfProfile, σ_LEAF/FEM/eff, wheel coords, geometrySource); section record now carries `cdf_profile_*` arrays and FEM3D summary stats.
-- `audit_aircraft_centroids.py` — NEW. Library-wide audit of wheel-coordinate centroid offsets.
-- `fetch_climate_normals.py` — NEW. NOAA Climate Normals → AFI → Berggren → FAA frost-protection assessment.
-- `rerun_one_section.py` — NEW. Single-section rerun + merge utility for recovering from individual-section batch timeouts.
+### Website (`c:/temp/aeropave/src/`)
+- `components/GearFootprintTopView.jsx` — single-band legend, wheel-render fix, two-line mismatch label
+- `components/CdfProfileChart.jsx` — inch-only, linear-only, top-10
+- `components/SummaryTable.jsx` — libGear with mismatch indicator
+- `components/TrafficHints.jsx` — C-130 → 2S, C-17 → 2T
+- `tabs/DesignTool.jsx` — panel reorder, pre-cal preservation fix
+- `api/nativeStressClient.js` — 8 s timeout, null-on-error
+- `App.jsx` — failStreak (3-consecutive-miss tolerance)
 
-### Frontend (`c:/temp/aeropave/src/`)
-- `tabs/DesignTool.jsx` — pre-cal hydration via `savedRecordToNativeShape()`; section-change auto-fire bug fix (clearTimeout at top); per-aircraft table libGear column + mismatch badge; ChangesSummary baseline now uses saved `mor_psi`.
-- `components/GearFootprintTopView.jsx` — centroid-normalize gears, center wander envelope on X=0, ω* as separate marker; libGear in row label; `shape-rendering="crispEdges"`; caption rewritten to explain ω* semantics.
-- `components/FrostPanel.jsx` — NEW. Project Report frost-protection panel.
-- `tabs/ProjectReport.jsx` — mounts `FrostPanel` between SubgradeChart and KeyFindings.
-- `components/Footer.jsx` — methodology line updated to FAA AC 150/5320-6F R=360 + SCI=80.
-- `components/SummaryTable.jsx` — section-detail "Construction history & material inputs" panel updated; MOR row added; SCI row clarified.
+### Project root (`c:/Users/chidc/.../03 Final Project/`)
+- `.gitignore` — created (FAA proprietary, PaveAir, build artifacts excluded)
+- `README.md` — created (project overview, repo layout, what's NOT in repo)
+- `note_claude/2026-04-24_PCI_Distress_Field_Data.md` — created
+- `note_claude/2026-04-24_Gear_Mismatch_Excel_vs_FAARFIELD_Library.md` — created and extended (§10 added today)
+- `note_claude/2026-04-24_Fresh_Machine_Setup_Guide.md` — created
+- `note_claude/pci_distress_data.json` — created
+- `website/` — full snapshot refreshed via robocopy from `c:/temp/aeropave/`
 
-### Data (`c:/temp/aeropave/src/data/`)
-- `cdf_results.json` — overwritten from overnight batch (12/13 sections with rich new schema; 8881 still rerunning).
-- `frost_data.json` — NEW. Frost analysis output for 6 airports.
+### Scripts
+- `scripts/rerun_kmwh_37508_split.py` — created (2-half split + linear merge)
 
-### Results (`results/`)
-- `cdf_results.json` + `cdf_results_sci_history.json` — overwritten 2026-04-23 15:19 with rich new schema.
-- `airport_frost_data.json` — NEW.
-- `aircraft_centroid_audit.json` + `aircraft_centroid_audit.md` — NEW. Library audit results.
-
-### Notes (`note_claude/`)
-- `2026-04-23_Frost_Protection_Analysis.md` — NEW (12.7 KB). PhD-level frost write-up for the report.
-
-### Docs (`docs/`)
-- `decisions.md` — earlier methodology-pivot entry preserved; this session's changes captured here in the handoff.
-- `handoff.md` — this file.
-- `todo.md` — earlier 4-item next-steps list (still relevant: visual confirmation, KMQJ desktop cross-check, final report, optional MOR sensitivity).
+### Git
+- Initialized repo at `…/03 Final Project/`
+- Configured user.name + user.email locally (no global change)
+- Pushed 2 commits to https://github.com/Pleesudjai/cee598-airport-final

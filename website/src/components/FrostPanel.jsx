@@ -5,13 +5,18 @@ import {
 } from 'recharts'
 
 // Frost-class palette: lightest blue = FG-1 (negligible) → deepest blue = FG-4 (high).
-// "Cold severity" reads as colder/deeper blue.  Inadequate verdicts kept in red
-// for severity contrast; compliant verdicts stay in the blue family.
+// Frost-class palette uses a green→red severity gradient that matches the
+// legend caption AND visually contrasts against the blue pavement-thickness
+// bars (so the two bar series are easy to distinguish at a glance).
+//   FG-1 = green  → negligible frost susceptibility, safe
+//   FG-2 = olive  → mild
+//   FG-3 = orange → moderate concern
+//   FG-4 = red    → high susceptibility, danger
 const FROST_CLASS_COLOR = {
-  'FG-1': '#7dd3fc',   // sky-300 — coldest tolerance (negligible susceptibility)
-  'FG-2': '#38bdf8',   // sky-400
-  'FG-3': '#0284c7',   // sky-600 — concern
-  'FG-4': '#0c4a6e',   // sky-900 — most susceptible
+  'FG-1': '#22c55e',   // green-500
+  'FG-2': '#a3a300',   // olive
+  'FG-3': '#f97316',   // orange-500
+  'FG-4': '#dc2626',   // red-600
 }
 
 function tierColor(tier) {
@@ -82,16 +87,12 @@ export default function FrostPanel({ onSelectAirport }) {
               <YAxis tick={{ fontSize: 11, fill: '#737784' }} label={{ value: 'inches', angle: -90, position: 'insideLeft', fontSize: 11, fill: '#737784' }} />
               <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8, border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }} />
               <Legend wrapperStyle={{ fontSize: 11 }} />
-              <Bar dataKey="frost" name="Berggren frost depth (in)" radius={[3,3,0,0]}>
-                {chartData.map((d, i) => (
-                  <Cell key={i} fill={FROST_CLASS_COLOR[d.class]} />
-                ))}
-              </Bar>
-              <Bar dataKey="pavement" name="Total pavement section (in)" fill="#0047ab" radius={[3,3,0,0]} />
+              <Bar dataKey="frost" name="Berggren frost depth (in)" fill="#1d4ed8" radius={[3,3,0,0]} />
+              <Bar dataKey="pavement" name="Total pavement section (in)" fill="#9ca3af" radius={[3,3,0,0]} />
             </BarChart>
           </ResponsiveContainer>
           <p className="text-[10px] text-outline mt-2">
-            Bar color reflects subgrade frost-susceptibility class (FG-1 green / FG-2 olive / FG-3 orange / FG-4 red). When the frost-depth bar exceeds the pavement-thickness bar AND the frost class is FG-2/3/4, the FAA treatment tier flips to "inadequate".
+            <span className="font-bold" style={{ color: '#1d4ed8' }}>Blue bar</span> = Berggren frost penetration depth (modified Berggren equation from NOAA Air Freezing Index). <span className="font-bold" style={{ color: '#6b7280' }}>Gray bar</span> = total pavement section thickness. The FAA treatment tier flips to "inadequate" when frost depth exceeds pavement thickness AND the subgrade frost class is FG-2/3/4 (see per-airport table below for FG class).
           </p>
         </div>
 

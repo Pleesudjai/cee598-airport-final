@@ -116,8 +116,8 @@ export default function KeyFindings({ cdfResults, sections, airports }) {
             </p>
           </div>
 
-          {/* Recommendations */}
-          <div className="bg-surface-lowest rounded-xl p-5 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
+          {/* Recommendations — HIDDEN per user request 2026-04-25 (panel kept in source for future re-enable) */}
+          {false && <div className="bg-surface-lowest rounded-xl p-5 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
             <p className="text-[10px] font-bold uppercase tracking-widest text-outline mb-3">Design Recommendations</p>
             <div className="space-y-3">
 
@@ -207,7 +207,7 @@ export default function KeyFindings({ cdfResults, sections, airports }) {
                 </ul>
               </div>
             </div>
-          </div>
+          </div>}
         </div>
       </div>
     </section>
