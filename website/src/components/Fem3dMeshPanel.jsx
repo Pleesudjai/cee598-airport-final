@@ -217,52 +217,13 @@ function buildTraces(mesh, colorMode, triStress, stressRange, wheelDiagnostics, 
     const zTop = slabDomain ? slabDomain.zMax : 0
     const zLift = (slabDomain && (slabDomain.zMax - slabDomain.zMin) * 0.02) || 0.5
 
-    // If the backend sent per-wheel diagnostics (complex_exact_manual path),
-    // render contributing + symmetry-mirror wheels only. Wheels outside the
-    // single-slab FEM region are intentionally hidden — FAARFIELD's wider gear
-    // coverage requires its multi-offset sweep, which we don't reproduce here.
-    // The user's authoritative full-footprint view is the LEAF Stress Contour
-    // panel above, which uses our wider gridExtent and shows every wheel.
-    if (wheelDiagnostics && wheelDiagnostics.length > 0) {
-      const groups = {
-        contributing: { x: [], y: [], text: [], color: '#16a34a', border: '#14532d', symbol: 'diamond', name: 'Wheels — captured by FEM' },
-        mirror:       { x: [], y: [], text: [], color: '#94a3b8', border: '#475569', symbol: 'diamond-open', name: 'Wheels — implicit symmetry mirror' },
-      }
-      wheelDiagnostics.forEach(w => {
-        const reason = w.skipReason || ''
-        const inside = w.nodeOverlapCount > 0
-        if (inside) {
-          groups.contributing.x.push(w.x)
-          groups.contributing.y.push(w.y)
-          groups.contributing.text.push(`${w.loadContributedLb?.toFixed(0) || 0} lb, ${w.nodeOverlapCount} nodes`)
-        } else if (reason.toLowerCase().includes('symmetry')) {
-          groups.mirror.x.push(w.x)
-          groups.mirror.y.push(w.y)
-          groups.mirror.text.push(reason)
-        }
-        // wheels truly outside the mesh: dropped, not drawn
-      })
-      Object.values(groups).forEach(g => {
-        if (g.x.length === 0) return
-        traces.push({
-          type: 'scatter3d', mode: 'markers', name: g.name,
-          x: g.x, y: g.y, z: g.x.map(() => zTop + zLift),
-          marker: { size: 8, color: g.color, symbol: g.symbol, line: { color: g.border, width: 1.5 } },
-          text: g.text,
-          hovertemplate: `${g.name}<br>x=%{x:.1f}" y=%{y:.1f}"<br>%{text}<extra></extra>`,
-        })
-      })
-    } else {
-      // Fallback: simple-gear native path — single red-diamond trace
-      traces.push({
-        type: 'scatter3d', mode: 'markers', name: 'Wheel load',
-        x: wheelLoads.map(w => w.x), y: wheelLoads.map(w => w.y),
-        z: wheelLoads.map(() => zTop + zLift),
-        marker: { size: 7, color: '#dc2626', symbol: 'diamond', line: { color: '#7f1d1d', width: 1.5 } },
-        hovertemplate: 'Wheel<br>x=%{x:.1f}" y=%{y:.1f}"<br>p=%{text} psi<extra></extra>',
-        text: wheelLoads.map(w => w.pressure?.toFixed(0) || '?'),
-      })
-    }
+    // Wheel markers intentionally NOT drawn here. The wheelLoads /
+    // wheelDiagnostics positions are reported in the AIRCRAFT frame, but
+    // FAARFIELD's single-slab FEM applies an equivalent-loading approximation
+    // near the mesh origin — so the stress peaks won't visually align with
+    // the wheel positions, which would be misleading. Users get accurate
+    // per-wheel locations from the LEAF Stress Contour panel above (LEAF
+    // computes Boussinesq from each wheel's actual position).
   }
 
   // FEM mesh extent rectangle — shows the user exactly what region the FEM
@@ -765,13 +726,9 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
                 FEM mesh coverage
               </p>
               <p>
-                <span className="font-bold">{meshData.wheelsInsideMeshCount}</span> of {meshData.wheelsInsideMeshCount + meshData.wheelsOutsideMeshCount} wheels
-                {' '}fall inside FAARFIELD's single-slab FEM region
-                {' '}(X∈[{meshData.meshBoundsXmin?.toFixed(0)}, {meshData.meshBoundsXmax?.toFixed(0)}]",
-                {' '}Y∈[{meshData.meshBoundsYmin?.toFixed(0)}, {meshData.meshBoundsYmax?.toFixed(0)}]").
-                {' '}Desktop FAARFIELD handles wide gears via a multi-position offset sweep that we don't reproduce here.
-                {' '}Gray wheels are implicit symmetry mirrors (the solver doubles their effect automatically).
-                {' '}For the full footprint of every wheel, see the <span className="font-semibold">Stress Contour (Native LEAF)</span> panel above — LEAF takes a configurable grid extent and shows every wheel.
+                FAARFIELD's single-slab FEM applies the gear as an <span className="font-semibold">equivalent loading</span> near the mesh origin — it doesn't simulate each tire at its physical aircraft-frame position. That's why this view doesn't show individual wheel pins. For the per-wheel footprint and stress lobes, see the <span className="font-semibold">Stress Contour (Native LEAF)</span> panel above — LEAF computes Boussinesq response from each wheel's actual position.
+                {' '}Mesh region: X∈[{meshData.meshBoundsXmin?.toFixed(0)}, {meshData.meshBoundsXmax?.toFixed(0)}]",
+                {' '}Y∈[{meshData.meshBoundsYmin?.toFixed(0)}, {meshData.meshBoundsYmax?.toFixed(0)}]".
               </p>
             </div>
           </div>
