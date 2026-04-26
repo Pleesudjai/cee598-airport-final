@@ -1,0 +1,1074 @@
+{
+  "generatedAt": "2026-04-26T07:57:00.786277+00:00",
+  "backendVersion": "0.3.0",
+  "topN": 5,
+  "gridPoints": 21,
+  "sections": [
+    {
+      "sectionKey": "KLHX_6627",
+      "icao": "KLHX",
+      "sectionId": "6627",
+      "aircraft": [
+        {
+          "icao": "C130",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 5.21810184036184,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_C130.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_C130.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_C130.json",
+          "requestHash": "sha256:87c46eb0f9e04c9c9ceb1b54c2f5bc75",
+          "sizes": {
+            "leafGrid": 57061,
+            "leafPoint": 7745,
+            "fem3dMesh": 1227823
+          }
+        },
+        {
+          "icao": "CRJ9",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 1.4332243903905884,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_CRJ9.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_CRJ9.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_CRJ9.json",
+          "requestHash": "sha256:036f300ad548ea6181b0ac65a0d17c77",
+          "sizes": {
+            "leafGrid": 57541,
+            "leafPoint": 7763,
+            "fem3dMesh": 1227737
+          }
+        },
+        {
+          "icao": "CL30",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 0.011701864899311014,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_CL30.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_CL30.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_CL30.json",
+          "requestHash": "sha256:bed6bf040241fcbfe07b4a9b36d5db3c",
+          "sizes": {
+            "leafGrid": 58014,
+            "leafPoint": 7780,
+            "fem3dMesh": 1232593
+          }
+        },
+        {
+          "icao": "F2TH",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 0.008333585072495948,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_F2TH.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_F2TH.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_F2TH.json",
+          "requestHash": "sha256:0d99f9e394651dfa60bb5c6e4a35b55a",
+          "sizes": {
+            "leafGrid": 58272,
+            "leafPoint": 7815,
+            "fem3dMesh": 1234267
+          }
+        },
+        {
+          "icao": "H25B",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 7.193752988596133e-05,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_6627_H25B.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_6627_H25B.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_6627_H25B.json",
+          "requestHash": "sha256:9e330db1797c0f753c1c404b32782765",
+          "sizes": {
+            "leafGrid": 58247,
+            "leafPoint": 7805,
+            "fem3dMesh": 1234590
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KLHX_7347",
+      "icao": "KLHX",
+      "sectionId": "7347",
+      "aircraft": [
+        {
+          "icao": "CRJ9",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 0.004124262182790088,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_CRJ9.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_CRJ9.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_CRJ9.json",
+          "requestHash": "sha256:939139fe56f1b930464a188298ff47d7",
+          "sizes": {
+            "leafGrid": 57837,
+            "leafPoint": 7727,
+            "fem3dMesh": 1219928
+          }
+        },
+        {
+          "icao": "C130",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 0.0009143507122727346,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_C130.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_C130.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_C130.json",
+          "requestHash": "sha256:47e8d70cc5dfa3c3cf7ae7c8a8c2f3db",
+          "sizes": {
+            "leafGrid": 57243,
+            "leafPoint": 7671,
+            "fem3dMesh": 1219780
+          }
+        },
+        {
+          "icao": "SW4",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 2.1439403582793343e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_SW4.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_SW4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_SW4.json",
+          "requestHash": "sha256:a9be9d3338c33bb69db9d6835bf65386",
+          "sizes": {
+            "leafGrid": 59042,
+            "leafPoint": 7770,
+            "fem3dMesh": 1232346
+          }
+        },
+        {
+          "icao": "BE20",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 1.2134051600006415e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_BE20.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_BE20.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_BE20.json",
+          "requestHash": "sha256:7d2a3fc449d3d796f57df758de5ca3d3",
+          "sizes": {
+            "leafGrid": 59171,
+            "leafPoint": 7789,
+            "fem3dMesh": 1232580
+          }
+        },
+        {
+          "icao": "CL30",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 8.854234348082964e-10,
+          "leafGridPath": "/data/precal/leaf_grid/KLHX_7347_CL30.json",
+          "leafPointPath": "/data/precal/leaf_point/KLHX_7347_CL30.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KLHX_7347_CL30.json",
+          "requestHash": "sha256:f15b454b5a867ed595cf9ae2030f574f",
+          "sizes": {
+            "leafGrid": 58439,
+            "leafPoint": 7702,
+            "fem3dMesh": 1224411
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KPUB_6948",
+      "icao": "KPUB",
+      "sectionId": "6948",
+      "aircraft": [
+        {
+          "icao": "C130",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 189.97829965976834,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_C130.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_C130.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_C130.json",
+          "requestHash": "sha256:a37085425c7cacf7cc16f98441af831d",
+          "sizes": {
+            "leafGrid": 57361,
+            "leafPoint": 7841,
+            "fem3dMesh": 1229829
+          }
+        },
+        {
+          "icao": "B734",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 139.64394732942304,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_B734.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_B734.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_B734.json",
+          "requestHash": "sha256:2e4b56474a9f645cb740e3d0a55fc12e",
+          "sizes": {
+            "leafGrid": 57632,
+            "leafPoint": 7857,
+            "fem3dMesh": 1227277
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 117.27856396090947,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_B738.json",
+          "requestHash": "sha256:2c31093854cda9b0a547263a0f6a6293",
+          "sizes": {
+            "leafGrid": 57586,
+            "leafPoint": 7890,
+            "fem3dMesh": 1226942
+          }
+        },
+        {
+          "icao": "CRJ7",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 78.1939953850895,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_CRJ7.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_CRJ7.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_CRJ7.json",
+          "requestHash": "sha256:97f53ad08457f4ba289006992884db6d",
+          "sizes": {
+            "leafGrid": 57775,
+            "leafPoint": 7853,
+            "fem3dMesh": 1229258
+          }
+        },
+        {
+          "icao": "CRJ2",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 61.23153442681648,
+          "leafGridPath": "/data/precal/leaf_grid/KPUB_6948_CRJ2.json",
+          "leafPointPath": "/data/precal/leaf_point/KPUB_6948_CRJ2.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KPUB_6948_CRJ2.json",
+          "requestHash": "sha256:b83430fa1aadab65f30a040b2f314a36",
+          "sizes": {
+            "leafGrid": 58065,
+            "leafPoint": 7868,
+            "fem3dMesh": 1232269
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KMQJ_8662",
+      "icao": "KMQJ",
+      "sectionId": "8662",
+      "aircraft": [
+        {
+          "icao": "GLF5",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 7.903201449968453,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_GLF5.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_GLF5.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_GLF5.json",
+          "requestHash": "sha256:cd96ca1c397c1ccf96079b36e4665a0e",
+          "sizes": {
+            "leafGrid": 57443,
+            "leafPoint": 7784,
+            "fem3dMesh": 1224332
+          }
+        },
+        {
+          "icao": "GLF4",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 4.314101254549581,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_GLF4.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_GLF4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_GLF4.json",
+          "requestHash": "sha256:0af4a905c298e780d7a18799e93ff75b",
+          "sizes": {
+            "leafGrid": 57676,
+            "leafPoint": 7786,
+            "fem3dMesh": 1225499
+          }
+        },
+        {
+          "icao": "GLF6",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 2.139588025788068,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_GLF6.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_GLF6.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_GLF6.json",
+          "requestHash": "sha256:6298698f1f5bafd6bee59eb80197369b",
+          "sizes": {
+            "leafGrid": 57460,
+            "leafPoint": 7778,
+            "fem3dMesh": 1223594
+          }
+        },
+        {
+          "icao": "GLEX",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 1.5107098420109033,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_GLEX.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_GLEX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_GLEX.json",
+          "requestHash": "sha256:0c79237b827c6bf0b0df84a3b3ed22ee",
+          "sizes": {
+            "leafGrid": 57319,
+            "leafPoint": 7770,
+            "fem3dMesh": 1223691
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 1.4434057435306245,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8662_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8662_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8662_B738.json",
+          "requestHash": "sha256:24cacc3a6a0d36ff81b8b0d468627562",
+          "sizes": {
+            "leafGrid": 57055,
+            "leafPoint": 7745,
+            "fem3dMesh": 1222211
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KMQJ_8881",
+      "icao": "KMQJ",
+      "sectionId": "8881",
+      "aircraft": [
+        {
+          "icao": "GLF6",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 17.116704206304544,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_GLF6.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_GLF6.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_GLF6.json",
+          "requestHash": "sha256:23cf45e2067c3bbf3145988f751d8a2c",
+          "sizes": {
+            "leafGrid": 57460,
+            "leafPoint": 7778,
+            "fem3dMesh": 1223597
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 11.547245948244996,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_B738.json",
+          "requestHash": "sha256:fa70b0caba34398fe6e1b494d0016ae8",
+          "sizes": {
+            "leafGrid": 57055,
+            "leafPoint": 7745,
+            "fem3dMesh": 1222214
+          }
+        },
+        {
+          "icao": "GLF5",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 9.032230228535374,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_GLF5.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_GLF5.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_GLF5.json",
+          "requestHash": "sha256:d4339909b072fd1ba4e2b3491c2ac44e",
+          "sizes": {
+            "leafGrid": 57443,
+            "leafPoint": 7784,
+            "fem3dMesh": 1224335
+          }
+        },
+        {
+          "icao": "GLF4",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 4.314101254549581,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_GLF4.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_GLF4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_GLF4.json",
+          "requestHash": "sha256:6effd2cc66194acb7b78e7aec55e47a6",
+          "sizes": {
+            "leafGrid": 57676,
+            "leafPoint": 7786,
+            "fem3dMesh": 1225502
+          }
+        },
+        {
+          "icao": "GLEX",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 3.0214196840218066,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8881_GLEX.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8881_GLEX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8881_GLEX.json",
+          "requestHash": "sha256:be862f513333e51d4b325619fc855f5f",
+          "sizes": {
+            "leafGrid": 57319,
+            "leafPoint": 7770,
+            "fem3dMesh": 1223694
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KMQJ_8640",
+      "icao": "KMQJ",
+      "sectionId": "8640",
+      "aircraft": [
+        {
+          "icao": "GLF5",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 7.903201449968453,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_GLF5.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_GLF5.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_GLF5.json",
+          "requestHash": "sha256:cd96ca1c397c1ccf96079b36e4665a0e",
+          "sizes": {
+            "leafGrid": 57443,
+            "leafPoint": 7784,
+            "fem3dMesh": 1224317
+          }
+        },
+        {
+          "icao": "GLF4",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 4.314101254549581,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_GLF4.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_GLF4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_GLF4.json",
+          "requestHash": "sha256:0af4a905c298e780d7a18799e93ff75b",
+          "sizes": {
+            "leafGrid": 57676,
+            "leafPoint": 7786,
+            "fem3dMesh": 1225484
+          }
+        },
+        {
+          "icao": "GLF6",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 2.139588025788068,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_GLF6.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_GLF6.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_GLF6.json",
+          "requestHash": "sha256:6298698f1f5bafd6bee59eb80197369b",
+          "sizes": {
+            "leafGrid": 57460,
+            "leafPoint": 7778,
+            "fem3dMesh": 1223579
+          }
+        },
+        {
+          "icao": "GLEX",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 1.5107098420109033,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_GLEX.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_GLEX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_GLEX.json",
+          "requestHash": "sha256:0c79237b827c6bf0b0df84a3b3ed22ee",
+          "sizes": {
+            "leafGrid": 57319,
+            "leafPoint": 7770,
+            "fem3dMesh": 1223676
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 1.4434057435306245,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8640_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8640_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8640_B738.json",
+          "requestHash": "sha256:24cacc3a6a0d36ff81b8b0d468627562",
+          "sizes": {
+            "leafGrid": 57055,
+            "leafPoint": 7745,
+            "fem3dMesh": 1222196
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KMQJ_8780",
+      "icao": "KMQJ",
+      "sectionId": "8780",
+      "aircraft": [
+        {
+          "icao": "GLF5",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 7.903201449968453,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_GLF5.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_GLF5.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_GLF5.json",
+          "requestHash": "sha256:cd96ca1c397c1ccf96079b36e4665a0e",
+          "sizes": {
+            "leafGrid": 57443,
+            "leafPoint": 7784,
+            "fem3dMesh": 1224317
+          }
+        },
+        {
+          "icao": "GLF4",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 4.314101254549581,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_GLF4.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_GLF4.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_GLF4.json",
+          "requestHash": "sha256:0af4a905c298e780d7a18799e93ff75b",
+          "sizes": {
+            "leafGrid": 57676,
+            "leafPoint": 7786,
+            "fem3dMesh": 1225484
+          }
+        },
+        {
+          "icao": "GLF6",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 2.139588025788068,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_GLF6.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_GLF6.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_GLF6.json",
+          "requestHash": "sha256:6298698f1f5bafd6bee59eb80197369b",
+          "sizes": {
+            "leafGrid": 57460,
+            "leafPoint": 7778,
+            "fem3dMesh": 1223579
+          }
+        },
+        {
+          "icao": "GLEX",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 1.5107098420109033,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_GLEX.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_GLEX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_GLEX.json",
+          "requestHash": "sha256:0c79237b827c6bf0b0df84a3b3ed22ee",
+          "sizes": {
+            "leafGrid": 57319,
+            "leafPoint": 7770,
+            "fem3dMesh": 1223676
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 1.4434057435306245,
+          "leafGridPath": "/data/precal/leaf_grid/KMQJ_8780_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KMQJ_8780_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMQJ_8780_B738.json",
+          "requestHash": "sha256:24cacc3a6a0d36ff81b8b0d468627562",
+          "sizes": {
+            "leafGrid": 57055,
+            "leafPoint": 7745,
+            "fem3dMesh": 1222196
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KCIU_21222",
+      "icao": "KCIU",
+      "sectionId": "21222",
+      "aircraft": [
+        {
+          "icao": "B763",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 15.141529377204492,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_B763.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_B763.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B763.json",
+          "requestHash": "sha256:fe0446e1bbb890ee462a022c32593de6",
+          "sizes": {
+            "leafGrid": 57420,
+            "leafPoint": 7806,
+            "fem3dMesh": 1227544
+          }
+        },
+        {
+          "icao": "A332",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 13.277273444166548,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_A332.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_A332.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_A332.json",
+          "requestHash": "sha256:a052877e8aad588a4c6766ba2a5a28f5",
+          "sizes": {
+            "leafGrid": 57239,
+            "leafPoint": 7792,
+            "fem3dMesh": 1226212
+          }
+        },
+        {
+          "icao": "B77W",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 12.621516206260308,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_B77W.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_B77W.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B77W.json",
+          "requestHash": "sha256:d6698d582d3113900d8b07ca843c572c",
+          "sizes": {
+            "leafGrid": 56874,
+            "leafPoint": 7771,
+            "fem3dMesh": 1224558
+          }
+        },
+        {
+          "icao": "B77L",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 12.596710368324914,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_B77L.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_B77L.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B77L.json",
+          "requestHash": "sha256:8afde8285800aaccbc1e94e8613a54f9",
+          "sizes": {
+            "leafGrid": 56874,
+            "leafPoint": 7771,
+            "fem3dMesh": 1224558
+          }
+        },
+        {
+          "icao": "B772",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 12.271637485065868,
+          "leafGridPath": "/data/precal/leaf_grid/KCIU_21222_B772.json",
+          "leafPointPath": "/data/precal/leaf_point/KCIU_21222_B772.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KCIU_21222_B772.json",
+          "requestHash": "sha256:0eecfe2021e2dfa7b1b55ff4c9ad77c5",
+          "sizes": {
+            "leafGrid": 56957,
+            "leafPoint": 7761,
+            "fem3dMesh": 1224529
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KOTM_28171",
+      "icao": "KOTM",
+      "sectionId": "28171",
+      "aircraft": [
+        {
+          "icao": "R135",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 0.9408276949495208,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_R135.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_R135.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_R135.json",
+          "requestHash": "sha256:0e4f8ab7d14ad151bbdc506a9fbcf0a9",
+          "sizes": {
+            "leafGrid": 56707,
+            "leafPoint": 7756,
+            "fem3dMesh": 1225109
+          }
+        },
+        {
+          "icao": "GALX",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 3.8763177507637334e-05,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_GALX.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_GALX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_GALX.json",
+          "requestHash": "sha256:f0dfd4ba378d7832b1159a6ddee5ee1c",
+          "sizes": {
+            "leafGrid": 58178,
+            "leafPoint": 7785,
+            "fem3dMesh": 1235359
+          }
+        },
+        {
+          "icao": "CL35",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 3.5168115793213598e-06,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_CL35.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_CL35.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_CL35.json",
+          "requestHash": "sha256:9470946499bc7d088bea5fa60dbb195b",
+          "sizes": {
+            "leafGrid": 57997,
+            "leafPoint": 7751,
+            "fem3dMesh": 1234040
+          }
+        },
+        {
+          "icao": "CL30",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 2.7418047612126154e-06,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_CL30.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_CL30.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_CL30.json",
+          "requestHash": "sha256:d8b95b31a6bad345c50693d743565a22",
+          "sizes": {
+            "leafGrid": 58157,
+            "leafPoint": 7792,
+            "fem3dMesh": 1234701
+          }
+        },
+        {
+          "icao": "F2TH",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 1.1282794841508633e-06,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_28171_F2TH.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_28171_F2TH.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_28171_F2TH.json",
+          "requestHash": "sha256:eebb1fb69dd018de493beef458b0f945",
+          "sizes": {
+            "leafGrid": 58234,
+            "leafPoint": 7799,
+            "fem3dMesh": 1236425
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KOTM_27450",
+      "icao": "KOTM",
+      "sectionId": "27450",
+      "aircraft": [
+        {
+          "icao": "R135",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 0.4662089040533353,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_R135.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_R135.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_R135.json",
+          "requestHash": "sha256:3ebf5fe10ca06aae0fd73da9e10036ea",
+          "sizes": {
+            "leafGrid": 56843,
+            "leafPoint": 7662,
+            "fem3dMesh": 1217008
+          }
+        },
+        {
+          "icao": "GALX",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 3.2475902189441174e-07,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_GALX.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_GALX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_GALX.json",
+          "requestHash": "sha256:a695d97552052b55a0cc3bb8c5592647",
+          "sizes": {
+            "leafGrid": 58283,
+            "leafPoint": 7744,
+            "fem3dMesh": 1226825
+          }
+        },
+        {
+          "icao": "CL35",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 4.7249447989744316e-08,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_CL35.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_CL35.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_CL35.json",
+          "requestHash": "sha256:6670c1a659d0c0d78e894a1699b0ad5a",
+          "sizes": {
+            "leafGrid": 58159,
+            "leafPoint": 7713,
+            "fem3dMesh": 1225834
+          }
+        },
+        {
+          "icao": "CL30",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 2.5823127395701748e-08,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_CL30.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_CL30.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_CL30.json",
+          "requestHash": "sha256:39daa930765ff68ca161368dae058ef7",
+          "sizes": {
+            "leafGrid": 58192,
+            "leafPoint": 7705,
+            "fem3dMesh": 1226208
+          }
+        },
+        {
+          "icao": "F2TH",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 6.611015260543967e-09,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27450_F2TH.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27450_F2TH.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27450_F2TH.json",
+          "requestHash": "sha256:e196ac7e4e60df75f2a909433ba5c88b",
+          "sizes": {
+            "leafGrid": 58423,
+            "leafPoint": 7741,
+            "fem3dMesh": 1227818
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KOTM_27641",
+      "icao": "KOTM",
+      "sectionId": "27641",
+      "aircraft": [
+        {
+          "icao": "R135",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 0.9615999972310665,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_R135.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_R135.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_R135.json",
+          "requestHash": "sha256:9001e6f285759b94bcd31217a024d4fc",
+          "sizes": {
+            "leafGrid": 56691,
+            "leafPoint": 7734,
+            "fem3dMesh": 1211229
+          }
+        },
+        {
+          "icao": "GALX",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 2.200462708579129e-05,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_GALX.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_GALX.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_GALX.json",
+          "requestHash": "sha256:475944579c557b2efb836e25c24a13fc",
+          "sizes": {
+            "leafGrid": 58213,
+            "leafPoint": 7778,
+            "fem3dMesh": 1221008
+          }
+        },
+        {
+          "icao": "CL35",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 2.1295721440022384e-06,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_CL35.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_CL35.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_CL35.json",
+          "requestHash": "sha256:d44411e06a7ab9f1186fc694bc3d247d",
+          "sizes": {
+            "leafGrid": 57994,
+            "leafPoint": 7760,
+            "fem3dMesh": 1219957
+          }
+        },
+        {
+          "icao": "CL30",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 1.5771027043109824e-06,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_CL30.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_CL30.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_CL30.json",
+          "requestHash": "sha256:e87bc7aa1e17f215eda2152406959f14",
+          "sizes": {
+            "leafGrid": 58103,
+            "leafPoint": 7767,
+            "fem3dMesh": 1220361
+          }
+        },
+        {
+          "icao": "F2TH",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 6.085764376214354e-07,
+          "leafGridPath": "/data/precal/leaf_grid/KOTM_27641_F2TH.json",
+          "leafPointPath": "/data/precal/leaf_point/KOTM_27641_F2TH.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KOTM_27641_F2TH.json",
+          "requestHash": "sha256:8851642fec3a19303b0f098c3b3b4fba",
+          "sizes": {
+            "leafGrid": 58308,
+            "leafPoint": 7795,
+            "fem3dMesh": 1221947
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KMWH_37325",
+      "icao": "KMWH",
+      "sectionId": "37325",
+      "aircraft": [
+        {
+          "icao": "C17",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 14164.022779764071,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_C17.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_C17.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_C17.json",
+          "requestHash": "sha256:eb769a0a44f1cd064142d9b60b07d674",
+          "sizes": {
+            "leafGrid": 57399,
+            "leafPoint": 7734,
+            "fem3dMesh": 1209004
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 3362.468626207369,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B738.json",
+          "requestHash": "sha256:7c8102db9cbb1e739b319e3bc96fab69",
+          "sizes": {
+            "leafGrid": 57982,
+            "leafPoint": 7729,
+            "fem3dMesh": 1216436
+          }
+        },
+        {
+          "icao": "P3",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 1128.643692883233,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_P3.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_P3.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_P3.json",
+          "requestHash": "sha256:672de3557981bb1b7d3e2fd3aad3d04d",
+          "sizes": {
+            "leafGrid": 58518,
+            "leafPoint": 7834,
+            "fem3dMesh": 1223695
+          }
+        },
+        {
+          "icao": "B739",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 544.8419351749617,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_B739.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_B739.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B739.json",
+          "requestHash": "sha256:1ea323ad8319e968ce783d62bf4ef305",
+          "sizes": {
+            "leafGrid": 58004,
+            "leafPoint": 7751,
+            "fem3dMesh": 1215794
+          }
+        },
+        {
+          "icao": "B737",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 517.3889604412416,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37325_B737.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37325_B737.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37325_B737.json",
+          "requestHash": "sha256:5f5699a6bf3344773d40c8a5cc653b82",
+          "sizes": {
+            "leafGrid": 58223,
+            "leafPoint": 7757,
+            "fem3dMesh": 1217658
+          }
+        }
+      ]
+    },
+    {
+      "sectionKey": "KMWH_37508",
+      "icao": "KMWH",
+      "sectionId": "37508",
+      "aircraft": [
+        {
+          "icao": "C17",
+          "rank": 1,
+          "isControlling": true,
+          "cdfContribution": 14164.022779764071,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_C17.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_C17.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_C17.json",
+          "requestHash": "sha256:eb769a0a44f1cd064142d9b60b07d674",
+          "sizes": {
+            "leafGrid": 57399,
+            "leafPoint": 7734,
+            "fem3dMesh": 1209003
+          }
+        },
+        {
+          "icao": "B738",
+          "rank": 2,
+          "isControlling": false,
+          "cdfContribution": 3362.468626207369,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_B738.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_B738.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B738.json",
+          "requestHash": "sha256:7c8102db9cbb1e739b319e3bc96fab69",
+          "sizes": {
+            "leafGrid": 57982,
+            "leafPoint": 7729,
+            "fem3dMesh": 1216421
+          }
+        },
+        {
+          "icao": "P3",
+          "rank": 3,
+          "isControlling": false,
+          "cdfContribution": 1128.643692883233,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_P3.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_P3.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_P3.json",
+          "requestHash": "sha256:672de3557981bb1b7d3e2fd3aad3d04d",
+          "sizes": {
+            "leafGrid": 58518,
+            "leafPoint": 7834,
+            "fem3dMesh": 1223680
+          }
+        },
+        {
+          "icao": "B38M",
+          "rank": 4,
+          "isControlling": false,
+          "cdfContribution": 597.5211819845407,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_B38M.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_B38M.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B38M.json",
+          "requestHash": "sha256:a26b57af75288b44450567d8650b3251",
+          "sizes": {
+            "leafGrid": 57928,
+            "leafPoint": 7740,
+            "fem3dMesh": 1216187
+          }
+        },
+        {
+          "icao": "B739",
+          "rank": 5,
+          "isControlling": false,
+          "cdfContribution": 544.8419351749617,
+          "leafGridPath": "/data/precal/leaf_grid/KMWH_37508_B739.json",
+          "leafPointPath": "/data/precal/leaf_point/KMWH_37508_B739.json",
+          "fem3dMeshPath": "/data/precal/fem3d_mesh/KMWH_37508_B739.json",
+          "requestHash": "sha256:1ea323ad8319e968ce783d62bf4ef305",
+          "sizes": {
+            "leafGrid": 58004,
+            "leafPoint": 7751,
+            "fem3dMesh": 1215779
+          }
+        }
+      ]
+    }
+  ]
+}

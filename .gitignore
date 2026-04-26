@@ -73,6 +73,9 @@ scripts/cache/
 .claude/state/
 .claude/logs/
 
+# ---- Reproducible run logs (regenerated on every bake) --------------------
+scripts/*.log
+
 # ---- Sensitive ------------------------------------------------------------
 .env
 .env.*

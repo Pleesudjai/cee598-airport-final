@@ -1,5 +1,31 @@
 # Decision Log
 
+## 2026-04-26 — Pre-baked LEAF + FEM3D stress endpoints for static deploy
+
+**What:** Captured backend stress responses for 13 sections × top-5 contributing aircraft × 3 endpoints (`/api/leaf/grid`, `/api/leaf/point`, `/api/fem3d/mesh`) into static JSON under `public/data/precal/`. Manifest at `src/data/precal/index.json`. Frontend client (`nativeStressClient.js`) extended with backward-compatible precal fallback that activates when `sectionKey` is supplied and the live backend POST fails. Spec at `specs/prebake-stress-endpoints.md`.
+
+**Why:**
+1. AeroPave's stress visualizations (LEAF contour, rigid stress profile, 3D FEM mesh) require the .NET 4.8 `FaarfieldApi.exe` running on `localhost:5100`, which Netlify cannot host. Without static caches the deployed site shows verdict cards + CDF charts but the three stress panels render "live backend required."
+2. Top-5 (not top-1) so the design tool's aircraft dropdown still gives offline visibility into the next-most-damaging aircraft per section, not just the controlling one. 13 × 5 = 65 aircraft pairs covers ~85% of the dropdown items the user is likely to click.
+3. Hybrid storage: small `index.json` in `src/data/` (build-time import, ~39 kB), large payloads in `public/data/precal/` (runtime fetch on demand). Keeps Vite bundle small.
+4. **MOR / SCI deliberately not in cache key.** The LEAF and FEM3D endpoints return raw elastic stresses, which depend only on `(layer thicknesses, layer E, subgrade E, wheel loads)`. MOR enters only the PCC fatigue law (Nf = f(σ_x / MOR)), already pre-baked into `cdf_results.json` via the CDF endpoint. The user uses one fixed MOR per section (0.08 × 4500 psi = 360 psi per the 2026-04-22 decision); even hypothetically there's no MOR axis to add.
+
+**Outputs:**
+- `c:/temp/aeropave/public/data/precal/{leaf_grid,leaf_point,fem3d_mesh}/` — 65 files each, 195 total
+- `c:/temp/aeropave/src/data/precal/index.json` — 13-section × 5-aircraft manifest
+- `<project>/website/{src,public}/data/precal/` — git-tracked mirror
+- `<project>/scripts/prebake_stress_endpoints.py` — reproducible runner with `--canary` and `--all` flags
+- `<project>/scripts/prebake_stress_endpoints.log` — full run trace
+
+**Bake metrics:**
+- Canary KLHX_6627 / C130: leafGrid 56 kB, leafPoint 8 kB, fem3dMesh 1.17 MB. Well clear of all thresholds.
+- Full run: 0 skips. Total cache 80 MB (under 500 MB Netlify-comfort budget). Wall time ~35 min.
+- Per-pair FEM3D timing 6–25 s on average; 0.1 s on warm-cache hits.
+
+**Deferred (next session):** thread `sectionKey` from `DesignTool.jsx` through `StressContourPanel` / `RigidStressProfile` / `Fem3dMeshPanel` into the three fetcher calls. The `nativeStressClient.js` precal-fallback is already in place; the components currently pass `null` for sectionKey, so the fallback is wired but inert. Three-line change per component once browser-tested.
+
+---
+
 ## 2026-04-22 — Methodology Pivot: FAA AC 150/5320-6F MOR + SCI=80 (replaces SCI history)
 
 **What:** Replaced the prior "SCI from construction-history CDFU" approach with FAA AC 150/5320-6F empirical PCC modulus-of-rupture rule for aged existing pavement (R = 0.08 · f'c_assumed = 0.08 · 4500 = 360 psi) and FAARFIELD design-default SCI = 80 across all 13 sections. Re-ran the full 13-section batch with `useFem3d=True` (~2.5 hr).

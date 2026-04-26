@@ -2,6 +2,37 @@
 // Backend has CORS enabled (Access-Control-Allow-Origin: *).
 const BASE = 'http://localhost:5100'
 
+// Precal manifest (build-time import). Lists which (sectionKey, aircraftIcao)
+// pairs have static stress JSONs available for offline / Netlify deploys.
+// Populated by scripts/prebake_stress_endpoints.py.
+let _precalIndex = null
+async function getPrecalIndex() {
+  if (_precalIndex !== null) return _precalIndex
+  try {
+    const r = await fetch('/data/precal/index.json')
+    _precalIndex = r.ok ? await r.json() : { sections: [] }
+  } catch { _precalIndex = { sections: [] } }
+  return _precalIndex
+}
+
+async function loadPrecal(sectionKey, aircraftIcao, endpoint) {
+  if (!sectionKey || !aircraftIcao) return null
+  const idx = await getPrecalIndex()
+  const section = idx.sections?.find(s => s.sectionKey === sectionKey)
+  if (!section) return null
+  const ac = section.aircraft?.find(a => a.icao === aircraftIcao)
+  if (!ac) return null
+  const path = ac[`${endpoint}Path`]
+  if (!path) return null
+  try {
+    const r = await fetch(path)
+    if (!r.ok) return null
+    const data = await r.json()
+    if (data?._meta?.skipped) return null
+    return { data, source: 'precal' }
+  } catch { return null }
+}
+
 export async function checkHealth() {
   // Bumped to 8 s — when the backend is mid-CDF (especially FEM3D) the single-
   // threaded HttpListener queues /api/health behind the in-flight request, so a
@@ -15,7 +46,7 @@ export async function checkHealth() {
   }
 }
 
-export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gridPoints = 21, gridExtentIn = null) {
+export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gridPoints = 21, gridExtentIn = null, sectionKey = null) {
   try {
     // v2: pass icao/gear/mtow for library-resolved geometry
     const ac = {
@@ -55,10 +86,14 @@ export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gri
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ layers, subgrade, aircraft: ac, evalDepthIn, gridExtentIn: extent, gridPoints })
     })
-    if (!res.ok) return { data: null, source: 'error' }
+    if (!res.ok) {
+      const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafGrid')
+      return precal || { data: null, source: 'error' }
+    }
     return { data: await res.json(), source: 'native' }
   } catch {
-    return { data: null, source: 'unavailable' }
+    const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafGrid')
+    return precal || { data: null, source: 'unavailable' }
   }
 }
 
@@ -132,7 +167,7 @@ export async function fetchDesign(layers, subgrade, aircraftList, growth, life, 
   }
 }
 
-export async function fetchFem3dMesh(layers, subgrade, aircraft, highDetail = false, filterCoarse = true, includeStressField = false, stressAggregation = 'mean') {
+export async function fetchFem3dMesh(layers, subgrade, aircraft, highDetail = false, filterCoarse = true, includeStressField = false, stressAggregation = 'mean', sectionKey = null) {
   try {
     const icao = aircraft.type || aircraft.icao || ''
     const ac = {
@@ -161,16 +196,18 @@ export async function fetchFem3dMesh(layers, subgrade, aircraft, highDetail = fa
     if (!res.ok) {
       const body = await res.text().catch(() => '')
       console.error('[fetchFem3dMesh] HTTP', res.status, body.slice(0, 500))
-      return { data: null, source: `error ${res.status}`, detail: body.slice(0, 300) }
+      const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'fem3dMesh')
+      return precal || { data: null, source: `error ${res.status}`, detail: body.slice(0, 300) }
     }
     return { data: await res.json(), source: 'native' }
   } catch (e) {
     console.error('[fetchFem3dMesh] exception', e)
-    return { data: null, source: 'unavailable', detail: e.message }
+    const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'fem3dMesh')
+    return precal || { data: null, source: 'unavailable', detail: e.message }
   }
 }
 
-export async function fetchLeafProfile(layers, subgrade, aircraft, evalDepths) {
+export async function fetchLeafProfile(layers, subgrade, aircraft, evalDepths, sectionKey = null) {
   try {
     // v2: pass icao/gear/mtow for library-resolved geometry
     const ac = {
@@ -191,11 +228,13 @@ export async function fetchLeafProfile(layers, subgrade, aircraft, evalDepths) {
     if (!res.ok) {
       const body = await res.text().catch(() => '')
       console.error('[fetchLeafProfile] HTTP', res.status, body.slice(0, 500))
-      return { data: null, source: `error ${res.status}`, detail: body.slice(0, 200) }
+      const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafPoint')
+      return precal || { data: null, source: `error ${res.status}`, detail: body.slice(0, 200) }
     }
     return { data: await res.json(), source: 'native' }
   } catch (e) {
     console.error('[fetchLeafProfile] exception', e)
-    return { data: null, source: 'unavailable', detail: e.message }
+    const precal = await loadPrecal(sectionKey, aircraft.icao || aircraft.type, 'leafPoint')
+    return precal || { data: null, source: 'unavailable', detail: e.message }
   }
 }
