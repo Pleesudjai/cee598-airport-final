@@ -17,10 +17,13 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
   const plotRef = useRef(null)
   const debounceRef = useRef(null)
 
-  // Clear old data and Plotly chart when inputs change
+  // Clear old data and Plotly chart when inputs change. Also reset the field
+  // selector to Vertical Stress (σz) — the engineering default — on every
+  // section / aircraft swap so the user lands on a consistent starting view.
   useEffect(() => {
     setGridData(null)
     setError(null)
+    setField('stressZ')
     if (plotRef.current && window.Plotly) {
       try { window.Plotly.purge(plotRef.current) } catch {}
     }
@@ -102,7 +105,15 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
         height: 400,
         paper_bgcolor: 'transparent',
         plot_bgcolor: 'transparent',
-      }, { responsive: true, displayModeBar: false })
+      }, {
+        responsive: true,
+        displayModeBar: true,           // show zoom/pan/reset toolbar
+        displaylogo: false,              // hide Plotly watermark
+        // Keep only the buttons engineers actually use on a stress contour:
+        // zoom (drag-rect), zoomIn / zoomOut, pan, autoScale (= reset), download.
+        modeBarButtonsToRemove: ['select2d', 'lasso2d', 'hoverClosestCartesian', 'hoverCompareCartesian', 'toggleSpikelines'],
+        toImageButtonOptions: { format: 'png', filename: `stress_${field}_${evalDepth}in`, scale: 2 },
+      })
     } catch (e) {
       console.error('Plotly render error:', e)
       setError('Chart render error')
