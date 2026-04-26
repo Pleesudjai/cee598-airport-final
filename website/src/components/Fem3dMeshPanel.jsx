@@ -414,6 +414,20 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cdfRunToken, enabled])
 
+  // Auto-fetch on initial mount when the (sectionKey, aircraft) pair is in the
+  // precal cache — pulling the cached mesh is ~10-50 ms so there's no reason to
+  // make the user click "Build mesh" first. For custom airports / edited inputs
+  // (sectionKey == null), defer to the explicit button so we don't accidentally
+  // fire a 10-15 s live FEM3D solve.
+  useEffect(() => {
+    if (!enabled || !sectionKey) return
+    if (hasEverRendered.current) return  // already running via the other auto-effects
+    if (loading) return
+    if (!layers?.length || !normalizedAc?.icao) return
+    runMesh()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enabled, sectionKey, normalizedAc?.icao])
+
   // Per-triangle scalar derived directly from the backend's per-element
   // FEM tensor (no LEAF interpolation — this is real FAARFIELD FEM output).
   const { triStress, stressRange } = useMemo(() => {
