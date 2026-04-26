@@ -241,6 +241,31 @@ function buildTraces(mesh, colorMode, triStress, stressRange, wheelDiagnostics, 
       line: { color: '#2563eb', width: 4, dash: 'dash' },
       hoverinfo: 'skip',
     })
+
+    // Runway centerline overlay: FAARFIELD's single-slab FEM uses X-symmetry
+    // about X=0 (the runway centerline). Drawing a red dashed line at X=0
+    // spanning the full slab Y-extent + a small endpoint label so the user
+    // can immediately orient the view: "centerline runs longitudinally along Y".
+    const ySpan = slabDomain ? [slabDomain.yMin, slabDomain.yMax] : [yMin, yMax]
+    traces.push({
+      type: 'scatter3d', mode: 'lines', name: 'Runway centerline (X = 0)',
+      x: [0, 0],
+      y: ySpan,
+      z: [z + zLift * 0.5, z + zLift * 0.5],
+      line: { color: '#dc2626', width: 5, dash: 'dot' },
+      hovertemplate: 'Runway centerline<br>X = 0 (analytical mirror plane)<extra></extra>',
+    })
+    // Endpoint text marker so the line is interpretable in legend + on plot
+    traces.push({
+      type: 'scatter3d', mode: 'text', name: 'centerline-label',
+      x: [0],
+      y: [ySpan[1]],
+      z: [z + zLift * 1.2],
+      text: ['CL'],
+      textfont: { color: '#dc2626', size: 14, family: 'Arial, sans-serif' },
+      hoverinfo: 'skip',
+      showlegend: false,
+    })
   }
 
   return traces
