@@ -1,12 +1,147 @@
 # Session Handoff
-**Date:** 2026-04-25 (afternoon/evening session — gear-trace audit + UI rebuild + final deliverables)
-**Focus:** Built gear-coordinate trace audit endpoint + 130-row Excel deliverable → unified ProjectSummary panel → field-validation panel (PCI vs CDF) → final report (.docx) + slide deck (.pptx) including detailed proxy-criteria section
-**Earlier this same day:** 2026-04-25 morning — fresh-machine bring-up (FAARFIELD .msi install, backend/frontend running). See "Earlier session 2026-04-25 — fresh-machine bring-up" below.
-**Previous session:** 2026-04-24 (KMWH split rerun, gear audit, UI hardening, GitHub push). See further below.
+**Date:** 2026-04-25 (late evening session — visual polish + GitHub Aeropave repo + mobile-responsive)
+**Focus:** Final visual polish (frost band viz, verdict badges, soil-tan subgrade card, gear-label simplification across all components, frost-panel blue/gray bars) → CDF-vs-PCI scatter rebuild (raw PCI on Y, auto-staggered labels) → distress-breakdown improvements (other=green, grayscale severity legend, load-fraction pill bar) → button-label clarification across airport + section rows → added co-authors Can Atakan Ozturk + Kai Halland → mobile-responsive layout pass → created `Pleesudjai/Aeropave` GitHub repo for Netlify deploy → pushed full session changes to `Pleesudjai/cee598-airport-final` for multi-machine sync.
+**Earlier this same day:** afternoon — gear-trace audit + unified ProjectSummary panel + field-validation + final report/slides. See "Earlier session 2026-04-25 — afternoon (gear-trace audit + unified panel + final deliverables)" below.
+**Even earlier today:** morning — fresh-machine bring-up (FAARFIELD .msi install). See further below.
+**Previous session:** 2026-04-24 (KMWH split rerun, gear audit). See further below.
 
 ---
 
-## This session (2026-04-25 afternoon/evening)
+## This session (2026-04-25 late evening)
+
+### Completed
+
+**Frontend visual polish** ([c:/temp/aeropave/src/](../../../../../../temp/aeropave/src/)):
+- `CrossSectionSmall.jsx` — added blue thermometer-style FROST band on the right of every section diagram. Linear-gradient fill (light → deep blue) with snowflake icon, "FROST X.X″" label, and pill-style status badge below ("✓ in pavement" green / "⚠ subgrade risk" red). ViewBox extended 360×180 → 430×200 to fit. Frost depth from NOAA Climate Normals 1991-2020 + modified Berggren equation, looked up per airport from `frost_data.json`.
+- `ProjectSummaryUnified.jsx` — multiple iterations:
+  - Verdict badge text now adapts: `3/3 OVER` (green) / `4/4 UNDER` (red) / `1 OVER · 1 UNDER` (mixed) instead of always `X/Y OVER`.
+  - Soil-tan themed Subgrade card matching cross-section subgrade band color.
+  - Renamed "Open →" button → "Read details ▾" (in-place expand) + "Design Tool →" (navigate); later removed Design Tool button from airport-level row entirely so it only appears on per-section cards.
+  - Added "ctrl: PCC Fatigue" italic label so it reads as metadata, not a button.
+  - Same convention applied to per-section card row.
+- `PerSectionDetail.jsx` — top-aircraft table capped at top 10 (was 20). Gear column simplified: shows library value only (no more "≠excel" mismatch indicator).
+- `DesignTool.jsx`, `GearFootprintTopView.jsx`, `SummaryTable.jsx` — gear label simplified consistently across all per-aircraft views.
+- `KeyFindings.jsx` — "Design Recommendations" panel hidden via `{false && …}` wrapper (preserved in source for future re-enable).
+- `Hero.jsx` — added co-authors Can Atakan Ozturk and Kai Halland; mobile-responsive layout (`grid-cols-1 lg:grid-cols-12`, badges stack 2-col on mobile).
+- `App.jsx` — header padding responsive (`px-3 sm:px-8`), main padding `px-3 sm:px-6 lg:px-8`.
+
+**CDF-vs-PCI scatter rebuild** ([CdfVsPciScatter.jsx](../../../../../../temp/aeropave/src/components/CdfVsPciScatter.jsx)):
+- Removed Load-adjusted/Total toggle; Y-axis is now raw PCI (0–100, higher=better).
+- Y-axis ticks: 0, 10, 20, …, 100 (clean round numbers; PCI=70 falls on a gridline).
+- Quadrant tints flipped: green tint upper-left (predicted+observed adequate), red tint lower-right (predicted+observed under).
+- "PCI = 70 (FAA M&R trigger)" label moved to `insideTopLeft` (was `insideBottomRight`, overlapping KMWH dots).
+- "CDF = 1" label kept at top (vertical reference line).
+- Dot label auto-staggering: lane-assignment algorithm clusters points within 0.5 log-decade and 8 PCI; offsets via 6-lane scheme (24, -20, 44, -40, 64, -60). Edge-aware: PCI > 88 forces all-below lanes (no collision with CDF=1 top label); PCI < 12 forces all-above. Faint dashed connector lines for offsets > 24 px.
+
+**Distress breakdown improvements** ([DistressBreakdownChart.jsx](../../../../../../temp/aeropave/src/components/DistressBreakdownChart.jsx)):
+- "Other" category color changed gray → green (load=red / climate=blue / other=green).
+- Severity legend swatches now use neutral grayscale (`#e5e7eb` → `#6b7280` → `#1f2937`) so saturation = severity is unambiguous and independent of category hue.
+- Load-vs-Non-Load deduct-share bar pill text: widened pill (96 px), `whitespace-nowrap`, lower text-display thresholds for narrow segments.
+- Always-visible "Load X.X% / Non-load Y.Y%" labels below the bar regardless of segment width.
+
+**FrostPanel chart**:
+- Was all blue (sky-300/400/600/900) for both bars — visually indistinguishable.
+- Now: Berggren frost depth = solid blue (`#1d4ed8`) · Total pavement section = solid gray (`#9ca3af`). Caption updated to reference the new colors.
+
+**Mobile-responsive layout pass**:
+- All key components now use Tailwind responsive prefixes (`sm:`, `md:`, `lg:`).
+- Hero stacks vertically on mobile; airport rows wrap with non-essential text hidden (`hidden sm:inline`, `hidden md:inline`).
+- Section card row: `Design Tool →` compacts to `Tool →` on mobile.
+- PerSectionDetail: `grid-cols-1 lg:grid-cols-12` so CDF breakdown stacks above top-aircraft table on mobile; per-aircraft table wrapped in `overflow-x-auto`.
+
+**GitHub deployment**:
+- Created **`Pleesudjai/Aeropave`** new repo specifically for Netlify deploy. Frontend-only mirror — no backend, no notes, no specs, no results. Includes `netlify.toml` with build settings and SPA-friendly redirects + cache headers. 6 commits to date covering all the late-afternoon UI changes:
+  1. `38e1904` Initial commit
+  2. `8ecfc50` Clarify airport row buttons (Read details / Design Tool →)
+  3. `1adee47` Apply convention to per-section card row
+  4. `8335563` Remove Design Tool button from airport row
+  5. `c23255f` Add team co-authors to Hero byline
+  6. `65aa3ad` Mobile-responsive layout pass
+- Pushed full session work to **`Pleesudjai/cee598-airport-final`** main branch (commit `fb1d216`): 40 files changed including all backend + frontend + notes + specs + scripts + results.
+
+### Current State
+
+#### Working end-to-end
+- Backend `FaarfieldApi.exe` running at localhost:5100 with new `/api/diag/gear-trace` endpoint.
+- Frontend Vite dev server at localhost:5173 with all current visual polish applied.
+- 13/13 sections render correctly with frost-band overlay; verdict badges show dominant condition; gear labels uniform across views.
+- CDF-vs-PCI scatter renders cleanly with no overlapping labels and PCI=70 reference label fully visible.
+- ProjectSummaryUnified airport rows + section cards render mobile-responsive (verified at 375 px wide via Tailwind classes).
+- Two GitHub repos in sync: `cee598-airport-final` (full project) + `Aeropave` (frontend-only Netlify mirror).
+
+#### Built but untested
+- **Netlify deploy** of `Pleesudjai/Aeropave` repo — `netlify.toml` is in place, but the user has not yet connected the repo to Netlify. Should auto-deploy on push once connected.
+- **Multi-machine git pull workflow** — pushed to `cee598-airport-final` from this machine; the other machine has not been tested yet.
+
+#### Broken / Incomplete
+- **Pre-bake stress endpoints** (LEAF grid + LEAF point + FEM3D mesh) — not done; stress visualizations only work when backend is running. Remains optional Netlify enhancement (~3.5 hr).
+- **KMQJ 8662 desktop FAARFIELD CDF cross-check** — recipe at `results/KMQJ_8662_desktop_crosscheck.md`; not executed (Phase D FEM-stress crosscheck did pass at 4580/4580 elements within 0.1% — that's the validated parity claim).
+
+### Next Steps (priority order)
+1. **(User task) Connect `Pleesudjai/Aeropave` to Netlify** — sign in at https://app.netlify.com/, "Add new site" → "Import from GitHub" → pick the repo. `netlify.toml` auto-fills build command (`npm run build`) and publish directory (`dist`). Free tier supports private repos with GitHub auth.
+2. **(User task) Practice the presentation** — `results/CEE598_Final_Slides_PleesudjaiC.pptx` (18 slides, 16:9). Suggested ~15-min flow: scope (3) → CDF intro (4) → why AeroPave (5) → architecture (6) → CDF math (7-9) → verdicts (10) → headlines (11-12) → field validation (13) → methodology evidence (14-15) → limitations + conclusions (16-17).
+3. **(User task) Test multi-machine workflow** — on the other computer: `git clone https://github.com/Pleesudjai/cee598-airport-final.git` → robocopy `website/` → `c:/temp/aeropave/` → install FAARFIELD .msi (one-time) → msbuild → npm install → run two terminals.
+4. **Optional: Pre-bake stress endpoints** for full Netlify static deploy (LEAF grid + LEAF point + FEM3D mesh JSONs). ~3.5 hr; would make stress visualizations work without backend.
+
+### Key Decisions (with WHY)
+
+- **Library gear is authoritative; UI shows ONLY the library value.** Reason: the CDF computation uses the library's wheel coords regardless of the Excel `gear` column. Showing both with a "≠excel" indicator was confusing the user. Mismatch is documented in `note_claude/2026-04-24_Gear_Mismatch_Excel_vs_FAARFIELD_Library.md` instead.
+- **Removed Design Tool button from airport-level row.** Reason: the airport-level button opened the FIRST section, which isn't always what the user wanted. Per-section cards have their own Design Tool button that goes to the EXACT section.
+- **CDF-vs-PCI scatter uses raw PCI on Y-axis, not deduct.** Reason: easier to reason about (higher = better), and the M&R trigger lines up at PCI=70.
+- **Quadrant tints flipped to green-upper-left + red-lower-right.** Reason: matches the new Y-axis (high PCI = good = green; low PCI = bad = red).
+- **"Other" distress category = green.** Reason: distinct from red (load) and blue (climate); avoids confusion with the gray severity ramp in the legend.
+- **Severity legend swatches use grayscale.** Reason: visually unambiguous that "saturation = severity, hue = category". Original used red ramp (load.L/M/H) which conflated the two axes.
+- **Frost band as side thermometer (not bracket).** Reason: more visualization-y per user request; looks like a depth gauge with snowflake + gradient + status pill.
+- **Created separate Aeropave repo for Netlify** instead of pointing Netlify at cee598-airport-final/website. Reason: cleaner deploy story (no .vb files in the public deploy repo), and the cee598-airport-final repo's website folder is a SUBFOLDER which Netlify build config handles awkwardly.
+
+### Dead Ends to Avoid
+
+- **Don't push frontend changes to Aeropave repo from another machine without first updating cee598-airport-final/website/.** The two repos are NOT auto-mirrored. Editing Aeropave directly would create divergence. Treat cee598-airport-final as the single source of truth; Aeropave is a one-way deploy mirror.
+- **Don't use Dropbox alone for the .git folder sync between machines.** Dropbox can sync mid-write and corrupt the .git/objects/ tree. Always use GitHub as the canonical history; Dropbox only for files outside .git (FAARFIELD installer, datasets, scratch notes).
+- **Don't sum m and m² distress quantities together.** Header counts in DistressBreakdownChart now split by unit; previously summed them which is meaningless (linear cracks vs area distress are different physical quantities).
+- **Don't use Recharts default `<Legend />` with per-cell custom-colored bars.** Recharts can't infer a single legend swatch when each bar has a different fill via `<Cell>`; renders blank dark squares. Use a custom HTML legend block instead.
+- **Don't pass position="left" / "insideBottomRight" for ReferenceLine labels in regions with dots.** They overflow the plot or overlap data. Use `insideTopLeft` for empty quadrants.
+
+### Open Questions / Blockers
+
+- [ ] User to confirm Netlify deploy URL once `Pleesudjai/Aeropave` is connected. Suggest renaming the auto-generated subdomain to something like `aeropave-cee598.netlify.app`.
+- [ ] User to verify mobile layout on actual iPhone (Tailwind responsive classes are tested by spec; physical-device confirmation is good practice).
+- [ ] Should the `mendeley_import_refs/` folder (12 MB of FRC research PDFs in Dropbox) be tracked in cee598-airport-final? Current decision: NOT tracked (unrelated to the airport project; scratch reference material).
+
+### Files Modified This Session
+
+**Frontend** (`c:/temp/aeropave/src/`):
+- `App.jsx` — responsive header/main padding
+- `components/Hero.jsx` — co-authors + mobile-responsive grid
+- `components/ProjectSummaryUnified.jsx` — verdict badge text, button labels, soil-tan subgrade, mobile-wrap, removed Design Tool button at airport level
+- `components/PerSectionDetail.jsx` — capped at top 10 aircraft, gear label simplified, mobile-responsive grid
+- `components/CrossSectionSmall.jsx` — frost band thermometer visualization
+- `components/CdfVsPciScatter.jsx` — Y-axis = raw PCI, lane-stagger labels, edge-aware lanes, label position
+- `components/DistressBreakdownChart.jsx` — other=green, grayscale severity legend, pill-bar text fix
+- `components/FrostPanel.jsx` — blue/gray bars (was all-blue)
+- `components/GearFootprintTopView.jsx` — gear label simplified
+- `components/KeyFindings.jsx` — Design Recommendations panel hidden
+- `components/SummaryTable.jsx` — gear label simplified (legacy file)
+- `tabs/DesignTool.jsx` — gear label simplified
+- `lib/distressClassification.js` — other category palette = green; SEVERITY_GRAYSCALE export
+
+**Repo:** `Pleesudjai/Aeropave` (new this session):
+- 6 commits cumulative; latest = `65aa3ad` "Mobile-responsive layout pass"
+
+**Repo:** `Pleesudjai/cee598-airport-final` (synced this session):
+- Commit `fb1d216` "Session 2026-04-25: gear-trace audit + unified panel + field validation + final report/slides"
+- 40 files changed (3 new backend, 7 new frontend, 3 notes, 4 specs, 3 deliverables, 14 modifications)
+
+---
+
+## Earlier session 2026-04-25 — afternoon (gear-trace audit + unified panel + final deliverables)
+*(Original heading was "This session (2026-04-25 afternoon/evening)" — re-titled when the late-evening session was added above.)*
+
+### Goal
+
+---
+
+### Afternoon detail (preserved from earlier draft)
 
 ### Goal
 Produce the final report deliverable for the upcoming CEE 598 class presentation; finish the field-validation UI; close out remaining methodology specs.
