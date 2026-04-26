@@ -3,22 +3,14 @@
 const BASE = 'http://localhost:5100'
 
 // Precal manifest (build-time import). Lists which (sectionKey, aircraftIcao)
-// pairs have static stress JSONs available for offline / Netlify deploys.
-// Populated by scripts/prebake_stress_endpoints.py.
-let _precalIndex = null
-async function getPrecalIndex() {
-  if (_precalIndex !== null) return _precalIndex
-  try {
-    const r = await fetch('/data/precal/index.json')
-    _precalIndex = r.ok ? await r.json() : { sections: [] }
-  } catch { _precalIndex = { sections: [] } }
-  return _precalIndex
-}
+// pairs have static stress JSONs available under /public/data/precal/.
+// Manifest lives in src/ (small, imported at build); payloads live in public/
+// (~160 MB, fetched at runtime only when needed).
+import precalIndex from '../data/precal/index.json'
 
 async function loadPrecal(sectionKey, aircraftIcao, endpoint) {
   if (!sectionKey || !aircraftIcao) return null
-  const idx = await getPrecalIndex()
-  const section = idx.sections?.find(s => s.sectionKey === sectionKey)
+  const section = precalIndex.sections?.find(s => s.sectionKey === sectionKey)
   if (!section) return null
   const ac = section.aircraft?.find(a => a.icao === aircraftIcao)
   if (!ac) return null
