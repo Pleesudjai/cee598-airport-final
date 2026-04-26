@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { fetchLeafProfile } from '../api/nativeStressClient'
 
-export default function RigidStressProfile({ layers, subgrade, aircraft, nativeAvailable }) {
+export default function RigidStressProfile({ layers, subgrade, aircraft, nativeAvailable, sectionKey = null }) {
   const [profileData, setProfileData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -18,7 +18,7 @@ export default function RigidStressProfile({ layers, subgrade, aircraft, nativeA
   }, [layers, subgrade, aircraft])
 
   useEffect(() => {
-    if (!nativeAvailable || !layers?.length || !aircraft) return
+    if (!layers?.length || !aircraft) return
 
     if (debounceRef.current) clearTimeout(debounceRef.current)
     debounceRef.current = setTimeout(async () => {
@@ -42,9 +42,11 @@ export default function RigidStressProfile({ layers, subgrade, aircraft, nativeA
           tirePressure: 200,
           tireSpacingIn: 34,
         }
-        const result = await fetchLeafProfile(leafLayers, subgrade, leafAc, depths)
+        const result = await fetchLeafProfile(leafLayers, subgrade, leafAc, depths, sectionKey)
         if (result.data) {
           setProfileData(result.data)
+        } else if (!nativeAvailable) {
+          setError('No pre-cal\'d profile for this aircraft. Start faarfield-api for live LEAF.')
         } else {
           setError(`Backend: ${result.source}${result.detail ? ' — ' + result.detail : ''}`)
         }
@@ -55,7 +57,7 @@ export default function RigidStressProfile({ layers, subgrade, aircraft, nativeA
     }, 500)
 
     return () => { if (debounceRef.current) clearTimeout(debounceRef.current) }
-  }, [layers, subgrade, aircraft, nativeAvailable])
+  }, [layers, subgrade, aircraft, nativeAvailable, sectionKey])
 
   useEffect(() => {
     if (!profileData || !profileData.depths || !plotRef.current || !window.Plotly) return
@@ -116,15 +118,6 @@ export default function RigidStressProfile({ layers, subgrade, aircraft, nativeA
       setError('Chart render error: ' + e.message)
     }
   }, [profileData, layers, aircraft])
-
-  if (!nativeAvailable) {
-    return (
-      <div className="rounded-2xl bg-surface-lowest p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
-        <h3 className="text-sm font-bold text-outline mb-2">Stress Profile</h3>
-        <p className="text-xs text-outline">Start <code className="bg-surface-low px-1 rounded">faarfield-api</code> to enable.</p>
-      </div>
-    )
-  }
 
   return (
     <div className="rounded-2xl bg-surface-lowest p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">

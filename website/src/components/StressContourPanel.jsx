@@ -9,7 +9,7 @@ const FIELDS = [
   { key: 'stressMaxShear', label: 'Max Shear Stress (τmax)', unit: 'psi' },
 ]
 
-export default function StressContourPanel({ layers, subgrade, aircraft, evalDepth, nativeAvailable }) {
+export default function StressContourPanel({ layers, subgrade, aircraft, evalDepth, nativeAvailable, sectionKey = null }) {
   const [gridData, setGridData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [field, setField] = useState('stressZ')
@@ -26,9 +26,11 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
     }
   }, [layers, subgrade, aircraft, evalDepth])
 
-  // Fetch new data with debounce
+  // Fetch new data with debounce. Try live backend first; if unavailable,
+  // fetchLeafGrid falls back to the pre-baked precal cache when sectionKey
+  // matches a baked (section, aircraft) pair.
   useEffect(() => {
-    if (!nativeAvailable || !layers?.length || !aircraft) return
+    if (!layers?.length || !aircraft) return
 
     if (debounceRef.current) clearTimeout(debounceRef.current)
     debounceRef.current = setTimeout(async () => {
@@ -47,12 +49,11 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
           tirePressure: 200,
           tireSpacingIn: 34,
         }
-        // fetchLeafGrid auto-scales gridExtent from library wheel coords
-        const result = await fetchLeafGrid(leafLayers, subgrade, leafAc, evalDepth, 21)
+        const result = await fetchLeafGrid(leafLayers, subgrade, leafAc, evalDepth, 21, null, sectionKey)
         if (result.data) {
           setGridData(result.data)
         } else {
-          setError('Backend unavailable')
+          setError(nativeAvailable ? 'Backend unavailable' : 'No pre-cal\'d data for this aircraft. Start faarfield-api for live LEAF.')
         }
       } catch (e) {
         setError(e.message || 'Fetch failed')
@@ -61,7 +62,7 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
     }, 500)
 
     return () => { if (debounceRef.current) clearTimeout(debounceRef.current) }
-  }, [layers, subgrade, aircraft, evalDepth, nativeAvailable])
+  }, [layers, subgrade, aircraft, evalDepth, nativeAvailable, sectionKey])
 
   // Render Plotly chart ONLY when gridData is valid
   useEffect(() => {
@@ -107,15 +108,6 @@ export default function StressContourPanel({ layers, subgrade, aircraft, evalDep
       setError('Chart render error')
     }
   }, [gridData, field, evalDepth])
-
-  if (!nativeAvailable) {
-    return (
-      <div className="rounded-2xl bg-surface-lowest p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">
-        <h3 className="text-sm font-bold text-outline mb-2">Stress Contour</h3>
-        <p className="text-xs text-outline">Start <code className="bg-surface-low px-1 rounded">faarfield-api</code> to enable native stress visualization.</p>
-      </div>
-    )
-  }
 
   return (
     <div className="rounded-2xl bg-surface-lowest p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)]">

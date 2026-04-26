@@ -290,7 +290,7 @@ const CAMERA_PRESETS = {
   transverse:  { eye: { x: 0,   y: 2.4,  z: 0.2 }, up: { x: 0, y: 0, z: 1 } },
 }
 
-export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cdfRunToken = 0 }) {
+export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cdfRunToken = 0, sectionKey = null }) {
   const [meshData, setMeshData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -361,7 +361,7 @@ export default function Fem3dMeshPanel({ layers, subgrade, aircraft, enabled, cd
     setLoading(true); setError(null)
     const snapshot = inputSignature
     try {
-      const result = await fetchFem3dMesh(layers, subgrade, normalizedAc, highDetail, true, wantStressField, stressAgg)
+      const result = await fetchFem3dMesh(layers, subgrade, normalizedAc, highDetail, true, wantStressField, stressAgg, sectionKey)
       if (result.data?.mesh) {
         setMeshData(result.data)
         hasEverRendered.current = true

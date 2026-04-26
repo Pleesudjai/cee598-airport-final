@@ -171,6 +171,9 @@ export default function DesignTool({
   const airportSections = allSections.filter(s => s.icao === currentAirport)
   const currentSectionId = selectedSection || airportSections[0]?.section_id
   const currentSection = allSections.find(s => s.section_id === currentSectionId)
+  // Key into the pre-baked stress cache (`public/data/precal/`). Format must
+  // match `{ICAO}_{sectionId}` exactly as written by scripts/prebake_stress_endpoints.py.
+  const sectionKey = (currentAirport && currentSectionId) ? `${currentAirport}_${currentSectionId}` : null
   const originalResult = cdfResults.find(r => r.section_id === currentSectionId)
   const sub = subgradeData[currentAirport]
   const trafficData = traffic[currentAirport]
@@ -892,6 +895,7 @@ export default function DesignTool({
                     aircraft={stressAircraft}
                     evalDepth={totalDepth}
                     nativeAvailable={nativeAvailable}
+                    sectionKey={sectionKey}
                   />
                 </div>
                 <div className="col-span-5">
@@ -900,6 +904,7 @@ export default function DesignTool({
                     subgrade={stressSubgrade}
                     aircraft={stressAircraft}
                     nativeAvailable={nativeAvailable}
+                    sectionKey={sectionKey}
                   />
                 </div>
               </div>
@@ -913,6 +918,7 @@ export default function DesignTool({
                   aircraft={stressAircraft}
                   enabled={useFem3d}
                   cdfRunToken={femCdfToken}
+                  sectionKey={sectionKey}
                 />
               )}
             </>
