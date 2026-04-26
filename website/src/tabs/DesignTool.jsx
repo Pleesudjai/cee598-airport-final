@@ -681,16 +681,6 @@ export default function DesignTool({
                   <span className="material-symbols-outlined text-primary animate-spin text-3xl mr-3">progress_activity</span>
                   <span className="text-sm text-outline">Running FAARFIELD engine...</span>
                 </div>
-              ) : !analysisAvailable ? (
-                <div className="bg-surface-lowest rounded-xl p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)] border border-failing/30">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="material-symbols-outlined text-failing">cloud_off</span>
-                    <p className="text-sm font-bold text-failing">FAARFIELD backend offline</p>
-                  </div>
-                  <p className="text-xs text-outline">
-                    CDF analysis requires the native FAARFIELD desktop-parity backend (LEAFClassLib + AMClassLib + 2014 fatigue equations). Start <code className="font-mono">FaarfieldApi.exe</code> at <code className="font-mono">c:/temp/aeropave/faarfield-api/bin/x86/Release/</code> and reload — no approximate fallback is provided.
-                  </p>
-                </div>
               ) : activeResult ? (
                 <>
                   <VerdictCard
@@ -699,6 +689,11 @@ export default function DesignTool({
                   {nativeCdf.solver && (
                     <p className="text-[9px] text-outline mt-1 text-center">
                       {nativeCdf.solver} | {nativeCdf.computeTimeMs}ms
+                    </p>
+                  )}
+                  {!analysisAvailable && (
+                    <p className="text-[10px] text-outline mt-1 text-center italic">
+                      Backend offline — viewing pre-cal'd results. Start <code className="font-mono">FaarfieldApi.exe</code> to enable slider edits.
                     </p>
                   )}
 
@@ -790,6 +785,16 @@ export default function DesignTool({
                     </div>
                   )}
                 </>
+              ) : !analysisAvailable ? (
+                <div className="bg-surface-lowest rounded-xl p-6 shadow-[0px_12px_32px_rgba(25,28,30,0.06)] border border-failing/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="material-symbols-outlined text-failing">cloud_off</span>
+                    <p className="text-sm font-bold text-failing">Backend offline — custom airport requires live engine</p>
+                  </div>
+                  <p className="text-xs text-outline">
+                    The 13 project sections show pre-cal'd verdicts instantly. For other airports or slider edits, start <code className="font-mono">FaarfieldApi.exe</code> at <code className="font-mono">c:/temp/aeropave/faarfield-api/bin/x86/Release/</code> and reload.
+                  </p>
+                </div>
               ) : (
                 <div className="bg-surface-lowest rounded-xl p-8 shadow-[0px_12px_32px_rgba(25,28,30,0.06)] text-center">
                   <span className="material-symbols-outlined text-outline text-4xl mb-2">engineering</span>
