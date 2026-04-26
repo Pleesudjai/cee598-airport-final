@@ -60,10 +60,13 @@ export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gri
       mtow: aircraft.mtow || 0,
     }
 
-    // Auto-scale grid extent from library wheel coords (if not explicitly set)
+    // Auto-scale grid extent from library wheel coords (if not explicitly set).
+    // Margin = max(80", 80% of max wheel coord) so the contour always shows the
+    // stress falloff well past the gear footprint. Floor at 120" so even small
+    // GA aircraft display a useful surrounding context band.
     let extent = gridExtentIn
     if (extent === null || extent <= 0) {
-      extent = 80
+      extent = 120
       if (ac.icao) {
         try {
           const acRes = await fetch(`${BASE}/api/aircraft/${encodeURIComponent(ac.icao)}`)
@@ -72,7 +75,9 @@ export async function fetchLeafGrid(layers, subgrade, aircraft, evalDepthIn, gri
             if (acData.wheel_coords?.length) {
               const maxX = Math.max(...acData.wheel_coords.map(c => Math.abs(c.x || 0)))
               const maxY = Math.max(...acData.wheel_coords.map(c => Math.abs(c.y || 0)))
-              const computed = Math.ceil((Math.max(maxX, maxY) + 40) / 10) * 10
+              const maxXY = Math.max(maxX, maxY)
+              const margin = Math.max(80, 0.8 * maxXY)
+              const computed = Math.ceil((maxXY + margin) / 10) * 10
               extent = Math.max(extent, computed)
               console.log(`[fetchLeafGrid] Auto-scaled gridExtent for ${ac.icao}: ${extent}" (wheels at ±${maxX.toFixed(0)}, ±${maxY.toFixed(0)})`)
             }
