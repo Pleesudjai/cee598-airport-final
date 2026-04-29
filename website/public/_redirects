@@ -1,0 +1,7 @@
+# NOAA NCEI Climate Normals reverse proxy (mirrors vite.config.js dev proxy).
+# Status 200 = Netlify fetches NOAA on the server side and returns the content
+# as if it came from this domain — bypasses browser CORS for src/lib/frost.js.
+/noaa/*  https://www.ncei.noaa.gov/:splat  200
+
+# SPA fallback — every other unknown path serves index.html (must come AFTER /noaa).
+/*  /index.html  200
