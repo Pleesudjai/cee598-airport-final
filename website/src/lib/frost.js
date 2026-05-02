@@ -231,7 +231,10 @@ export function faaTreatment(frostIn, frostClass, totalPavementIn) {
  * @returns {Promise<object|null>}
  */
 export async function getFrostForCoord(lat, lon, opts = {}) {
-  const { aashtoGroup, frostClass: classOverride, pavementIn = 14, maxFallback = 5 } = opts
+  // maxFallback default raised from 5 → 30: NOAA station inventory has 26k
+  // stations but only ~9.6k carry the daily TAVG normals CSV; trying only 5
+  // gave up too easily for airports without a co-located ASOS site.
+  const { aashtoGroup, frostClass: classOverride, pavementIn = 14, maxFallback = 30 } = opts
   const candidates = findNearestStations(lat, lon, maxFallback)
   if (!candidates.length) return null
 

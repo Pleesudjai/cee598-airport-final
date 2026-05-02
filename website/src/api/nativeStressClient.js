@@ -1,6 +1,10 @@
 // Direct backend URL — Vite 8 proxy doesn't forward POST requests reliably.
 // Backend has CORS enabled (Access-Control-Allow-Origin: *).
-const BASE = 'http://localhost:5100'
+// In dev, VITE_API_BASE is unset and we fall back to localhost:5100.
+// On Netlify, set VITE_API_BASE in Site settings → Environment variables to a
+// public tunnel URL (e.g. https://aeropave-api.trycloudflare.com) so visitors
+// can reach the backend from the deployed site.
+const BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5100'
 
 // Precal manifest (build-time import). Lists which (sectionKey, aircraftIcao)
 // pairs have static stress JSONs available under /public/data/precal/.
